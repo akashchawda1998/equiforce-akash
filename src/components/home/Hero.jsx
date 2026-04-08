@@ -26,9 +26,10 @@ function Hero() {
             </span>
           </p>
 
-          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#d97706] to-[#3b82f6] hover:scale-105 transition-transform duration-300 font-medium shadow-lg">
+        <Link to="/contact">  <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#d97706] to-[#3b82f6] hover:scale-105 transition-transform duration-300 font-medium shadow-lg">
             Request a Demo
           </button>
+          </Link>
         </div>
 
         {/* RIGHT SIDE VIDEO CARD */}

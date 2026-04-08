@@ -141,9 +141,12 @@ const ContactPage = () => {
             <p className="text-gray-300 text-sm mb-6">
               Schedule a live platform demo with our technical experts.
             </p>
+
+            <Link to="/contact">
             <button className="w-full md:w-auto border border-[#d97706] text-[#d97706] px-8 py-3 rounded-lg font-bold hover:bg-[#d97706] hover:text-white transition-all">
               Request Demo
             </button>
+            </Link>
           </div>
         </div>
       </section>
