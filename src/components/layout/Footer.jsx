@@ -45,9 +45,9 @@ const Footer = () => {
             <div>
               <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-6">Solutions</h4>
               <ul className="space-y-4">
-                <li className="mb-2"><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link></li>
-                <li className="mb-2"><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
-                <li className="mb-2"><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors">Performance Measurement</Link></li>
+                <li className="mb-2"><Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link></li>
                 <li className="mb-2"><Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link></li>
               </ul>
             </div>

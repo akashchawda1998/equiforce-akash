@@ -75,12 +75,12 @@ const features = [
     title: "Investment Operations & Reconciliation",
     desc: "Investment data reconciliation across internal systems and custodian sources.",
     icon: InvestmentOpsIcon,
-    link: "/performance-measurement#performance",
+    link: "/performance-measurement#operations",
   }, {
     title: "Performance Measurement",
     desc: "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
     icon: PerformanceMeasurementIcon,
-    link: "/performance-measurement#operations",
+    link: "/performance-measurement#performance",
   },
  
 

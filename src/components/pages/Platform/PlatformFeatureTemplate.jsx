@@ -37,7 +37,7 @@ const VP = { once: false, margin: "-90px" };
 
 // ─── Updated Feature Data ──────────────────────────────────────────────
 const performanceData = {
-  id:"performance",
+  id:"operations",
   badge: "Performance",
   titleStart: "Performance",
   titleHighlight: "Measurement",
@@ -68,7 +68,7 @@ const performanceData = {
 };
 
 const gipsData = {
-    id:"gips",
+    id:"performance",
   badge: "Compliance",
   titleStart: "GIPS Composite",
   titleHighlight: "Management",
@@ -98,7 +98,7 @@ const gipsData = {
 };
 
 const operationsData = {
-  id:"operations",
+  id:"gips",
   badge: "Operations",
   titleStart: "Investment",
   titleHighlight: "Operations",
@@ -254,7 +254,7 @@ const FeatureSection = ({ feature, index ,id}) => {
   const highlights = feature.features[0]?.highlights || [];
 
   return (
-    <div className="relative py-16 md:py-24"  id={id}>
+    <div className="relative md:py-24"  id={id}>
       {/* Connector line */}
       {index > 0 && (
         <motion.div
@@ -432,7 +432,7 @@ const PlatformAllFeaturesPage = () => {
   }, [hash]);
 
   return (
-    <div className="min-h-screen bg-white pt-28 pb-20">
+    <div className="min-h-screen bg-white pt-10 pb-20">
       <div className="max-w-screen-xl mx-auto px-6 lg:px-16">
         {allData.map((data, index) => (
           <FeatureSection

@@ -87,7 +87,7 @@ const Navbar = () => {
 
 
                           <Link
-                            to="/performance-measurement#performance"
+                            to="/performance-measurement#operations"
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
@@ -98,7 +98,7 @@ const Navbar = () => {
                           </Link>
 
                           <Link
-                            to="/performance-measurement#gips"
+                            to="/performance-measurement#performance"
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
@@ -109,7 +109,7 @@ const Navbar = () => {
                           </Link>
 
                           <Link
-                            to="/performance-measurement#operations"
+                            to="/performance-measurement#gips"
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
                           >
@@ -263,10 +263,10 @@ const Navbar = () => {
                 >
                   {/* Replaced placeholder links with actual Platform pages */}
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
-                    <Link to="/performance-measurement" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link>
-                    <Link to="/gips-composite" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
-                    <Link to="/investment-operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link>
-                    <Link to="/ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
+                    <Link to="/performance-measurement#operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link>
+                    <Link to="/performance-measurement#performance" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
+                    <Link to="/performance-measurement#gips" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link>
+                    <Link to="/performance-measurement#ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
                     <Link to="/consultant" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Consulting Solutions
 </Link>
                   </div>
