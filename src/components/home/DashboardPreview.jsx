@@ -10,6 +10,13 @@ const badges = [
     pos: "top-[15%] -left-4 md:-left-12",
     delay: "100",
   },
+
+  {
+    text: "GIPS Composite Management",
+    icon: "📖",
+    pos: "top-[15%] -right-4 md:-right-12",
+    delay: "400",
+  },
   {
     text: "Performance Measurement",
     icon: "🕒",
@@ -18,12 +25,7 @@ const badges = [
   },
 
   // Right Side
-  {
-    text: "GIPS Composite Management",
-    icon: "📖",
-    pos: "top-[15%] -right-4 md:-right-12",
-    delay: "400",
-  },
+  
 
   {
     text: "AI-Powered Investment Reporting",
@@ -99,12 +101,12 @@ const DashboardPreview = () => {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 bg-gray-50 p-3 rounded-xl border border-gray-100"
+              className="flex items-center gap-2 bg-gray-50 p-1 rounded-xl border border-gray-100"
               data-aos="fade-up"
               data-aos-delay={index * 50}
             >
               <span className="text-sm">{badge.icon}</span>
-              <span className="font-bold text-xs text-slate-700">{badge.text}</span>
+              <span className="font-bold text-xs text-slate-500">{badge.text}</span>
             </div>
           ))}
         </div>
