@@ -75,12 +75,12 @@ const features = [
     title: "Investment Operations & Reconciliation",
     desc: "Investment data reconciliation across internal systems and custodian sources.",
     icon: InvestmentOpsIcon,
-    link: "/performance-measurement#operations",
+    link: "/performance-measurement#performance",
   }, {
     title: "Performance Measurement",
     desc: "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
     icon: PerformanceMeasurementIcon,
-    link: "/performance-measurement#performance",
+    link: "/performance-measurement#operations",
   },
  
 
@@ -115,8 +115,7 @@ const Features = () => {
         </h2>
 
         <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-sm leading-relaxed">
-          EquiForce delivers specialized solutions across performance measurement, composite management,
-          investment operations, and reporting — enhanced with AI-driven capabilities for superior operational control.
+EquiForce delivers specialized solutions across investment operations and reconciliation, performance measurement, GIPS composite management, and investment reporting - enhanced with AI-driven capabilities for superior operational control.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

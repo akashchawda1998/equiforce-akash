@@ -5,13 +5,13 @@ const NAVY = "#000E24";
 const badges = [
   // Left Side
   {
-    text: "Performance Measurement",
+    text: "Investment Operations & Reconciliation",
     icon: "☁️",
     pos: "top-[15%] -left-4 md:-left-12",
     delay: "100",
   },
   {
-    text: "GIPS Composite Management",
+    text: "Performance Measurement",
     icon: "🕒",
     pos: "top-[60%] -left-8 md:-left-20",
     delay: "200",
@@ -19,14 +19,14 @@ const badges = [
 
   // Right Side
   {
-    text: "AI-Powered Reporting",
+    text: "GIPS Composite Management",
     icon: "📖",
     pos: "top-[15%] -right-4 md:-right-12",
     delay: "400",
   },
 
   {
-    text: "Investment Operations & Reconciliation",
+    text: "AI-Powered Investment Reporting",
     icon: "👥",
     pos: "bottom-[40%] -right-4 md:-right-12",
     delay: "600",

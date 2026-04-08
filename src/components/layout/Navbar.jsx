@@ -292,7 +292,8 @@ const Navbar = () => {
               >
                 Sign In
               </Link>
-              <button
+             <Link
+                to="/contact"> <button
                 className="w-full py-4 rounded-xl text-white shadow-lg active:scale-95 transition-transform bg-[#d97706] hover:bg-[#b46002]"
                 onClick={() => {
                   setMenuOpen(false);
@@ -300,6 +301,7 @@ const Navbar = () => {
               >
                 Try for Free
               </button>
+              </Link>
             </div>
           </div>
         </div>
