@@ -9,17 +9,18 @@ const badges = [
     pos: "top-[15%] -left-4 md:-left-12",
     delay: "100",
   },
-  {
-    text: "GIPS Composite Management",
-    icon: "📚", // standards / documentation
-    pos: "top-[15%] -right-4 md:-right-12",
-    delay: "400",
-  },
+ 
   {
     text: "Performance Measurement",
     icon: "📈", // growth / performance tracking
     pos: "top-[60%] -left-8 md:-left-20",
     delay: "200",
+  },
+   {
+    text: "GIPS Composite Management",
+    icon: "📚", // standards / documentation
+    pos: "top-[15%] -right-4 md:-right-12",
+    delay: "400",
   },
   {
     text: "AI-Powered Investment Reporting",
