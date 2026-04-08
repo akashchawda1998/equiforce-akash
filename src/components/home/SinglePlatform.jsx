@@ -17,7 +17,7 @@ const SinglePlatform = () => {
 
   return (
     <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto px-6">
+      <div className="max-w-screen-2xl mx-auto px-2">
         {/* Heading Section */}
         <div className="text-center mb-16 md:mb-24" data-aos="fade-up">
           <h2 

@@ -3,33 +3,27 @@ import SinglePlatformImg from "../../assets/images/dashboard.jpeg";
 const NAVY = "#000E24";
 
 const badges = [
-  // Left Side
   {
     text: "Investment Operations & Reconciliation",
-    icon: "☁️",
+    icon: "📊", // data / financial operations
     pos: "top-[15%] -left-4 md:-left-12",
     delay: "100",
   },
-
   {
     text: "GIPS Composite Management",
-    icon: "📖",
+    icon: "📚", // standards / documentation
     pos: "top-[15%] -right-4 md:-right-12",
     delay: "400",
   },
   {
     text: "Performance Measurement",
-    icon: "🕒",
+    icon: "📈", // growth / performance tracking
     pos: "top-[60%] -left-8 md:-left-20",
     delay: "200",
   },
-
-  // Right Side
-  
-
   {
     text: "AI-Powered Investment Reporting",
-    icon: "👥",
+    icon: "🤖", // AI / automation
     pos: "bottom-[40%] -right-4 md:-right-12",
     delay: "600",
   },
@@ -37,8 +31,8 @@ const badges = [
 
 const DashboardPreview = () => {
   return (
-    <section className="py-2 md:py-12 bg-white overflow-hidden">
-      <div className="max-w-screen-2xl mx-auto px-6">
+    <section className="py-8 md:py-12 bg-white overflow-hidden">
+      <div className="max-w-screen-2xl mx-auto px-2">
         {/* Heading Section */}
         <div className="text-center mb-5">
           <h2
