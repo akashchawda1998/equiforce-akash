@@ -10,19 +10,16 @@ function Hero() {
         <div className="w-full h-full bg-[url('/lines.svg')] bg-no-repeat bg-center bg-cover opacity-10 animate-[backgroundMove_60s_linear_infinite]"></div>
       </div>
 
-      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-10 py-24">
-
+<div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 lg:py-24">
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 text-white z-10">
           <p className="uppercase text-[#d97706] tracking-widest mt-10 mb-3 text-sm md:text-sm font-semibold">
             Nearly 3 Decades of Industry Expertise
           </p>
-
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-            Your Strategic <span className="text-[#d97706]">Partner</span> in<br />
-            Investment Ops, Performance & GIPS
-          </h1>
-
+<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight  lg:text-left">
+  Your Strategic <span className="text-[#d97706]">Partner</span> in<br className="hidden sm:block" />
+  Investment Ops, Performance & GIPS
+</h1>
           <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
               Empowering investment management with practitioner expertise & technology edge.

@@ -2,7 +2,7 @@ import aboutImg from "../../assets/images/about-image1.webp";
 
 const AboutHero = () => {
   return (
-    <section className="pt-35 md:pt-30 lg:pt-30 pb-12 md:pb-10 lg:pb-10 text-center">
+    <section className="pt-22 px-5 md:pt-30 lg:pt-30 pb-12 md:pb-10 lg:pb-10 text-center">
       
    
 
