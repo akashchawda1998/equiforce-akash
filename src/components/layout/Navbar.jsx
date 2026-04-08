@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone, FiUsers } from "react-icons/fi";
-import logo from "../../assets/images/logo2.png";
+import logo from "../../assets/images/logoorg.png";
 import DemoModal from "../common/DemoModal";
 
 const NAVY = "#000E24";
@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       {/* Fixed Navbar with solid #000E24 background - No Scroll Animation */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-[#000E24] py-2 shadow-lg border-b border-white/10">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#000E24] py-2 shadow-lg border-b border-white/10 px-2">
         <div className="max-w-screen-2xl mx-auto px- 2:px-4 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo matching the provided image exactly */}
