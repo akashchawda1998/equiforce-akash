@@ -1,4 +1,5 @@
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const DemoModal = ({ isOpen, onClose }) => {
   return (
@@ -87,10 +88,13 @@ const DemoModal = ({ isOpen, onClose }) => {
             ></textarea>
 
             {/* CTA */}
+            
+            <Link to="/contact">
             <button className="w-full bg-gradient-to-r from-[#d97706] to-[#d97706] 
               hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition">
               Request Demo
             </button>
+            </Link>
 
             {/* Trust */}
             <p className="text-xs text-gray-500 text-center mt-2">
