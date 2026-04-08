@@ -2,6 +2,7 @@ import React from "react";
 import { MapPin, ChevronDown, Mail } from "lucide-react";
 import contactimg from "../../assets/images/bg.png";
 import bgchatboat from "../../assets/images/bgchat.jpeg"
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const inputStyle =
