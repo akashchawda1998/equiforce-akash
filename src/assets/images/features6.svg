@@ -1,0 +1,105 @@
+<svg width="600" height="320" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed" stop-opacity="0"/>
+      <stop offset="50%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="320" fill="url(#bg6)" rx="16"/>
+
+  <!-- Glow orb background -->
+  <circle cx="300" cy="155" r="90" fill="#7c3aed" opacity="0.06" filter="url(#softGlow)"/>
+  <circle cx="300" cy="155" r="60" fill="#d97706" opacity="0.06" filter="url(#softGlow)"/>
+
+  <!-- Neural network nodes - input layer -->
+  <circle cx="90" cy="95" r="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="90" cy="135" r="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="90" cy="175" r="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="90" cy="215" r="8" fill="#1e293b" stroke="#7c3aed" stroke-width="1.5" filter="url(#glow6)"/>
+  <text x="90" y="245" fill="#64748b" font-size="9" font-family="monospace" text-anchor="middle">INPUT</text>
+
+  <!-- Hidden layer 1 -->
+  <circle cx="195" cy="110" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="195" cy="155" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="195" cy="200" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <text x="195" y="228" fill="#64748b" font-size="9" font-family="monospace" text-anchor="middle">H1</text>
+
+  <!-- Hidden layer 2 -->
+  <circle cx="300" cy="95" r="10" fill="url(#brainGrad)" filter="url(#glow6)"/>
+  <circle cx="300" cy="140" r="10" fill="url(#brainGrad)" filter="url(#glow6)"/>
+  <circle cx="300" cy="185" r="10" fill="url(#brainGrad)" filter="url(#glow6)"/>
+  <circle cx="300" cy="230" r="10" fill="url(#brainGrad)" filter="url(#glow6)"/>
+  <text x="300" y="256" fill="#64748b" font-size="9" font-family="monospace" text-anchor="middle">H2</text>
+
+  <!-- Hidden layer 3 -->
+  <circle cx="405" cy="110" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="405" cy="155" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="405" cy="200" r="9" fill="#1e293b" stroke="#d97706" stroke-width="1.5" filter="url(#glow6)"/>
+  <text x="405" y="228" fill="#64748b" font-size="9" font-family="monospace" text-anchor="middle">H3</text>
+
+  <!-- Output layer -->
+  <circle cx="510" cy="125" r="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow6)"/>
+  <circle cx="510" cy="185" r="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow6)"/>
+  <text x="510" y="215" fill="#64748b" font-size="9" font-family="monospace" text-anchor="middle">OUT</text>
+
+  <!-- Connections input -> h1 -->
+  <line x1="98" y1="95" x2="186" y2="110" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="95" x2="186" y2="155" stroke="#7c3aed" stroke-width="0.6" opacity="0.3"/>
+  <line x1="98" y1="135" x2="186" y2="110" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="135" x2="186" y2="155" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="135" x2="186" y2="200" stroke="#7c3aed" stroke-width="0.6" opacity="0.3"/>
+  <line x1="98" y1="175" x2="186" y2="155" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="175" x2="186" y2="200" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="215" x2="186" y2="200" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+  <line x1="98" y1="215" x2="186" y2="155" stroke="#7c3aed" stroke-width="0.6" opacity="0.3"/>
+
+  <!-- h1 -> h2 -->
+  <line x1="204" y1="110" x2="290" y2="95" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="204" y1="110" x2="290" y2="140" stroke="#d97706" stroke-width="0.7" opacity="0.4"/>
+  <line x1="204" y1="155" x2="290" y2="140" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="204" y1="155" x2="290" y2="185" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="204" y1="155" x2="290" y2="230" stroke="#d97706" stroke-width="0.7" opacity="0.3"/>
+  <line x1="204" y1="200" x2="290" y2="185" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="204" y1="200" x2="290" y2="230" stroke="#d97706" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- h2 -> h3 -->
+  <line x1="310" y1="95" x2="396" y2="110" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="310" y1="140" x2="396" y2="110" stroke="#d97706" stroke-width="0.7" opacity="0.4"/>
+  <line x1="310" y1="140" x2="396" y2="155" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="310" y1="185" x2="396" y2="155" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="310" y1="185" x2="396" y2="200" stroke="#d97706" stroke-width="0.7" opacity="0.5"/>
+  <line x1="310" y1="230" x2="396" y2="200" stroke="#d97706" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- h3 -> output -->
+  <line x1="414" y1="110" x2="502" y2="125" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"/>
+  <line x1="414" y1="155" x2="502" y2="125" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+  <line x1="414" y1="155" x2="502" y2="185" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+  <line x1="414" y1="200" x2="502" y2="185" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Output labels -->
+  <text x="525" y="129" fill="#34d399" font-size="9" font-family="monospace">ANOMALY</text>
+  <text x="525" y="189" fill="#d97706" font-size="9" font-family="monospace">FORECAST</text>
+
+  <!-- Title area -->
+  <line x1="60" y1="280" x2="540" y2="280" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="300" y="302" fill="#94a3b8" font-size="12" font-family="monospace" text-anchor="middle" letter-spacing="2">AI-DRIVEN INTELLIGENCE</text>
+</svg>

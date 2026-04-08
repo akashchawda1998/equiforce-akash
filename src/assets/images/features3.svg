@@ -1,0 +1,85 @@
+<svg width="600" height="320" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1a2744"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d97706" stop-opacity="0.3"/>
+      <stop offset="100%" style="stop-color:#007CF0" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="320" fill="url(#bg3)" rx="16"/>
+
+  <!-- Ledger card -->
+  <rect x="60" y="30" width="480" height="260" rx="12" fill="#111827" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="60" y="30" width="480" height="42" rx="12" fill="url(#headerGrad)"/>
+  <rect x="60" y="54" width="480" height="18" fill="#111827"/>
+  <text x="90" y="57" fill="#d97706" font-size="12" font-family="monospace" font-weight="bold">FUND LEDGER</text>
+  <text x="470" y="57" fill="#64748b" font-size="11" font-family="monospace" text-anchor="end">FY 2024</text>
+
+  <!-- Column headers -->
+  <line x1="60" y1="78" x2="540" y2="78" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="90" y="94" fill="#64748b" font-size="10" font-family="monospace">ACCOUNT</text>
+  <text x="290" y="94" fill="#64748b" font-size="10" font-family="monospace">DEBIT</text>
+  <text x="390" y="94" fill="#64748b" font-size="10" font-family="monospace">CREDIT</text>
+  <text x="490" y="94" fill="#64748b" font-size="10" font-family="monospace" text-anchor="end">BALANCE</text>
+  <line x1="60" y1="100" x2="540" y2="100" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Rows -->
+  <!-- Row 1 -->
+  <rect x="60" y="100" width="480" height="28" fill="#0f172a" opacity="0.4"/>
+  <text x="90" y="119" fill="#cbd5e1" font-size="10" font-family="monospace">Cash &amp; Equivalents</text>
+  <text x="290" y="119" fill="#34d399" font-size="10" font-family="monospace">$4,250,000</text>
+  <text x="390" y="119" fill="#f87171" font-size="10" font-family="monospace">$1,100,000</text>
+  <text x="490" y="119" fill="#d97706" font-size="10" font-family="monospace" text-anchor="end">$3,150,000</text>
+
+  <!-- Row 2 -->
+  <text x="90" y="147" fill="#cbd5e1" font-size="10" font-family="monospace">Equity Securities</text>
+  <text x="290" y="147" fill="#34d399" font-size="10" font-family="monospace">$9,800,000</text>
+  <text x="390" y="147" fill="#f87171" font-size="10" font-family="monospace">$2,350,000</text>
+  <text x="490" y="147" fill="#d97706" font-size="10" font-family="monospace" text-anchor="end">$7,450,000</text>
+
+  <!-- Row 3 -->
+  <rect x="60" y="154" width="480" height="28" fill="#0f172a" opacity="0.4"/>
+  <text x="90" y="174" fill="#cbd5e1" font-size="10" font-family="monospace">Fixed Income</text>
+  <text x="290" y="174" fill="#34d399" font-size="10" font-family="monospace">$6,500,000</text>
+  <text x="390" y="174" fill="#f87171" font-size="10" font-family="monospace">$900,000</text>
+  <text x="490" y="174" fill="#d97706" font-size="10" font-family="monospace" text-anchor="end">$5,600,000</text>
+
+  <!-- Row 4 -->
+  <text x="90" y="202" fill="#cbd5e1" font-size="10" font-family="monospace">Derivatives</text>
+  <text x="290" y="202" fill="#34d399" font-size="10" font-family="monospace">$1,200,000</text>
+  <text x="390" y="202" fill="#f87171" font-size="10" font-family="monospace">$450,000</text>
+  <text x="490" y="202" fill="#d97706" font-size="10" font-family="monospace" text-anchor="end">$750,000</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="212" x2="540" y2="212" stroke="#1e3a5f" stroke-width="1"/>
+
+  <!-- Total row -->
+  <rect x="60" y="212" width="480" height="32" fill="url(#headerGrad)" rx="0"/>
+  <text x="90" y="233" fill="#d97706" font-size="11" font-family="monospace" font-weight="bold">TOTAL NAV</text>
+  <text x="290" y="233" fill="#34d399" font-size="11" font-family="monospace" font-weight="bold">$21,750,000</text>
+  <text x="390" y="233" fill="#f87171" font-size="11" font-family="monospace" font-weight="bold">$4,800,000</text>
+  <text x="490" y="233" fill="#d97706" font-size="11" font-family="monospace" text-anchor="end" font-weight="bold" filter="url(#glow3)">$16,950,000</text>
+
+  <!-- Bottom progress bar -->
+  <text x="90" y="268" fill="#64748b" font-size="10" font-family="monospace">Audit Readiness</text>
+  <rect x="200" y="257" width="240" height="8" rx="4" fill="#1e3a5f"/>
+  <rect x="200" y="257" width="204" height="8" rx="4" fill="url(#progressGrad)" filter="url(#glow3)"/>
+  <text x="455" y="268" fill="#d97706" font-size="10" font-family="monospace">85%</text>
+
+  <text x="300" y="308" fill="#94a3b8" font-size="12" font-family="monospace" text-anchor="middle" letter-spacing="2">FUND ACCOUNTING</text>
+</svg>
