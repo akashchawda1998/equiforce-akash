@@ -139,10 +139,10 @@ const DashboardPreview = () => {
               key={index}
               className={`group border border-[#d97706] absolute z-20 hidden sm:flex items-center gap-3 bg-white px-4 py-3 rounded-2xl shadow-xl whitespace-nowrap transition hover:scale-105 ${badge.pos}`}
             >
-              <span className="w-10 h-10 flex items-center justify-center">
+              <span className="w-8 h-8 flex items-center justify-center">
                 {badge.icon}
               </span>
-              <span className="font-bold text-sm md:text-base text-slate-700">
+              <span className="font-bold text-sm md:text-sm text-slate-700">
                 {badge.text}
               </span>
             </div>
