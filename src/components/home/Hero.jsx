@@ -23,7 +23,7 @@ function Hero() {
 </h1>
           <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
-              Empowering investment management with practitioner expertise & technology edge.
+              Empowering investment management with practitioner expertise & technology edge
             </span>
           </p>
 
