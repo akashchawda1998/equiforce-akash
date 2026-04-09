@@ -93,14 +93,12 @@ const team = [
 
     name: "Steve",
     email:"steve@equiforcesolutions.com",
-    role: "Head of Business Development",
-
+    role: "Head of Business",
+    role1: "Development",
     img: img4,
 
     bio: [
-
       ""
-
     ]
 
   },
