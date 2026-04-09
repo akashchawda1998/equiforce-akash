@@ -71,7 +71,7 @@ const AiPoweredReportingIcon = () => (
 );
 
 const features = [
-   {
+  {
     title: "Investment Operations & Reconciliation",
     desc: "Investment data reconciliation across internal systems and custodian sources.",
     icon: InvestmentOpsIcon,
@@ -82,9 +82,9 @@ const features = [
     icon: PerformanceMeasurementIcon,
     link: "/performance-measurement#performance",
   },
- 
 
-   {
+
+  {
     title: "GIPS Composite Management",
     desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
     icon: GipsCompositeIcon,
@@ -109,13 +109,13 @@ const Features = () => {
         </div>
 
         <h2 className="text-3xl sm:text-4xl md:text-3xl font-black text-white mb-6 leading-tight">
-         Our Firm 
+          Our Firm
 
- <span className="text-[#d97706]"> Solutions</span>
+          <span className="text-[#d97706]"> Solutions</span>
         </h2>
 
         <p className="text-blue-100/80 max-w-3xl mx-auto mb-6 text-base md:text-sm leading-relaxed">
-EquiForce delivers specialized solutions across investment operations and reconciliation, performance measurement, GIPS composite management, and investment reporting - enhanced with AI-driven capabilities for superior operational control.
+          EquiForce delivers specialized solutions across investment operations and reconciliation, performance measurement, GIPS composite management, and investment reporting - enhanced with AI-driven capabilities for superior operational control.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

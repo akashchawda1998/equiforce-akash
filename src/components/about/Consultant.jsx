@@ -22,7 +22,7 @@ const team = [
         name: "Jane Atmodjojo, CFA®, CIPM",
         email: "jane@equiforcesolutions.com",
         role: "CEO",
-        role1: "Senior Consultant",
+        role1: "Principal Consultant",
 
         img: img1,
 
@@ -51,7 +51,7 @@ const team = [
             "vince@equiforcesolutions.com",
 
         role: "Chief Product Officer",
-        role1: "Senior Consultant",
+        role1: "Principal Consultant",
 
         img: img3,
 

@@ -6,6 +6,7 @@ import Hero from "../home/Hero";
 import HowItWorks from "../home/HowItWorks";
 import Integrations from "../home/Integrations";
 import Newsletter from "../home/Newsletter";
+import PartnerSection from "../home/PartnerSection";
 import Pricing from "../home/Pricing";
 import SinglePlatform from "../home/SinglePlatform";
 import Testimonials from "../home/Testimonials";
@@ -37,6 +38,7 @@ const Home = () => {
       </div>
 
       
+      
       <div data-aos="fade-up" data-aos-delay="350">
         <Testimonials />
       </div>
@@ -52,6 +54,8 @@ const Home = () => {
       <div data-aos="fade-up" data-aos-delay="500">
         <Newsletter />
       </div> */}
+
+      <PartnerSection/>
      
     </>
   );

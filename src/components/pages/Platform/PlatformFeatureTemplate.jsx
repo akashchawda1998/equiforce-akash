@@ -291,7 +291,7 @@ const FeatureSection = ({ feature, index ,id}) => {
             className="inline-flex items-center gap-2 w-fit"
           >
             <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#d97706]/10 text-[#d97706] text-sm font-black border border-[#d97706]/20">
-              {String(index + 1).padStart(2, "0")}
+              {String(index + 1).padStart(2,)}
             </span>
             <span className="text-[#d97706] text-sm font-semibold tracking-widest uppercase">
               {feature.features[0]?.tag || ""}
