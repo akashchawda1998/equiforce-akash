@@ -11,7 +11,7 @@ const AboutHero = () => {
       </h1>
 
       <p className="text-gray-600 max-w-4xl mx-auto font-medium" >
-EquiForce Solutions empowers investment management firms with  <span className="text-[#FF8000]"> purpose-built </span> technology — delivering precision-engineered solutions for investment operations & reconciliation, performance measurement, GIPS composite management, and AI-powered investment reporting. More than a software provider, we are a  <span className="text-[#FF8000]">strategic partner and consultants</span> with nearly three decades of investment operations expertise — integrating <span className="text-[#FF8000]">AI technologies</span> that enable our clients to operate with accuracy, confidence, and a competitive edge.
+EquiForce Solutions empowers investment management firms with  <span className="text-[#FF8000]"> purpose-built </span> technology - delivering precision-engineered solutions for investment operations & reconciliation, performance measurement, GIPS composite management, and AI-powered investment reporting. More than a software provider, we are a  <span className="text-[#FF8000]">strategic partner and consultants</span> with nearly three decades of investment operations expertise - integrating <span className="text-[#FF8000]">AI technologies</span> that enable our clients to operate with accuracy, confidence, and a competitive edge.
 
       </p>
 
