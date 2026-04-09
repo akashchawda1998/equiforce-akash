@@ -112,7 +112,7 @@ const team = [
   {
 
     name: "Edmund J. Woo",
-email:"Edmund@equiforcesolutions.com",
+email:"edmund@equiforcesolutions.com",
     role: "Head of Client Relations",
 
     img: img5,
