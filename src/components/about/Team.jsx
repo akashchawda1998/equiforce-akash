@@ -92,7 +92,7 @@ const team = [
   {
 
     name: "Steve",
-    email:"Steve@equiforcesolutions.com",
+    email:"steve@equiforcesolutions.com",
     role: "Head of Business Development",
 
     img: img4,
