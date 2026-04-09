@@ -100,13 +100,13 @@ const Footer = () => {
                 Get in Touch
               </h4>
               <ul className="space-y-3">
-                <li className="flex items-center gap-3 justify-center md:justify-start group">
+                <li className="flex items-center gap-3  md:justify-start group">
                   <FiMail className="text-[#d97706]" />
                   <a href="mailto:contact@equiforcesolutions.com" className="group-hover:text-[#d97706] transition-colors">
                     contact@equiforcesolutions.com
                   </a>
                 </li>
-                <li className="flex items-center gap-3 justify-center md:justify-start group">
+                <li className="flex items-center gap-3 md:justify-start group">
                   <FiPhone className="text-[#d97706]" />
                   <a href="tel:+16268388118" className="group-hover:text-[#d97706] transition-colors">
                     +1-626-838-8118
