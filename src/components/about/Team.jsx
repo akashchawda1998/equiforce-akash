@@ -47,7 +47,8 @@ const team = [
     name: "Pushpendra Thakur",
     email: "pushpendra@equiforcesolutions.com",
 
-    role: "Chief Technology Officer",
+        role: "Advisory CTO",
+
 
     img: img2,
 
