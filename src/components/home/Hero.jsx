@@ -1,5 +1,5 @@
 import React from "react";
-import heroVideo from "../../assets/video/Heroivideo.mp4";
+import heroVideo from "../../assets/video/bgvideo.mp4";
 import { Link } from "react-router-dom";
 
 function Hero() {
