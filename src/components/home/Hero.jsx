@@ -1,11 +1,44 @@
-import React, { useRef} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import heroVideo from "../../assets/video/bgvideo.mp4";
 import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
 
 function Hero() {
   // const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlayWithSound = () => {
+      video.muted = false;
+      video
+        .play()
+        .then(() => {
+          setIsMuted(false);
+        })
+        .catch(() => {
+          video.muted = true;
+        });
+    };
+
+    window.addEventListener("mousemove", tryPlayWithSound);
+    window.addEventListener("touchstart", tryPlayWithSound);
+
+    return () => {
+      window.removeEventListener("mousemove", tryPlayWithSound);
+      window.removeEventListener("touchstart", tryPlayWithSound);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
 
   return (
     <div className="relative w-full bg-gradient-to-b from-[#000E24] to-[#0f2f5c] overflow-hidden">
@@ -43,11 +76,11 @@ function Hero() {
         {/* RIGHT SIDE VIDEO CARD */}
         <div className="w-full lg:w-1/2 flex justify-center relative z-10">
           <div className="relative w-full max-w-lg">
-            {/* Glassmorphic Video Card */}
             <div className="relative rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl overflow-hidden group">
               <video
                 ref={videoRef}
                 autoPlay
+                muted
                 loop
                 playsInline
                 className="w-full h-auto sm:h-[289px] object-contain transition-transform duration-500 hover:scale-105"
@@ -55,8 +88,18 @@ function Hero() {
                 <source src={heroVideo} type="video/mp4" />
               </video>
 
-              
-              {/* Subtle Neon Glow */}
+              {/* Mute/Unmute Button (Top Right) */}
+              <button
+                onClick={toggleMute}
+                className="hidden absolute top-4 right-4 z-20 p-2.5 rounded-full bg-white/5 backdrop-blur-sm border border-[#d97706]/40 text-[#d97706] hover:bg-[#d97706]/20 transition-all active:scale-90"
+              >
+                {isMuted ? (
+                  <VolumeX size={18} strokeWidth={2.5} />
+                ) : (
+                  <Volume2 size={18} strokeWidth={2.5} />
+                )}
+              </button>
+
               <div className="absolute inset-0 pointer-events-none rounded-3xl border border-gradient-to-tr from-[#d97706]/50 to-[#3b82f6]/50 opacity-50 animate-pulse"></div>
             </div>
           </div>
