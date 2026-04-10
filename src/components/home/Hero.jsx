@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
 
 function Hero() {
-  const [isMuted, setIsMuted] = useState(true);
+  // const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
+  // const toggleMute = () => {
+  //   if (videoRef.current) {
+  //     videoRef.current.muted = !videoRef.current.muted;
+  //     setIsMuted(videoRef.current.muted);
+  //   }
+  // };
   return (
     <div className="relative w-full bg-gradient-to-b from-[#000E24] to-[#0f2f5c] overflow-hidden">
       {/* Subtle Animated Background Lines */}
@@ -54,7 +54,7 @@ function Hero() {
               <video
                 ref={videoRef}
                 autoPlay
-                muted
+                // muted
                 loop
                 playsInline
                 className="w-full h-auto sm:h-[289px] object-contain transition-transform duration-500 hover:scale-105"
@@ -63,7 +63,7 @@ function Hero() {
               </video>
 
               {/* Mute/Unmute Button */}
-              <button
+              {/* <button
                 onClick={toggleMute}
                 className="absolute bottom-3 right-3 z-20 p-2.5 rounded-full bg-white/5   text-[#d97706] hover:bg-[#d97706]/10 hover:border-[#d97706] transition-all duration-300 active:scale-90"
                 title={isMuted ? "Unmute" : "Mute"}
@@ -73,7 +73,7 @@ function Hero() {
                 ) : (
                   <Volume2 size={18} strokeWidth={2.5} />
                 )}
-              </button>
+              </button> */}
               {/* Subtle Neon Glow */}
               <div className="absolute inset-0 pointer-events-none rounded-3xl border border-gradient-to-tr from-[#d97706]/50 to-[#3b82f6]/50 opacity-50 animate-pulse"></div>
             </div>
