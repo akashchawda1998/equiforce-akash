@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef} from "react";
 import heroVideo from "../../assets/video/bgvideo.mp4";
 import { Link } from "react-router-dom";
 import { Volume2, VolumeX } from "lucide-react";
