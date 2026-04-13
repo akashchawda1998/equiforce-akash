@@ -59,7 +59,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors whitespace-nowrap">
-                    GIPS Composite Management
+                     GIPS-focused Composite Management
                   </Link>
                 </li>
                 <li>
@@ -119,26 +119,43 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-[13px]">
+      <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-[13px]">
 
-          {/* COPYRIGHT */}
-          <p className="text-center md:text-left">
-            ©2026 <span className="font-semibold text-gray-600">EquiForce Solutions</span> · All rights reserved.
-          </p>
+  {/* LEFT: COPYRIGHT */}
+  <p className="text-center md:text-left">
+    ©2026 <span className="font-semibold text-gray-600">EquiForce Solutions</span> · All rights reserved.
+  </p>
 
-          {/* SCROLL BUTTON */}
-          <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="w-11 h-11 flex items-center justify-center rounded-full 
-              bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg 
-              hover:scale-110 transition-all duration-300"
-            >
-              <FiArrowUp size={18} />
-            </button>
-          </div>
+  {/* CENTER: LINKS */}
+  <div className="flex items-center gap-2 text-gray-500">
+    <Link
+      to="/privacy-policy"
+      className="hover:text-[#d97706] transition-colors"
+    >
+      Privacy Policy
+    </Link>
+    <span className="hidden md:block">|</span>
+    <Link
+      to="/terms-of-service"
+      className="hover:text-[#d97706] transition-colors"
+    >
+      Terms of Service
+    </Link>
+  </div>
 
-        </div>
+  {/* SCROLL BUTTON */}
+  <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
+    <button
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="w-11 h-11 flex items-center justify-center rounded-full 
+      bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg 
+      hover:scale-110 transition-all duration-300"
+    >
+      <FiArrowUp size={18} />
+    </button>
+  </div>
+
+</div>
       </div>
     </footer>
   );

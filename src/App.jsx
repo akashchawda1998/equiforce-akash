@@ -23,6 +23,7 @@ import {
 } from "./components/pages/Platform/platformData";
 import PrivacyNotice from "./components/pages/Notice";
 import Consultant from "./components/about/Consultant";
+import TermsOfService from "./components/pages/TermsOfService";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -68,7 +69,8 @@ function App() {
               <Route path="/signin" element={<SignIn />} />
               <Route path="/platform" element={<Platform />} />
               <Route path="/careers" element={<Careers />} />
-              <Route path="/policy" element={<PrivacyNotice />} />
+              <Route path="/privacy-policy" element={<PrivacyNotice />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/consultant" element={<Consultant />} />
 
               <Route path="/performance-measurement" element={<PlatformFeatureTemplate data={performanceData} />} />

@@ -50,19 +50,21 @@ const ContactPage = () => {
                 <div className="relative">
                   <select className={`${inputStyle} appearance-none pr-10`}>
                     <option>Select Service</option>
+                    <option>Investment Operations & Reconciliation</option>
                     <option>Performance Measurement</option>
                     <option>GIPS Composite Management</option>
-                    <option>Investment Operations</option>
-                    <option>AI-Powered Reporting</option>
+                    <option>AI-Powered Investment Reporting</option>
+                    <option>Consulting</option>
+
                   </select>
                   <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 w-5 h-5 pointer-events-none" />
                 </div>
 
-                <textarea
-                  rows="4"
-                  placeholder="How can we help you?"
-                  className="w-full p-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-cyan-500 transition-all"
-                />
+               <textarea
+  rows="4"
+  placeholder="How can we help you?"
+  className="w-full p-4 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-cyan-500 transition-all text-base"
+/>
 
                 <button
                   type="submit"

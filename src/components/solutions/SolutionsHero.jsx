@@ -20,7 +20,7 @@ const SolutionsHero = () => {
         {/* Subtext */}
         <p className="text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8">
           EquiForce provides an integrated platform to manage investment data,
-          track portfolio performance, ensure GIPS compliance, and generate
+          track portfolio performance, ensure GIPS-focused compliance, and generate
           accurate, audit-ready reports — all in one unified system.
         </p>
 

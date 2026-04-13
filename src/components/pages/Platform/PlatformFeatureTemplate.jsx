@@ -70,7 +70,7 @@ const performanceData = {
 const gipsData = {
     id:"performance",
   badge: "Compliance",
-  titleStart: "GIPS Composite",
+  titleStart: " GIPS-focused Composite",
   titleHighlight: "Management",
   heroDescription:
     "Structured composite construction and maintenance built for investment operations workflows.",

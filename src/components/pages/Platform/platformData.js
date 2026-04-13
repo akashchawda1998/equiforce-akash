@@ -31,7 +31,7 @@ export const performanceData = {
 export const gipsData = {
   id: "gips",
   badge: "Compliance",
-  titleStart: "GIPS Composite",
+  titleStart: " GIPS-focused Composite",
   titleHighlight: "Management",
   heroDescription:
     "Structured composite construction and maintenance built for investment operations workflows.",
@@ -39,7 +39,7 @@ export const gipsData = {
   features: [
     {
       tag: "Construction",
-      title: "GIPS Composite Management",
+      title: " GIPS-focused Composite Management",
       description:
         "Structured composite construction and maintenance built for investment operations workflows.",
       emoji: "🏗️",

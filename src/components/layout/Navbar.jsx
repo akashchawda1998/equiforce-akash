@@ -114,7 +114,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                              GIPS Composite Management
+                               GIPS-focused Composite Management
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">End-to-end composite management — built to deliver reliable, compliant performance reporting.</p>
                           </Link>
@@ -265,7 +265,7 @@ const Navbar = () => {
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
                     <Link to="/performance-measurement#operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link>
                     <Link to="/performance-measurement#performance" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
-                    <Link to="/performance-measurement#gips" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS Composite Management</Link>
+                    <Link to="/performance-measurement#gips" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">GIPS-focused Composite Management</Link>
                     <Link to="/performance-measurement#ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
                     <Link to="/consultant" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Consulting Solutions
 </Link>
