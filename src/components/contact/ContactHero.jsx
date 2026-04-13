@@ -155,7 +155,7 @@ const ContactPage = () => {
     rows="4"
     placeholder="How can we help you?"
     onChange={handleChange}
-    className="w-full p-4 border border-gray-300 rounded-md"
+    className="w-full text-black p-4 border border-gray-300 rounded-md"
   />
 
   <button className="w-full md:w-auto bg-[#d97706] hover:bg-[#b46002] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md active:scale-95" type="submit">Submit Inquiry</button>
