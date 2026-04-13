@@ -10,10 +10,7 @@ const GipsDisclaimer = () => {
             GIPS <span className="text-[#d97706]">Disclaimer</span>
           </h1>
 
-          <p className="mt-4 text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Standardized language for platform, marketing, consulting &
-            documentation
-          </p>
+      
         </div>
       </section>
 
@@ -21,21 +18,13 @@ const GipsDisclaimer = () => {
       <section className="w-full px-3 sm:px-4 md:px-10 lg:px-20 py-8 sm:py-10 md:py-12">
         <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-10 space-y-6 sm:space-y-8 text-gray-700 leading-relaxed text-sm sm:text-[15px] md:text-base">
 
-          <p>
-            This page provides standardized GIPS® disclaimer language for use
-            across your platform, marketing materials, consulting engagements,
-            and client-facing documentation. Review with your attorney and the
-            CFA Institute trademark guidelines before final use.
-          </p>
+     
 
           {/* SECTION */}
     
           {/* SECTION */}
           <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              1. Website & Marketing Materials
-            </h2>
-
+           
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
               <p>
                 Equiforce Solutions provides software and consulting services to
