@@ -23,7 +23,7 @@ const Footer = () => {
 
           {/* LEFT CTA */}
           <div className="md:col-span-4 text-center md:text-left">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold text-[#000E24] leading-tight mb-6">
+            <h2 className="text-2xl sm:text-2xl md:text-2xl font-bold text-[#000E24] leading-tight mb-6">
               Transform Your Investment <br className="hidden sm:block" />
               Operations with <br className="hidden sm:block" />
               EquiForce Solutions
@@ -31,7 +31,7 @@ const Footer = () => {
 
             <Link
               to="/contact"
-              className="inline-block bg-[#d97706] hover:shadow-xl hover:shadow-orange-500/20 text-white px-7 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1"
+              className="inline-block bg-[#d97706] hover:shadow-xl hover:shadow-orange-500/20 text-white px-7 py-2 rounded-xl font-semibold transition-all hover:-translate-y-1"
             >
               Try for Free
             </Link>
