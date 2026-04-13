@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
 const ContactPage = () => {
-
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,9 +25,11 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // disable button
+
     try {
       const res = await fetch(
-        "https://74er-2405-201-300b-a0f0-7914-2d6a-87de-48cf.ngrok-free.app/api/email/contact",
+        "https://745c-2405-201-300b-a0f0-7914-2d6a-87de-48cf.ngrok-free.app/api/email/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -41,22 +43,29 @@ const ContactPage = () => {
           }),
         }
       );
+
       const data = await res.json();
       console.log("Success:", data);
+
       toast.success("Enquiry Submitted Successfully !");
+
+      setTimeout(() => {
+        window.location.href = "/contact";
+      }, 4000);
+
     } catch (error) {
       console.error("Error:", error);
       toast.error("Failed to send email");
+    } finally {
+      setLoading(false); // re-enable button
     }
   };
-
 
   const inputStyle =
     "w-full h-12 px-4 border border-gray-300 rounded-md bg-white text-gray-700 placeholder:text-gray-400 outline-none"; // Added text-base to prevent iOS zoom
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Toaster position="bottom-right"/>
 
       {/* HERO SECTION - Adjusted padding and removed fixed height */}
       <section className="relative bg-[#0B2341] text-white pt-24 pb-20 md:pt-30 md:pb-40 overflow-hidden">
@@ -147,8 +156,17 @@ const ContactPage = () => {
                   className="w-full text-black p-4 border border-gray-300 rounded-md"
                 />
 
-                <button className="w-full md:w-auto bg-[#d97706] hover:bg-[#b46002] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md active:scale-95" type="submit">Submit Inquiry</button>
-              </form>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`w-full md:w-auto px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md
+    ${loading
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-[#d97706] hover:bg-[#b46002] text-white active:scale-95"}
+  `}
+                >
+                  {loading ? "Submitting..." : "Submit Inquiry"}
+                </button>              </form>
             </div>
 
             {/* RIGHT: LOCATIONS & DIRECT EMAILS */}
