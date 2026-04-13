@@ -45,7 +45,7 @@ const FeatureSection = ({ item, index }) => {
   const isEven = index % 2 === 0;
 
   return (
-    <div id={item.id} className="relative md:py-24">
+    <div id={item.id} className="relative md:pt-20 pb-15">
 
       <div
         className={`grid md:grid-cols-2 gap-10 lg:gap-20 items-center ${
