@@ -125,7 +125,7 @@ const DashboardPreview = () => {
         {/* Image Section */}
         <div className="relative max-w-5xl mx-auto">
 
-          <div className="relative z-10  rounded-2xl overflow-hidden border border-gray-100">
+          <div className="relative z-10 overflow-hidden">
             <img
               src={SinglePlatformImg}
               alt="Dashboard"
