@@ -149,21 +149,7 @@ const GipsDisclaimer = () => {
             </ul>
           </div>
 
-          {/* CONTACT */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-2">
-              Need Help?
-            </h2>
-
-            <p>
-              When in doubt, contact CFA Institute's trademarks team directly
-              at:
-            </p>
-
-            <p className="mt-2 text-[#d97706] font-medium break-all">
-              trademark@cfainstitute.org
-            </p>
-          </div>
+       
 
         </div>
       </section>
