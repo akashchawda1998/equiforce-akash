@@ -29,29 +29,11 @@ const GipsDisclaimer = () => {
           </p>
 
           {/* SECTION */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              1. Platform UI — Dashboard & System Footer
-            </h2>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-              <p>
-                Equiforce Solutions software is designed to support firms in
-                implementing the Global Investment Performance Standards
-                (GIPS®). Use of this platform does not constitute GIPS
-                compliance or GIPS verification. GIPS compliance is the sole
-                responsibility of the investment firm. GIPS® is a registered
-                trademark of CFA Institute. CFA Institute does not endorse or
-                promote this software, nor does it warrant the accuracy or
-                quality of content contained herein.
-              </p>
-            </div>
-          </div>
-
+    
           {/* SECTION */}
           <div>
             <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              2. Website & Marketing Materials
+              1. Website & Marketing Materials
             </h2>
 
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
@@ -67,87 +49,7 @@ const GipsDisclaimer = () => {
             </div>
           </div>
 
-          {/* SECTION */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              3. Consulting Engagement Disclaimer
-            </h2>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-              <p>
-                The services provided by Equiforce Solutions are intended to
-                assist the Client in developing, documenting, and implementing
-                processes aligned with the GIPS® standards. Equiforce Solutions
-                is not providing a legal opinion, compliance certification, or
-                GIPS verification. GIPS compliance is the responsibility of the
-                Client. Equiforce Solutions strongly recommends that the Client
-                engage an independent, qualified GIPS verifier to assess
-                compliance. GIPS® is a registered trademark of CFA Institute.
-                CFA Institute has not been involved in the preparation of, and
-                does not endorse or review, the services provided hereunder.
-              </p>
-            </div>
-          </div>
-
-          {/* SECTION */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              4. Report & Deliverable Footer
-            </h2>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-              <p>
-                This document was prepared by Equiforce Solutions for
-                informational and implementation support purposes only. It does
-                not constitute GIPS verification or a compliance opinion.
-                GIPS® is a registered trademark of CFA Institute.
-              </p>
-            </div>
-          </div>
-
-          {/* SECTION */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              5. Sales / Proposal Disclaimer
-            </h2>
-
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
-              <p>
-                Equiforce Solutions offers SaaS technology and advisory services
-                to support GIPS® implementation. We do not perform GIPS
-                verification services. Our platform and consulting are designed
-                to help your firm build and maintain a compliant infrastructure;
-                ultimate compliance determination requires independent
-                verification. GIPS® is a registered trademark of CFA Institute.
-              </p>
-            </div>
-          </div>
-
-          {/* LIST */}
-          <div>
-            <h2 className="font-bold text-base sm:text-lg text-gray-900 mb-3">
-              6. What You Must Not Claim
-            </h2>
-
-            <ul className="list-disc pl-5 sm:pl-6 space-y-2">
-              <li>
-                States or implies your software guarantees or certifies GIPS
-                compliance.
-              </li>
-              <li>
-                Uses “GIPS Verified” or “GIPS Certified” in reference to your
-                product.
-              </li>
-              <li>
-                Implies CFA Institute endorses, partners with, or has reviewed
-                your platform.
-              </li>
-              <li>
-                Uses GIPS® as part of your company or product name without CFA
-                Institute written approval.
-              </li>
-            </ul>
-          </div>
+         
 
        
 
