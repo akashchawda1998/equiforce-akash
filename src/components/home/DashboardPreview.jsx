@@ -1,4 +1,4 @@
-import SinglePlatformImg from "../../assets/images/bgdashboard.png";
+import SinglePlatformImg from "../../assets/images/bgdashboard1.png";
 
 const NAVY = "#000E24";
 

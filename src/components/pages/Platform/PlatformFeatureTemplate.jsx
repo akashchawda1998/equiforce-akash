@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import AIReporting from "./../../../assets/images/AIReporting.png";
-import PerformanceManagement from "./../../../assets/images/PerformanceManagement.png";
-import GIPS from "./../../../assets/images/GIPS.png";
-import Recon from "./../../../assets/images/recon.png";
+import AIReporting from "./../../../assets/images/AIReporting1.png";
+import PerformanceManagement from "./../../../assets/images/PerformanceManagement1.png";
+import GIPS from "./../../../assets/images/GIPS1.png";
+import Recon from "./../../../assets/images/recon1.png";
 
 // ─── DATA IN YOUR EXACT SEQUENCE ───────────────
 
