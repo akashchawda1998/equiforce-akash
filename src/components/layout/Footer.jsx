@@ -31,39 +31,54 @@ const Footer = () => {
 
             <Link
               to="/contact"
-              className="inline-block bg-[#d97706] 
-              hover:shadow-xl hover:shadow-orange-500/20 text-white px-7 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1"
+              className="inline-block bg-[#d97706] hover:shadow-xl hover:shadow-orange-500/20 text-white px-7 py-3.5 rounded-xl font-semibold transition-all hover:-translate-y-1"
             >
               Try for Free
             </Link>
           </div>
 
           {/* RIGHT */}
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-y-10  text-gray-600 text-sm ">
+          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-gray-600 text-sm">
 
             {/* Solutions */}
-            <div className="min-w-0">
+            <div className="min-w-0 w-full">
               <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
                 Solutions
               </h4>
+
               <ul className="space-y-3">
                 <li>
-                  <Link to="/performance-measurement#operations" className="hover:text-[#d97706] transition-colors whitespace-nowrap ">
+                  <Link
+                    to="/performance-measurement#operations"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     Investment Operations & Reconciliation
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/performance-measurement#performance" className="hover:text-[#d97706] transition-colors whitespace-nowrap ">
+                  <Link
+                    to="/performance-measurement#performance"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     Performance Measurement
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/performance-measurement#gips" className="hover:text-[#d97706] transition-colors whitespace-nowrap">
-                     GIPS-focused Composite Management
+                  <Link
+                    to="/performance-measurement#gips"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
+                    GIPS-focused Composite Management
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/performance-measurement#ai-reporting" className="hover:text-[#d97706] transition-colors ">
+                  <Link
+                    to="/performance-measurement#ai-reporting"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     AI-Powered Investment Reporting
                   </Link>
                 </li>
@@ -71,50 +86,73 @@ const Footer = () => {
             </div>
 
             {/* Company */}
-            <div className="min-w-0  md:text-center ">
-              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5 ">
+            <div className="min-w-0 w-full">
+              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
                 Company
               </h4>
+
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about" className="hover:text-[#d97706] transition-colors">
+                  <Link
+                    to="/about"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     About Us
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/team" className="hover:text-[#d97706] transition-colors">
+                  <Link
+                    to="/team"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     Our Team
                   </Link>
                 </li>
 
-                 <li>
-                  <Link to="/about#partner" className="hover:text-[#d97706] transition-colors">
+                <li>
+                  <Link
+                    to="/about#partner"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
                     Our Partners
                   </Link>
                 </li>
+
                 <li>
-                  <Link to="/contact" className="hover:text-[#d97706] transition-colors">
-                    Contact&nbsp;&nbsp;
+                  <Link
+                    to="/contact"
+                    className="hover:text-[#d97706] transition-colors"
+                  >
+                    Contact
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Contact */}
-            <div className="min-w-0">
+            {/* Get in Touch */}
+            <div className="min-w-0 w-full">
               <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
                 Get in Touch
               </h4>
+
               <ul className="space-y-3">
-                <li className="flex items-center gap-3  md:justify-start group">
-                  <FiMail className="text-[#d97706]" />
-                  <a href="mailto:contact@equiforcesolutions.com" className="group-hover:text-[#d97706] transition-colors">
+                <li className="flex items-center gap-3 group">
+                  <FiMail className="text-[#d97706] shrink-0" />
+                  <a
+                    href="mailto:contact@equiforcesolutions.com"
+                    className="group-hover:text-[#d97706] transition-colors break-all"
+                  >
                     contact@equiforcesolutions.com
                   </a>
                 </li>
-                <li className="flex items-center gap-3 md:justify-start group">
-                  <FiPhone className="text-[#d97706]" />
-                  <a href="tel:+16268388118" className="group-hover:text-[#d97706] transition-colors">
+
+                <li className="flex items-center gap-3 group">
+                  <FiPhone className="text-[#d97706] shrink-0" />
+                  <a
+                    href="tel:+16268388118"
+                    className="group-hover:text-[#d97706] transition-colors"
+                  >
                     +1-626-838-8118
                   </a>
                 </li>
@@ -125,43 +163,51 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-      <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-[13px]">
+        <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-[13px]">
 
-  {/* LEFT: COPYRIGHT */}
-  <p className="text-center md:text-left">
-    ©2026 <span className="font-semibold text-gray-600">EquiForce Solutions</span> · All rights reserved.
-  </p>
+          {/* LEFT */}
+          <p className="text-center md:text-left">
+            ©2026{" "}
+            <span className="font-semibold text-gray-600">
+              EquiForce Solutions
+            </span>{" "}
+            · All rights reserved.
+          </p>
 
-  {/* CENTER: LINKS */}
-  <div className="flex items-center gap-2 text-gray-500">
-    <Link
-      to="/privacy-policy"
-      className="hover:text-[#d97706] transition-colors"
-    >
-      Privacy Policy
-    </Link>
-    <span className="hidden md:block">|</span>
-    <Link
-      to="/terms-of-service"
-      className="hover:text-[#d97706] transition-colors"
-    >
-      Terms of Service
-    </Link>
-  </div>
+          {/* CENTER */}
+          <div className="flex items-center gap-2 text-gray-500">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-[#d97706] transition-colors"
+            >
+              Privacy Policy
+            </Link>
 
-  {/* SCROLL BUTTON */}
-  <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
-    <button
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="w-11 h-11 flex items-center justify-center rounded-full 
-      bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg 
-      hover:scale-110 transition-all duration-300"
-    >
-      <FiArrowUp size={18} />
-    </button>
-  </div>
+            <span className="hidden md:block">|</span>
 
-</div>
+            <Link
+              to="/terms-of-service"
+              className="hover:text-[#d97706] transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
+
+          {/* SCROLL BUTTON */}
+          {show && (
+            <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
+              <button
+                onClick={() =>
+                  window.scrollTo({ top: 0, behavior: "smooth" })
+                }
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg hover:scale-110 transition-all duration-300"
+              >
+                <FiArrowUp size={18} />
+              </button>
+            </div>
+          )}
+        </div>
+
       </div>
     </footer>
   );
