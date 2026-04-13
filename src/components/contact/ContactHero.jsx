@@ -3,11 +3,11 @@ import { MapPin, ChevronDown, Mail } from "lucide-react";
 import contactimg from "../../assets/images/bg.png";
 import bgchatboat from "../../assets/images/bgchat.jpeg";
 import { Link } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
-
 const ContactPage = () => {
 
-   const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -25,42 +25,25 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const res = await fetch(
-        "https://745c-2405-201-300b-a0f0-7914-2d6a-87de-48cf.ngrok-free.app/api/email/send",
+        "https://74er-2405-201-300b-a0f0-7914-2d6a-87de-48cf.ngrok-free.app/api/email/contact",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            to: "akashchawda1998@gmail.com@",
-            subject: "New Inquiry from Equoforce",
-            text: `
-              Name: ${formData.firstName} ${formData.lastName}
-              Email: ${formData.email}
-              Company: ${formData.company}
-              Service: ${formData.service}
-              Message: ${formData.message}
-            `,
-            html: `
-              <h2>New Inquiry</h2>
-              <p><b>Name:</b> ${formData.firstName} ${formData.lastName}</p>
-              <p><b>Email:</b> ${formData.email}</p>
-              <p><b>Company:</b> ${formData.company}</p>
-              <p><b>Service:</b> ${formData.service}</p>
-              <p><b>Message:</b> ${formData.message}</p>
-            `,
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            businessEmail: formData.email,
+            companyName: formData.company,
+            service: formData.service,
+            message: formData.message,
           }),
         }
       );
-
       const data = await res.json();
       console.log("Success:", data);
-    toast.success("Enquiry Submitted Successfully !");
-
-
+      toast.success("Enquiry Submitted Successfully !");
     } catch (error) {
       console.error("Error:", error);
       toast.error("Failed to send email");
@@ -69,10 +52,12 @@ const ContactPage = () => {
 
 
   const inputStyle =
-    "w-full h-12 px-4 border border-gray-300 rounded-md bg-white text-gray-700 placeholder:text-gray-400 outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all text-base"; // Added text-base to prevent iOS zoom
+    "w-full h-12 px-4 border border-gray-300 rounded-md bg-white text-gray-700 placeholder:text-gray-400 outline-none"; // Added text-base to prevent iOS zoom
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      <Toaster position="bottom-right"/>
+
       {/* HERO SECTION - Adjusted padding and removed fixed height */}
       <section className="relative bg-[#0B2341] text-white pt-24 pb-20 md:pt-30 md:pb-40 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
@@ -103,63 +88,67 @@ const ContactPage = () => {
                 Send us a Message
               </h2>
 
-           <form className="space-y-5" onSubmit={handleSubmit}>
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <input
-      name="firstName"
-      type="text"
-      placeholder="First Name *"
-      className={inputStyle}
-      onChange={handleChange}
-    />
-    <input
-      name="lastName"
-      type="text"
-      placeholder="Last Name *"
-      className={inputStyle}
-      onChange={handleChange}
-    />
-  </div>
+              <form className="space-y-5" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <input
+                    name="firstName"
+                    type="text"
+                    placeholder="First Name *"
+                    className={inputStyle}
+                    onChange={handleChange}
+                  />
+                  <input
+                    name="lastName"
+                    type="text"
+                    placeholder="Last Name *"
+                    className={inputStyle}
+                    onChange={handleChange}
+                  />
+                </div>
 
-  <input
-    name="email"
-    type="email"
-    placeholder="Business Email *"
-    className={inputStyle}
-    onChange={handleChange}
-  />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Business Email *"
+                  className={inputStyle}
+                  onChange={handleChange}
+                />
 
-  <input
-    name="company"
-    type="text"
-    placeholder="Company Name *"
-    className={inputStyle}
-    onChange={handleChange}
-  />
+                <input
+                  name="company"
+                  type="text"
+                  placeholder="Company Name *"
+                  className={inputStyle}
+                  onChange={handleChange}
+                />
 
-  <select
-    name="service"
-    className={`${inputStyle} appearance-none pr-10`}
-    onChange={handleChange}
-  >
-    <option value="">Select Service</option>
-    <option>Investment Operations & Reconciliation</option>
-    <option>Performance Measurement</option>
-    <option>GIPS-focused Composite Management</option>
-    <option>AI-Powered Investment Reporting</option>
-    <option>Consulting</option>
-  </select>
+                <select
+                  name="service"
+                  className={`${inputStyle} appearance-none pr-10`}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled selected hidden>
+                    Select Service
+                  </option>
 
-  <textarea
-    name="message"
-    rows="4"
-    placeholder="How can we help you?"
-    onChange={handleChange}
-    className="w-full text-black p-4 border border-gray-300 rounded-md"
-  />
+                  <option>Investment Operations & Reconciliation</option>
+                  <option>Performance Measurement</option>
+                  <option>GIPS-focused Composite Management</option>
+                  <option>AI-Powered Investment Reporting</option>
+                  <option>Consulting</option>
+                </select>
 
-  <button className="w-full md:w-auto bg-[#d97706] hover:bg-[#b46002] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md active:scale-95" type="submit">Submit Inquiry</button>
-</form>
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="How can we help you?"
+                  onChange={handleChange}
+                  className="w-full text-black p-4 border border-gray-300 rounded-md"
+                />
+
+                <button className="w-full md:w-auto bg-[#d97706] hover:bg-[#b46002] text-white px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md active:scale-95" type="submit">Submit Inquiry</button>
+              </form>
             </div>
 
             {/* RIGHT: LOCATIONS & DIRECT EMAILS */}
