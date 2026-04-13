@@ -25,7 +25,7 @@ function Hero() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight  lg:text-left">
             Your Strategic <span className="text-[#d97706]"> Partner </span>in
             <br className="hidden sm:block" />
-             <span> Investment Ops, Performance & GIPS</span>
+             <span> Investment Ops, Performance & GIPS-Focused</span>
           </h1>
           <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
