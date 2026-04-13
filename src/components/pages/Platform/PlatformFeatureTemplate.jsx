@@ -74,12 +74,12 @@ const FeatureSection = ({ item, index }) => {
           </p>
 
           {/* LINK */}
-          <Link
+          {/* <Link
             to="/contact"
             className="text-[#d97706] font-bold text-sm"
           >
             Explore →
-          </Link>
+          </Link> */}
         </div>
 
         {/* IMAGE SIDE */}
