@@ -36,9 +36,7 @@ const Footer = () => {
           </div>
 
           {/* RIGHT GRID (4-4-2-2) */}
-          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12  text-gray-600 text-sm">
-            {/* Solutions (4) */}
-            <div className="md:col-span-5">
+<div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 sm:gap-10 md:gap-0 text-gray-600 text-sm">            <div className="md:col-span-5 md:mb-2">
               <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
                 Solutions
               </h4>
