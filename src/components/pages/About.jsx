@@ -8,6 +8,7 @@ import icon1 from "../../assets/images/ani-image1.webp";
 import icon2 from "../../assets/images/ani-image2.webp";
 import icon3 from "../../assets/images/ani-image3.webp";
 import icon4 from "../../assets/images/ani-image4.webp";
+import PartnerSection from "../home/PartnerSection";
 
 const About = () => {
   return (
@@ -32,6 +33,9 @@ const About = () => {
       <div data-aos="fade-up" data-aos-delay="250">
         <AboutFeatures />
       </div>
+
+
+      <PartnerSection/>
 
       {/* Final section softer */}
      

@@ -55,7 +55,6 @@ const Home = () => {
         <Newsletter />
       </div> */}
 
-      <PartnerSection/>
      
     </>
   );
