@@ -19,11 +19,12 @@ import {
   performanceData,
   gipsData,
   operationsData,
-  aiReportingData
+  aiReportingData,
 } from "./components/pages/Platform/platformData";
 import PrivacyNotice from "./components/pages/Notice";
 import Consultant from "./components/about/Consultant";
 import TermsOfService from "./components/pages/TermsOfService";
+import GipsDisclaimer from "./components/pages/GipsDisclaimer";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -71,12 +72,25 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy-policy" element={<PrivacyNotice />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/gips-focused" element={<GipsDisclaimer />} />
               <Route path="/consultant" element={<Consultant />} />
 
-              <Route path="/performance-measurement" element={<PlatformFeatureTemplate data={performanceData} />} />
-              <Route path="/gips-composite" element={<PlatformFeatureTemplate data={gipsData} />} />
-              <Route path="/investment-operations" element={<PlatformFeatureTemplate data={operationsData} />} />
-              <Route path="/ai-reporting" element={<PlatformFeatureTemplate data={aiReportingData} />} />
+              <Route
+                path="/performance-measurement"
+                element={<PlatformFeatureTemplate data={performanceData} />}
+              />
+              <Route
+                path="/gips-composite"
+                element={<PlatformFeatureTemplate data={gipsData} />}
+              />
+              <Route
+                path="/investment-operations"
+                element={<PlatformFeatureTemplate data={operationsData} />}
+              />
+              <Route
+                path="/ai-reporting"
+                element={<PlatformFeatureTemplate data={aiReportingData} />}
+              />
             </Routes>
           </LayoutWrapper>
         </BrowserRouter>
