@@ -139,8 +139,16 @@ const Footer = () => {
             <Link to="/terms-of-service" className="hover:text-[#d97706]">
               Terms of Service
             </Link>
-          </div>
+            <span className="hidden md:block">|</span>
 
+             <Link to="/gips-focused" className="hover:text-[#d97706]">
+              GIPS-focused
+            </Link>
+
+            
+          </div>
+  
+          
           {/* Scroll to Top */}
           {show && (
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
