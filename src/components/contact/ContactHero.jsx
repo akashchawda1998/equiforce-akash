@@ -52,7 +52,7 @@ const ContactPage = () => {
                     <option>Select Service</option>
                     <option>Investment Operations & Reconciliation</option>
                     <option>Performance Measurement</option>
-                    <option>GIPS Composite Management</option>
+                    <option>GIPS-focused Composite Management</option>
                     <option>AI-Powered Investment Reporting</option>
                     <option>Consulting</option>
 

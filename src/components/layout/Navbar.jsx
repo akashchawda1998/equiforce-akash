@@ -78,10 +78,10 @@ const Navbar = () => {
                      FIX 2: Reduced width to 600px for a better look without the sidebar
                   */
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 cursor-default z-50">
-                    <div className="w-[740px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
+                    <div className="w-[780px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
 
                       {/* Right Column - Now the Main Content */}
-                      <div className="bg-white p-10 flex flex-col justify-between">
+                      <div className="bg-white p-8 flex flex-col justify-between">
                         <div className="grid grid-cols-2 gap-x-10 gap-y-8">
 
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                             className="group block"
                           >
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                               GIPS-focused Composite Management
+                               GIPS-Focused Composite Management
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">End-to-end composite management — built to deliver reliable, compliant performance reporting.</p>
                           </Link>

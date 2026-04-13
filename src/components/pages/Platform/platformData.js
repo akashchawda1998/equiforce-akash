@@ -28,35 +28,7 @@ export const performanceData = {
   ],
 };
 
-export const gipsData = {
-  id: "gips",
-  badge: "Compliance",
-  titleStart: " GIPS-focused Composite",
-  titleHighlight: "Management",
-  heroDescription:
-    "Structured composite construction and maintenance built for investment operations workflows.",
-  iconEmoji: "🛡️",
-  features: [
-    {
-      tag: "Construction",
-      title: " GIPS-focused Composite Management",
-      description:
-        "Structured composite construction and maintenance built for investment operations workflows.",
-      emoji: "🏗️",
-      cardLabel: "Composites Built",
-      stats: [
-        { icon: "🤖", label: "Fully automated" },
-        { icon: "📋", label: "Rule-based" },
-        { icon: "🔒", label: "GIPS compliant" },
-      ],
-      metrics: [
-        { value: "100%", label: "Automation rate" },
-        { value: "0", label: "Manual steps" },
-        { value: "50+", label: "Composites maintained" },
-      ],
-    },
-  ],
-};
+
 
 export const operationsData = {
   id: "operations",
@@ -83,6 +55,36 @@ export const operationsData = {
         { value: "98%+", label: "STP rate" },
         { value: "0", label: "Manual confirmations" },
         { value: "5000+", label: "Trades processed daily" },
+      ],
+    },
+  ],
+};
+
+export const gipsData = {
+  id: "gips",
+  badge: "Compliance",
+  titleStart: " GIPS-focused Composite",
+  titleHighlight: "Management",
+  heroDescription:
+    "Structured composite construction and maintenance built for investment operations workflows.",
+  iconEmoji: "🛡️",
+  features: [
+    {
+      tag: "Construction",
+      title: " GIPS-focused Composite Management",
+      description:
+        "Structured composite construction and maintenance built for investment operations workflows.",
+      emoji: "🏗️",
+      cardLabel: "Composites Built",
+      stats: [
+        { icon: "🤖", label: "Fully automated" },
+        { icon: "📋", label: "Rule-based" },
+        { icon: "🔒", label: "GIPS compliant" },
+      ],
+      metrics: [
+        { value: "100%", label: "Automation rate" },
+        { value: "0", label: "Manual steps" },
+        { value: "50+", label: "Composites maintained" },
       ],
     },
   ],

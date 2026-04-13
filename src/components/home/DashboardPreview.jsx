@@ -88,7 +88,7 @@ const badges = [
     delay: "200",
   },
   {
-    text: "GIPS Composite Management",
+    text: "GIPS-focused Composite Management",
     icon: <GipsCompositeIcon />,
     pos: "top-[15%] -right-4 md:-right-12",
     delay: "400",
