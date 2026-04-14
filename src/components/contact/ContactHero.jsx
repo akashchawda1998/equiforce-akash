@@ -29,7 +29,7 @@ const ContactPage = () => {
 
     try {
       const res = await fetch(
-        "https://745c-2405-201-300b-a0f0-7914-2d6a-87de-48cf.ngrok-free.app/api/email/contact",
+        "https://equoforce-api.vercel.app/api/email/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
