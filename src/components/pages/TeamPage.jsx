@@ -16,7 +16,7 @@ const TeamPage = () => {
             Meet the Experts Behind <span className="text-[#d97706]">EquiForce</span>
           </h1>
           <p className="text-gray-300 text-md md:text-sm leading-relaxed" data-aos="fade-up">
-  Our team blends fintech, investment, and AI expertise to shape the future of finance.
+  Our team blends  fintech, asset management and AI expertise to shape the future of finance.
 </p>
         </div>
       </section>
