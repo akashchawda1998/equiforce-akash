@@ -87,7 +87,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-[#000E24] py-10">
+    <section className="bg-[#000E24] py-10" id="features">
       <div className="max-w-[1400px] mx-auto px-4 text-center">
         
         <span className="bg-[#d97706] text-white px-4 py-1 rounded-full text-xs uppercase">
