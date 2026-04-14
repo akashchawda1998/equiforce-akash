@@ -237,7 +237,7 @@ const Team = () => {
                 ))}
 
                 {/* Highlighted Footer Text */}
-                <p className="mt-12 text-sm italic pt-6 border-t border-gray-50">
+                <p className="mt-6 text-sm italic pt-6 border-t border-gray-50">
                   Building the future of{" "}
                   <span className="text-[#d97706] font-semibold">
                     scalable, cost-efficient technology and advisory services
