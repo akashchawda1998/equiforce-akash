@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import img2 from "../../assets/images/pt.png";
 import img1 from "../../assets/images/1.png";
 import img3 from "../../assets/images/3.jpeg";
-import img4 from "../../assets/images/default-avatar.jpeg";
+import img4 from "../../assets/images/steve.jpg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
 
@@ -92,14 +92,15 @@ const team = [
 
   {
 
-    name: "Steve",
+    name: "Steve Everley",
     email:"steve@equiforcesolutions.com",
     role: "Head of Business",
     role1: "Development",
     img: img4,
 
     bio: [
-      ""
+      `Steve Everley leads Business Development for EquiForce Solutions (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
+      "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
     ]
 
   },
