@@ -15,9 +15,9 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import r1 from "./recon1.png";
 import r2 from "./recon2.png";
 
-import g1 from "./gips1.png";
-import g2 from "./gips2.png";
-import g3 from "./gips3.png";
+import g1 from "./gipss1.png";
+import g2 from "./gipss2.png";
+import g3 from "./gipss3.png";
 
 import p1 from "./performance1.png";
 import p2 from "./performance2.png";
