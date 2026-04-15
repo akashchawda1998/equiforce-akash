@@ -25,7 +25,7 @@ function Hero() {
           <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight  lg:text-left">
             Your Strategic <span className="text-[#d97706]"> Partner </span>in
             <br className="hidden sm:block" />
-             <span> Investment Ops, Performance & GIPS® Composite Reporting</span>
+            <span> Investment Ops, Performance & GIPS® Composite Reporting</span>
           </h1>
           <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
@@ -42,7 +42,7 @@ function Hero() {
           </Link>
 
           <p className="text-xs mt-5 mb-5 text-[#b4b4b4d4]">Global Investment Performance Standards (GIPS®) GIPS® is a registered trademark owned by CFA Institute. CFA Institute does not endorse or promote this organization, nor does it warrant the accuracy or quality of the content contained herein.
-</p>
+          </p>
         </div>
 
         {/* RIGHT SIDE VIDEO CARD */}
@@ -54,12 +54,12 @@ function Hero() {
                 muted
                 loop
                 playsInline
-                className="w-full h-auto sm:h-[289px] object-contain transition-transform duration-500 hover:scale-105"
+                className="w-full h-auto object-contain transition-transform duration-500"
               >
                 <source src={heroVideo} type="video/mp4" />
               </video>
 
-             
+
               <div className="absolute inset-0 pointer-events-none rounded-3xl border border-gradient-to-tr from-[#d97706]/50 to-[#3b82f6]/50 opacity-50 animate-pulse"></div>
             </div>
           </div>

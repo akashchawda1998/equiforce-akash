@@ -64,7 +64,7 @@ const features = [
   {
     title: (
       <>
-          GIPS® Composite Management
+          GIPS® Composite <br />  Management
       </>
     ),
     desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
