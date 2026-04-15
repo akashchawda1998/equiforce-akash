@@ -41,7 +41,7 @@ function Hero() {
             </button>
           </Link>
 
-          <p className="text-xs mt-5 text-[#b4b4b4d4]">Global Investment Performance Standards (GIPS®) GIPS® is a registered trademark owned by CFA Institute. CFA Institute does not endorse or promote this organization, nor does it warrant the accuracy or quality of the content contained herein.
+          <p className="text-xs mt-5 mb-5 text-[#b4b4b4d4]">Global Investment Performance Standards (GIPS®) GIPS® is a registered trademark owned by CFA Institute. CFA Institute does not endorse or promote this organization, nor does it warrant the accuracy or quality of the content contained herein.
 </p>
         </div>
 
