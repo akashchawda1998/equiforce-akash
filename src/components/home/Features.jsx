@@ -64,7 +64,7 @@ const features = [
   {
     title: (
       <>
-         GIPS-focused Composite Management
+          GIPS® Composite Management
       </>
     ),
     desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
@@ -100,7 +100,7 @@ const Features = () => {
 
         <p className="text-blue-100/80 max-w-2xl mx-auto mb-8 text-sm">
           EquiForce delivers specialized solutions across investment operations,
-          performance measurement, GIPS-focused composite management, and AI reporting.
+          performance measurement,  GIPS® composite management, and AI reporting.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

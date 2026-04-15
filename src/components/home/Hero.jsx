@@ -16,7 +16,7 @@ function Hero() {
         <div className="w-full h-full bg-[url('/lines.svg')] bg-no-repeat bg-center bg-cover opacity-10 animate-[backgroundMove_60s_linear_infinite]"></div>
       </div>
 
-      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between  sm:gap-10 lg: px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 lg:py-24">
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 text-white z-10">
           <p className="uppercase text-[#d97706] tracking-widest mt-10 mb-3 text-sm md:text-sm font-semibold">
@@ -25,12 +25,12 @@ function Hero() {
           <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 leading-snug sm:leading-tight  lg:text-left">
             Your Strategic <span className="text-[#d97706]"> Partner </span>in
             <br className="hidden sm:block" />
-             <span> Investment Ops, Performance & GIPS-Focused</span>
+             <span> Investment Ops, Performance & GIPS® Composite Reporting</span>
           </h1>
           <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
             <span className="text-[#d97706]">
-              Empowering investment management with practitioner expertise &
-              technology edge
+              Empowering investment management with practitioner expertise & a technology edge
+
             </span>
           </p>
 
@@ -40,6 +40,9 @@ function Hero() {
               Request a Demo
             </button>
           </Link>
+
+          <p className="text-xs mt-5 text-[#b4b4b4d4]">Global Investment Performance Standards (GIPS®) GIPS® is a registered trademark owned by CFA Institute. CFA Institute does not endorse or promote this organization, nor does it warrant the accuracy or quality of the content contained herein.
+</p>
         </div>
 
         {/* RIGHT SIDE VIDEO CARD */}

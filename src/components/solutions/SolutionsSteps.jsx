@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Reconciliation & Compliance",
-    desc: "Identify discrepancies across systems and maintain compliance with GIPS-focused and industry standards.",
+    desc: "Identify discrepancies across systems and maintain compliance with  GIPS® and industry standards.",
   },
   {
     title: "Reporting & Analytics",

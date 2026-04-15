@@ -2,18 +2,23 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import AIReporting from "./../../../assets/images/AIReporting1.png";
 import PerformanceManagement from "./../../../assets/images/PerformanceManagement1.png";
 import GIPS from "./../../../assets/images/GIPS1.png";
 import Recon from "./../../../assets/images/recon1.png";
-
+import "swiper/css";
+import "swiper/css/pagination";
 // ─── DATA ─────────────────────────────────────
 
 const allData = [
   {
     id: "operations",
     img: Recon,
+    images: [Recon, AIReporting, PerformanceManagement],
+
     title: "Investment Operations & Reconciliation",
     description:
       "Investment data reconciliation across internal systems and custodian sources.",
@@ -21,6 +26,8 @@ const allData = [
   {
     id: "performance",
     img: PerformanceManagement,
+    images: [Recon, AIReporting, PerformanceManagement],
+
     title: "Performance Measurement",
     description:
       "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
@@ -28,13 +35,17 @@ const allData = [
   {
     id: "gips",
     img: GIPS,
-    title: "GIPS-focused Composite Management",
+    images: [Recon, AIReporting, PerformanceManagement],
+
+    title: " GIPS® Composite Management",
     description:
       "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
   },
   {
     id: "ai-reporting",
     img: AIReporting,
+    images: [Recon, AIReporting, PerformanceManagement],
+
     title: "AI-Powered Investment Reporting",
     description:
       "Intelligent investment reporting that surfaces accurate insights into every reporting layer.",
@@ -49,9 +60,8 @@ const FeatureSection = ({ item, index }) => {
   return (
     <div id={item.id} className="relative md:pt-20 pb-15">
       <div
-        className={`grid md:grid-cols-2 gap-10 lg:gap-20 items-center ${
-          isEven ? "" : "md:[direction:rtl]"
-        }`}
+        className={`grid md:grid-cols-2 gap-10 lg:gap-20 items-center ${isEven ? "" : "md:[direction:rtl]"
+          }`}
       >
         {/* TEXT SIDE */}
         <div
@@ -82,11 +92,28 @@ const FeatureSection = ({ item, index }) => {
           data-aos-once="true"
         >
           <div className="rounded-sm overflow-hidden border shadow-sm">
-            <img
-              src={item.img}
-              alt={item.title}
-              className="w-full h-full object-cover"
-            />
+            <div className="rounded-sm overflow-hidden border shadow-sm">
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{ clickable: true }}
+                loop={true}
+                className="w-full h-full"
+              >
+                {item.images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <img
+                      src={img}
+                      alt={`slide-${i}`}
+                      className="w-full  object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>

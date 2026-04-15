@@ -72,7 +72,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy-policy" element={<PrivacyNotice />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
-              <Route path="/gips-focused" element={<GipsDisclaimer />} />
+              {/* <Route path="/ GIPS®" element={<GipsDisclaimer />} /> */}
               <Route path="/consultant" element={<Consultant />} />
 
               <Route

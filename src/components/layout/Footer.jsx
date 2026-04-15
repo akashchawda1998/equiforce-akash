@@ -36,45 +36,45 @@ const Footer = () => {
           </div>
 
           {/* RIGHT GRID (4-4-2-2) */}
-<div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 sm:gap-10 md:gap-0 text-gray-600 text-sm">            <div className="md:col-span-5 md:mb-2">
-              <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
-                Solutions
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    to="/performance-measurement#operations"
-                    className="hover:text-[#d97706]"
-                  >
-                    Investment Operations & Reconciliation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/performance-measurement#performance"
-                    className="hover:text-[#d97706]"
-                  >
-                    Performance Measurement
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/performance-measurement#gips"
-                    className="hover:text-[#d97706]"
-                  >
-                    GIPS-focused Composite Management
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/performance-measurement#ai-reporting"
-                    className="hover:text-[#d97706]"
-                  >
-                    AI-Powered Investment Reporting
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 sm:gap-10 md:gap-0 text-gray-600 text-sm">            <div className="md:col-span-5 md:mb-2">
+            <h4 className="text-[#000E24] font-bold uppercase tracking-widest text-xs mb-5">
+              Solutions
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  to="/performance-measurement#operations"
+                  className="hover:text-[#d97706]"
+                >
+                  Investment Operations & Reconciliation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/performance-measurement#performance"
+                  className="hover:text-[#d97706]"
+                >
+                  Performance Measurement
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/performance-measurement#gips"
+                  className="hover:text-[#d97706]"
+                >
+                  GIPS® Composite Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/performance-measurement#ai-reporting"
+                  className="hover:text-[#d97706]"
+                >
+                  AI-Powered Investment Reporting
+                </Link>
+              </li>
+            </ul>
+          </div>
 
             {/* Company (4) */}
             <div className="md:col-span-2">
@@ -151,11 +151,6 @@ const Footer = () => {
             <span className="hidden md:block">|</span>
             <Link to="/terms-of-service" className="hover:text-[#d97706]">
               Terms of Service
-            </Link>
-            <span className="hidden md:block">|</span>
-
-            <Link to="/gips-focused" className="hover:text-[#d97706]">
-              GIPS-focused
             </Link>
           </div>
 
