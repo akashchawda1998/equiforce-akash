@@ -10,21 +10,22 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
+
 // ✅ Images
-import r1 from "../../assets/images/recon1.png";
-import r2 from "../../assets/images/recon2.png";
+import r1 from "./recon1.png";
+import r2 from "./recon2.png";
 
-import g1 from "../../assets/images/gips1.png";
-import g2 from "../../assets/images/gips2.png";
-import g3 from "../../assets/images/gips3.png";
+import g1 from "./gips1.png";
+import g2 from "./gips2.png";
+import g3 from "./gips3.png";
 
-import p1 from "../../assets/images/performance1.png";
-import p2 from "../../assets/images/performance2.png";
-import p3 from "../../assets/images/performance3.png";
+import p1 from "./performance1.png";
+import p2 from "./performance2.png";
+import p3 from "./performance3.png";
 
-import ai1 from "../../assets/images/ai1.png";
-import ai2 from "../../assets/images/ai2.png";
-import ai3 from "../../assets/images/ai3.png";
+import ai1 from "./ai1.png";
+import ai2 from "./ai2.png";
+import ai3 from "./ai3.png";
 
 // ─── DATA ─────────────────────────────────────
 const allData = [
