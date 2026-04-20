@@ -8,6 +8,7 @@ import img3 from "../../assets/images/3.jpeg";
 import img4 from "../../assets/images/steve.jpg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
+import img7 from "../../assets/images/default-avatar.jpeg";
 
 import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -145,6 +146,28 @@ email:"contact@equiforcesolutions.com",
 
   },
 
+
+
+
+
+    {
+
+    name: "Stephen Hua",
+email:"contact@equiforcesolutions.com",
+    role: "Technical Consultant",
+
+    img: img7,
+
+    bio: [
+
+""
+    ]
+
+  },
+
+
+
+
 ];
 
 const Team = () => {
@@ -176,7 +199,6 @@ const Team = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
           {/* Empty divs to center the bottom two if needed, or just map them */}
-          <div className="hidden lg:block"></div>
           {team.slice(4).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={setSelectedMember} />
           ))}
