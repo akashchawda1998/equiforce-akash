@@ -1,6 +1,7 @@
-import { FiArrowUp, FiMail, FiPhone } from "react-icons/fi";
+import { FiArrowUp, FiMail, FiLinkedin, FiPhone } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   const [show, setShow] = useState(false);
@@ -129,6 +130,21 @@ const Footer = () => {
                     +1-626-838-8118
                   </a>
                 </li>
+
+                  <li className="flex items-center gap-3 group">
+     <div className="">
+    <a
+      href="https://www.linkedin.com/company/equiforcesolutions/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-[#0A66C2] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#004182] transition duration-300 shadow-sm hover:shadow-md"
+    >
+      <FaLinkedinIn className="text-white" />
+      Follow us on LinkedIn
+    </a>
+  </div>
+    </li>
+
               </ul>
             </div>
           </div>
