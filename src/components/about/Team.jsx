@@ -8,7 +8,7 @@ import img3 from "../../assets/images/3.jpeg";
 import img4 from "../../assets/images/steve.jpg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
-import img7 from "../../assets/images/default-avatar.jpeg";
+import img7 from "../../assets/images/img8.png";
 
 import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -160,7 +160,13 @@ email:"contact@equiforcesolutions.com",
 
     bio: [
 
-""
+"Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
+"At EquiForce Solutions, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
+"Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
+"With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
+"He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
+"In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
+"Stephen’s approach reflects EquiForce Solutions’ core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
     ]
 
   },
