@@ -1,7 +1,18 @@
+import { Helmet } from "react-helmet";
 import aboutImg from "../../assets/images/about-image1.webp";
 
 const AboutHero = () => {
   return (
+
+<>
+
+<title>About EquiForce | Investment Operations, Performance Measurement GIPS® Solutions and AI-powered reporting</title>
+            <Helmet>
+
+<meta name="description" content="EquiForce empowers investment firms with technology for investment operations, reconciliation, performance measurement, GIPS® composite management, and AI-powered reporting. Backed by 30 years of expertise.">
+
+</meta>
+</Helmet>
     <section className="pt-22 px-5 md:pt-30 lg:pt-30 pb-12 md:pb-10 lg:pb-10 text-center">
       <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-10">
         Our Mission
@@ -23,6 +34,8 @@ const AboutHero = () => {
         competitive edge.
       </p>
     </section>
+</>
+
   );
 };
 

@@ -4,7 +4,11 @@ import Team from "../about/Team";
 
 const TeamPage = () => {
   return (
+
+    
     <div className="min-h-screen bg-white">
+
+      
       
       {/* Spacer for Fixed Navbar */}
       <div className="h-18 bg-[#000E24]"></div>

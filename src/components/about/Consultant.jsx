@@ -12,6 +12,7 @@ import img6 from "../../assets/images/6.jpeg";
 import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 
 const team = [
 
@@ -82,6 +83,15 @@ const Consultant = () => {
     return (
 
         <>
+
+
+            <Helmet>
+                <title>Meet the Experts Behind EquiForce | Leadership & Team</title>
+                <meta name="description" content="Meet the EquiForce team of experts in fintech, asset management, and AI. Our leadership and consultants bring decades of experience in investment operations, performance, and GIPS® reporting." />
+            </Helmet>
+
+
+
             <section className="bg-[#000E24] mt-12 py-12 text-center">
                 <div className="max-w-4xl mx-auto px-6">
                     <h1 className="text-2xl md:text-3xl font-bold text-white mb-2" data-aos="fade-down">
