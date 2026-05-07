@@ -84,7 +84,7 @@ const badges = [
   {
     text: "Performance Measurement",
     icon: <PerformanceMeasurementIcon />,
-    pos: "top-[60%] -left-8 md:-left-20",
+    pos: "top-[35%] -left-4 md:-left-12",
     delay: "200",
   },
   {
