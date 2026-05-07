@@ -32,7 +32,8 @@ function Hero() {
             <br className="hidden sm:block" />
             <span>
               {" "}
-              Investment Ops, Performance & GIPS® Composite Reporting
+              {/* Investment Ops,  */}
+              Performance & GIPS® Composite Reporting
             </span>
           </h1>
 
