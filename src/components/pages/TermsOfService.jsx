@@ -18,7 +18,7 @@ const TermsOfService = () => {
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8 text-gray-700 leading-relaxed text-sm md:text-base">
 
           <p>
-            Welcome to Equiforce Solutions, LLC. By accessing or using our
+            Welcome to Equiforce, LLC. By accessing or using our
             website, you agree to be bound by these Terms of Service (“Terms”).
             If you do not agree to these Terms, please do not use our website.
           </p>
@@ -70,7 +70,7 @@ const TermsOfService = () => {
             </h2>
             <p>
               All content on this website, including text, images, logos, and
-              graphics, is the property of Equiforce Solutions or its licensors
+              graphics, is the property of Equiforce or its licensors
               and is protected by intellectual property laws. You may not use,
               reproduce, or distribute any content without our express written
               consent.
@@ -113,10 +113,10 @@ const TermsOfService = () => {
               7. Relationship with Client Subscription Agreement
             </h2>
             <p>
-              If you are a client of Equiforce Solutions, LLC and use our SaaS
+              If you are a client of Equiforce, LLC and use our SaaS
               platform, your relationship with us is governed by the terms of
               your written agreement (the “Client Subscription Agreement”) with
-              Equiforce Solutions, LLC. These Terms of Service apply only to
+              Equiforce, LLC. These Terms of Service apply only to
               general website usage and do not alter or affect the terms of the
               Client Subscription Agreement.
             </p>
@@ -127,7 +127,7 @@ const TermsOfService = () => {
               8. Limitation of Liability
             </h2>
             <p>
-              To the fullest extent permitted by law, Equiforce Solutions, LLC
+              To the fullest extent permitted by law, Equiforce, LLC
               and its affiliates are not liable for any damages arising from
               your use of the website, including but not limited to direct,
               indirect, incidental, or consequential damages.
@@ -139,7 +139,7 @@ const TermsOfService = () => {
               9. Indemnification
             </h2>
             <p>
-              You agree to indemnify and hold Equiforce Solutions, LLC, its
+              You agree to indemnify and hold Equiforce, LLC, its
               officers, directors, employees, and agents harmless from any
               claims or damages resulting from your breach of these Terms or
               your violation of any law or the rights of a third party.
@@ -203,15 +203,15 @@ const TermsOfService = () => {
 
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm md:text-base">
               <p className="font-semibold text-gray-900">
-                Equiforce Solutions, LLC
+                Equiforce, LLC
               </p>
-              <p>Email: contact@equiforcesolutions.com</p>
+              <p>Email: contact@equiforce.ai</p>
               <p>Phone: +1 (626) 838-8118</p>
             </div>
           </div>
 
           <p className="font-medium text-gray-900">
-            Thank you for visiting Equiforce Solutions, LLC.
+            Thank you for visiting Equiforce, LLC.
           </p>
 
         </div>

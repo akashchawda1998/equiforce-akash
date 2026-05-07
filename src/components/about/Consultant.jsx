@@ -21,7 +21,7 @@ const team = [
     {
 
         name: "Jane Atmodjojo, CFA®, CIPM",
-        email: "jane@equiforcesolutions.com",
+        email: "jane@equiforce.ai",
         role: "CEO",
         role1: "Principal Consultant",
 
@@ -29,7 +29,7 @@ const team = [
 
         bio: [
 
-            "Jane co founded EquiForce Solutions (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
+            "Jane co founded EquiForce (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
 
             "Before launching EFS, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution,  GIPS® compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back  and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
 
@@ -49,7 +49,7 @@ const team = [
 
         email:
 
-            "vince@equiforcesolutions.com",
+            "vince@equiforce.ai",
 
         role: "Chief Product Officer",
         role1: "Principal Consultant",
@@ -58,7 +58,7 @@ const team = [
 
         bio: [
 
-            "Vincent co founded EquiForce Solutions (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
+            "Vincent co founded EquiForce (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
 
             "Before launching EFS, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, reconciliation, performance measurement, analytics, GIPS compliance, and reporting automation. He has a long track record of designing and implementing technology that automates processes, enhances data integrity, and enables firms to scale efficiently. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, Kayne Anderson Rudnick Investment Management, and ACR Alpine Capital Research.",
 

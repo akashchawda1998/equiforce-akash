@@ -50,7 +50,7 @@ const PartnerSection = () => {
             <div className="text-left text-gray-300 leading-relaxed">
 
               <p className="mb-4 text-gray-500">
-                Equiforce Solutions retains full responsibility for the design,
+                Equiforce retains full responsibility for the design,
                 development, and operation of its application stack.
               </p>
 

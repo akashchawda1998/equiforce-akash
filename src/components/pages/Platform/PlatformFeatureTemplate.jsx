@@ -29,13 +29,13 @@ import ai3 from "./ai3.png";
 
 // ─── DATA ─────────────────────────────────────
 const allData = [
-  {
-    id: "operations",
-    img: [r1, r2],
-    title: "Investment Operations & Reconciliation",
-    description:
-      "Investment data reconciliation across internal systems and custodian sources.",
-  },
+  // {
+  //   id: "operations",
+  //   img: [r1, r2],
+  //   title: "Investment Operations & Reconciliation",
+  //   description:
+  //     "Investment data reconciliation across internal systems and custodian sources.",
+  // },
   {
     id: "performance",
     img: [p1, p2, p3],

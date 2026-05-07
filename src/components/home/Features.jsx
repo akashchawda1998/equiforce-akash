@@ -74,20 +74,20 @@ const AiPoweredReportingIcon = () => (
 /* ---------------- DATA ---------------- */
 
 const features = [
+  // {
+  //   title: (
+  //     <>
+  //       Investment Operations & Reconciliation
+  //     </>
+  //   ),
+  //   desc: "Investment data reconciliation across internal systems and custodian sources.",
+  //   icon: InvestmentOpsIcon,
+  //   link: "/performance-measurement#operations",
+  // },
   {
     title: (
       <>
-        Investment Operations & Reconciliation
-      </>
-    ),
-    desc: "Investment data reconciliation across internal systems and custodian sources.",
-    icon: InvestmentOpsIcon,
-    link: "/performance-measurement#operations",
-  },
-  {
-    title: (
-      <>
-        Performance <br /> Measurement
+        Performance  Measurement
       </>
     ),
     desc: "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
@@ -97,7 +97,7 @@ const features = [
   {
     title: (
       <>
-          GIPS® Composite <br />  Management
+          GIPS® Composite  Management
       </>
     ),
     desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
@@ -136,7 +136,7 @@ const Features = () => {
           performance measurement,  GIPS® composite management and AI reporting.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((item, index) => {
             const Icon = item.icon;
 

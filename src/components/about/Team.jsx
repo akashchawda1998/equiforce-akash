@@ -21,7 +21,7 @@ const team = [
   {
 
     name: "Jane Atmodjojo, CFA®, CIPM",
-    email: "jane@equiforcesolutions.com",
+    email: "jane@equiforce.ai",
     role: "CEO",
     role1: "Senior Consultant",
 
@@ -29,7 +29,7 @@ const team = [
 
     bio: [
 
-      "Jane co founded EquiForce Solutions (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
+      "Jane co founded EquiForce (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
 
       "Before launching EFS, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back  and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
 
@@ -46,7 +46,7 @@ const team = [
   {
 
     name: "Pushpendra Thakur",
-    email: "pushpendra@equiforcesolutions.com",
+    email: "pushpendra@equiforce.ai",
 
         role: "Advisory Technology",
 
@@ -55,7 +55,7 @@ const team = [
 
     bio: [
 
-      "Pushpendra Thakur is the Co-Founder and Chief Technology Officer of EquiForce Solutions (EFS), where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for investment operations, performance measurement, and enterprise reporting. Since co-founding EFS in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EFS, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
+      "Pushpendra Thakur is the Co-Founder and Chief Technology Officer of EquiForce (EFS), where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for investment operations, performance measurement, and enterprise reporting. Since co-founding EFS in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EFS, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
 
       "With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
 
@@ -72,7 +72,7 @@ const team = [
 
     email:
 
-      "vince@equiforcesolutions.com",
+      "vince@equiforce.ai",
 
     role: "Chief Product Officer",
     role1: "Senior Consultant",
@@ -81,7 +81,7 @@ const team = [
 
     bio: [
 
-      "Vincent co founded EquiForce Solutions (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
+      "Vincent co founded EquiForce (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
 
       "Before launching EFS, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, reconciliation, performance measurement, analytics, GIPS compliance, and reporting automation. He has a long track record of designing and implementing technology that automates processes, enhances data integrity, and enables firms to scale efficiently. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, Kayne Anderson Rudnick Investment Management, and ACR Alpine Capital Research.",
 
@@ -94,13 +94,13 @@ const team = [
   {
 
     name: "Steve Everley",
-    email:"steve@equiforcesolutions.com",
+    email:"steve@equiforce.ai",
     role: "Head of Business",
     role1: "Development",
     img: img4,
 
     bio: [
-      `Steve Everley leads Business Development for EquiForce Solutions (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
+      `Steve Everley leads Business Development for EquiForce (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
       "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
     ]
 
@@ -113,14 +113,14 @@ const team = [
   {
 
     name: "Edmund J. Woo",
-email:"contact@equiforcesolutions.com",
+email:"contact@equiforce.ai",
     role: "Head of Client Relations",
 
     img: img5,
 
     bio: [
 
-      "As Head of Client Relations at EquiForce Solutions (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.", "Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.", "Edmund holds an MBA and B.S. from the University of Arizona."
+      "As Head of Client Relations at EquiForce (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.", "Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.", "Edmund holds an MBA and B.S. from the University of Arizona."
 
     ]
 
@@ -133,14 +133,14 @@ email:"contact@equiforcesolutions.com",
   {
 
     name: "Dylan Tran",
-email:"contact@equiforcesolutions.com",
+email:"contact@equiforce.ai",
     role: "Analyst",
 
     img: img6,
 
     bio: [
 
-      "As an Analyst at EquiForce Solutions (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.", "Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
+      "As an Analyst at EquiForce (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.", "Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
 
     ]
 
@@ -153,7 +153,7 @@ email:"contact@equiforcesolutions.com",
     {
 
     name: "Stephen Hua",
-email:"contact@equiforcesolutions.com",
+email:"contact@equiforce.ai",
     role: "Technical Consultant",
 
     img: img7,
@@ -161,12 +161,12 @@ email:"contact@equiforcesolutions.com",
     bio: [
 
 "Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
-"At EquiForce Solutions, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
+"At EquiForce, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
 "Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
 "With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
 "He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
 "In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
-"Stephen’s approach reflects EquiForce Solutions’ core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
+"Stephen’s approach reflects EquiForce core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
     ]
 
   },

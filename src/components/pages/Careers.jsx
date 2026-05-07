@@ -85,7 +85,7 @@ const Careers = () => {
         </h1>
 
         <p className="max-w-3xl mx-auto text-lg leading-relaxed font-medium" style={{ color: GRAY_TEXT }}>
-          At EquiForce Solutions, we are looking for passionate innovators to help us revolutionize performance measurement, reporting, and operational efficiency for the world's leading investment firms.
+          At EquiForce, we are looking for passionate innovators to help us revolutionize performance measurement, reporting, and operational efficiency for the world's leading investment firms.
         </p>
       </section>
 
@@ -142,7 +142,7 @@ const Careers = () => {
               </div>
 
               <a 
-                href="mailto:contact@equiforcesolutions.com"
+                href="mailto:contact@equiforce.ai"
                 className="shrink-0 px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2 text-white" 
                 style={{ backgroundColor: NAVY }}
               >
@@ -171,11 +171,11 @@ const Careers = () => {
           {/* EXACT MATCH TO THE UPLOADED IMAGE (Orange Monospace text on dark navy) */}
           <div className="inline-block bg-black/20 px-6 py-4 rounded-xl border border-white/5">
             <a 
-              href="mailto:contact@equiforcesolutions.com" 
+              href="mailto:contact@equiforce.ai" 
               className="font-mono text-xl md:text-3xl lg:text-4xl tracking-wide hover:opacity-80 transition-opacity break-all"
               style={{ color: ORANGE }}
             >
-              contact@equiforcesolutions.com
+              contact@equiforce.ai
             </a>
           </div>
         </div>

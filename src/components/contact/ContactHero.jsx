@@ -69,7 +69,7 @@ const ContactPage = () => {
     <>
       <Helmet>
 
-        <title>Request a Demo | Contact EquiForce Solutions</title>
+        <title>Request a Demo | Contact EquiForce</title>
  
         <meta name="description" content="Have questions or need a demo? Contact EquiForce to learn how our AI-powered platform can transform your investment operations and reporting workflows.">
 
@@ -153,7 +153,7 @@ const ContactPage = () => {
                       Select Service
                     </option>
 
-                    <option>Investment Operations & Reconciliation</option>
+                    {/* <option>Investment Operations & Reconciliation</option> */}
                     <option>Performance Measurement</option>
                     <option> GIPS® Composite Management</option>
                     <option>AI-Powered Investment Reporting</option>
@@ -192,15 +192,15 @@ const ContactPage = () => {
                     {[
                       {
                         name: "Jane Atmodjojo, CFA®, CIPM",
-                        email: "jane@equiforcesolutions.com",
+                        email: "jane@equiforce.ai",
                       },
                       {
                         name: "Vincent Tran, CIPM",
-                        email: "vince@equiforcesolutions.com",
+                        email: "vince@equiforce.ai",
                       },
                       {
                         name: "Pushpendra Thakur",
-                        email: "pushpendra@equiforcesolutions.com",
+                        email: "pushpendra@equiforce.ai",
                       },
                     ].map((contact, idx) => (
                       <a

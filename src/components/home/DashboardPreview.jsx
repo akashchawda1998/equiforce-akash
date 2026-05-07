@@ -75,12 +75,12 @@ const AiPoweredReportingIcon = () => (
 /* ================= BADGES ================= */
 
 const badges = [
-  {
-    text: "Investment Operations & Reconciliation",
-    icon: <InvestmentOpsIcon />,
-    pos: "top-[15%] -left-4 md:-left-12",
-    delay: "100",
-  },
+  // {
+  //   text: "Investment Operations & Reconciliation",
+  //   icon: <InvestmentOpsIcon />,
+  //   pos: "top-[15%] -left-4 md:-left-12",
+  //   delay: "100",
+  // },
   {
     text: "Performance Measurement",
     icon: <PerformanceMeasurementIcon />,

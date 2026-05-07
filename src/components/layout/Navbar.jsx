@@ -37,12 +37,10 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img src={logo} className="h-10 md:h-12" alt="EquiForce Logo" />
               <div className="flex flex-col justify-center mt-1 ml[-10px]">
-                <span className="text-lg md:text-[22px] font-black tracking-widest text-white uppercase leading-none">
+                <span className="text-lg md:text-[22px]  text-[#d97706]  text-white font-black tracking-widest uppercase leading-none">
                   EquiForce
                 </span>
-                <span className="text-[10px] md:text-[11px] font-bold tracking-[0.15em] text-[#d97706] uppercase mt-1 leading-none">
-                  Solutions
-                </span>
+               
               </div>
             </Link>
 
@@ -86,7 +84,7 @@ const Navbar = () => {
 
 
 
-                          <Link
+                          {/* <Link
                             to="/performance-measurement#operations"
                             onClick={() => setPlatformOpen(false)}
                             className="group block"
@@ -95,7 +93,7 @@ const Navbar = () => {
                               Investment Operations & Reconciliation
                             </h4>
                             <p className="text-sm text-gray-500 mt-1 leading-snug">Investment data reconciliation across internal systems and custodian sources.</p>
-                          </Link>
+                          </Link> */}
 
                           <Link
                             to="/performance-measurement#performance"
@@ -211,7 +209,7 @@ const Navbar = () => {
             {/* Right Side Actions */}
             <div className="flex items-center gap-2 md:gap-6">
               <Link
-                to="https://app.equiforcesolutions.com/login"
+                to="https://app.equiforce.ai/login"
                 className="text-xs  uppercase hidden sm:block text-sm font-bold text-white hover:text-[#d97706] transition-all"
               >
                 Sign In
@@ -263,7 +261,7 @@ const Navbar = () => {
                 >
                   {/* Replaced placeholder links with actual Platform pages */}
                   <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
-                    <Link to="/performance-measurement#operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link>
+                    {/* <Link to="/performance-measurement#operations" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Investment Operations & Reconciliation</Link> */}
                     <Link to="/performance-measurement#performance" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
                     <Link to="/performance-measurement#gips" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors"> GIPS® Composite Management</Link>
                     <Link to="/performance-measurement#ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
@@ -286,7 +284,7 @@ const Navbar = () => {
               <hr className="border-gray-100 my-2" />
 
               <Link
-                to="https://app.equiforcesolutions.com/"
+                to="https://app.equiforce.ai/"
                 className="text-gray-500 hover:text-[#d97706] transition-colors"
                 onClick={() => setMenuOpen(false)}
               >

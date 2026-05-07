@@ -25,7 +25,7 @@ const Footer = () => {
             <h2 className="text-2xl sm:text-2xl md:text-2xl font-bold text-[#000E24] leading-tight mb-6">
               Transform Your Investment <br className="hidden sm:block" />
               Operations with <br className="hidden sm:block" />
-              EquiForce Solutions
+              EquiForce
             </h2>
 
             <Link
@@ -42,14 +42,14 @@ const Footer = () => {
               Solutions
             </h4>
             <ul className="space-y-3">
-              <li>
+              {/* <li>
                 <Link
                   to="/performance-measurement#operations"
                   className="hover:text-[#d97706]"
                 >
                   Investment Operations & Reconciliation
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/performance-measurement#performance"
@@ -115,10 +115,10 @@ const Footer = () => {
                 <li className="flex items-center gap-3 group">
                   <FiMail className="text-[#d97706]" />
                   <a
-                    href="mailto:contact@equiforcesolutions.com"
+                    href="mailto:contact@equiforce.ai"
                     className="group-hover:text-[#d97706] break-all"
                   >
-                    contact@equiforcesolutions.com
+                    contact@equiforce.ai
                   </a>
                 </li>
                 <li className="flex items-center gap-3 group">
@@ -155,7 +155,7 @@ const Footer = () => {
           <p className="text-center md:text-left">
             ©2026{" "}
             <span className="font-semibold text-gray-600">
-              EquiForce Solutions
+              EquiForce
             </span>{" "}
             · All rights reserved.
           </p>

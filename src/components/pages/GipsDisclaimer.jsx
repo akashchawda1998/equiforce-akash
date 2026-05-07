@@ -27,10 +27,10 @@ const GipsDisclaimer = () => {
            
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
               <p>
-                Equiforce Solutions provides software and consulting services to
+                Equiforce provides software and consulting services to
                 assist investment firms in implementing processes consistent
                 with the Global Investment Performance Standards (GIPS®).
-                Equiforce Solutions is not a GIPS verification firm and does not
+                Equiforce is not a GIPS verification firm and does not
                 verify, certify, or opine on a firm's GIPS compliance status.
                 Only independent verifiers may perform GIPS verification.
                 GIPS® is a registered trademark of CFA Institute.

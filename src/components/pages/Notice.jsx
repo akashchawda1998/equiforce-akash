@@ -45,16 +45,16 @@ const PrivacyPolicy = () => {
               Non-Identifiable Data
             </h2>
             <p>
-              When you interact with Equiforce Solutions through the Solutions,
+              When you interact with Equiforce through the Solutions,
               we receive and store certain personally non-identifiable
               information. Such information, which is collected passively using
               various technologies, cannot presently be used to specifically
               identify you.
             </p>
             <p className="mt-3">
-              Equiforce Solutions may store such information itself or such
+              Equiforce may store such information itself or such
               information may be included in databases owned and maintained by
-              Equiforce Solutions affiliates, agents or service providers. The
+              Equiforce affiliates, agents or service providers. The
               Solutions/Services may use such information and pool it with other
               information to track, for example, the total number of visitors to
               our Site, the number of visitors to each page of our Site, and the
@@ -81,13 +81,13 @@ const PrivacyPolicy = () => {
             </h2>
             <p>
               In an ongoing effort to better understand and serve the users of
-              the Solutions/Services, Equiforce Solutions often conducts
+              the Solutions/Services, Equiforce often conducts
               research on its customer demographics, interests and behavior
               based on the Personal Data and other information provided to us.
             </p>
             <p className="mt-3">
               This research may be compiled and analyzed on an aggregate basis,
-              and Equiforce Solutions may share this aggregate data with its
+              and Equiforce may share this aggregate data with its
               affiliates, agents and business partners. This aggregate
               information does not identify you personally.
             </p>
@@ -136,14 +136,14 @@ const PrivacyPolicy = () => {
           <div>
             <h2 className="font-bold text-lg text-gray-900 mb-2">Security</h2>
             <p>
-              Equiforce Solutions takes reasonable steps to protect the Personal
+              Equiforce takes reasonable steps to protect the Personal
               Data provided via the Services from loss, misuse, and unauthorized
               access, disclosure, alteration, or destruction.
             </p>
             <p className="mt-3">
               However, no Internet or email transmission is ever fully secure or
               error free. Please keep this in mind when disclosing any Personal
-              Data to Equiforce Solutions via the Internet.
+              Data to Equiforce via the Internet.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ const PrivacyPolicy = () => {
               Our Use of Your Personal Information
             </h2>
             <p>
-              Equiforce Solutions uses the Personal Data you provide in a manner
+              Equiforce uses the Personal Data you provide in a manner
               that is consistent with this Privacy Policy.
             </p>
             <p className="mt-3">
@@ -188,7 +188,7 @@ const PrivacyPolicy = () => {
               Our Disclosure of Your Personal Data and Other Information
             </h2>
             <p>
-              Equiforce Solutions is not in the business of selling your
+              Equiforce is not in the business of selling your
               information. However, there are certain circumstances in which we
               may share your Personal Data with third parties as described
               below.
@@ -222,7 +222,7 @@ const PrivacyPolicy = () => {
               Agents, Consultants, and Related Third Parties
             </h2>
             <p>
-              Equiforce Solutions may hire other companies to perform business
+              Equiforce may hire other companies to perform business
               related functions such as mailing information, maintaining
               databases and processing payments.
             </p>
@@ -233,7 +233,7 @@ const PrivacyPolicy = () => {
               Legal Requirements
             </h2>
             <p>
-              Equiforce Solutions may disclose your Personal Data if required to
+              Equiforce may disclose your Personal Data if required to
               do so by law or in the good faith belief that such action is
               necessary to comply with legal obligations or protect rights,
               safety, and liability.
@@ -264,7 +264,7 @@ const PrivacyPolicy = () => {
           <div>
             <h2 className="font-bold text-lg text-gray-900 mb-2">Children</h2>
             <p>
-              Equiforce Solutions does not knowingly collect Personal Data from
+              Equiforce does not knowingly collect Personal Data from
               children under the age of 13. If such data is discovered, we will
               endeavor to delete it from our databases.
             </p>
@@ -286,7 +286,7 @@ const PrivacyPolicy = () => {
             </h2>
             <p>
               Your access to and use of the Services is subject to the Terms of
-              Service at www.equiforcesolutions.com
+              Service at www.equiforce.ai
             </p>
             <p className="mt-3">
               The Services and our business may change from time to time. We may
