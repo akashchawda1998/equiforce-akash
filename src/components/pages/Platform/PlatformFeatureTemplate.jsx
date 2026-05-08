@@ -41,7 +41,7 @@ const allData = [
     img: [p1, p2, p3],
     title: "Performance Measurement",
     description:
-      "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
+      "IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.",
   },
   {
     id: "gips",

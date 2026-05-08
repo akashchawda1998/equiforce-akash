@@ -90,7 +90,7 @@ const features = [
         Performance  Measurement
       </>
     ),
-    desc: "IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.",
+    desc: "IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.",
     icon: PerformanceMeasurementIcon,
     link: "/performance-measurement#performance",
   },

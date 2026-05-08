@@ -103,7 +103,7 @@ const Navbar = () => {
                             <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
                               Performance Measurement
                             </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">IBOR, ABOR, and PBOR returns and attribution at security, portfolio, and composite levels.</p>
+                            <p className="text-sm text-gray-500 mt-1 leading-snug">IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.</p>
                           </Link>
 
                           <Link
