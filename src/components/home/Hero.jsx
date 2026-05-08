@@ -33,7 +33,7 @@ function Hero() {
             <span>
               {" "}
               {/* Investment Ops,  */}
-              Performance & GIPS® Composite Reporting
+              Performance Measurement & GIPS® Composite Reporting
             </span>
           </h1>
 

@@ -116,7 +116,7 @@ const DashboardPreview = () => {
           >
             The Single{" "}
             <span className="text-[#d97706]">
-              Investment Operations Platform & Consulting Partner
+              Investment Measurement Platform & Consulting Partner
             </span>{" "}
             for your firm
           </h2>

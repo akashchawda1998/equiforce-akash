@@ -3,15 +3,15 @@ import React from "react";
 const differentiators = [
   {
     title: "Consultants, Not Just Vendors",
-    desc: "We are investment operations practitioners with nearly 30 years of hands-on experience — advising, implementing, and optimizing alongside our clients.",
+    desc: "We are performance measurement practitioners with nearly 30 years of hands-on experience – advising, implementing and optimizing alongside our clients.",
   },
   {
     title: "Purpose-Built Technology",
-    desc: "Every feature is engineered for back- and middle-office investment management workflows — covering reconciliation, performance, composites, and reporting.",
+    desc: "Every feature is engineered for back-and middle-office investment management workflows – covering performance measurement, composites and reporting.",
   },
   {
     title: "AI at the Core",
-    desc: "AI technologies natively embedded — automating reporting workflows and surfacing deep insights into every layer of investment reporting.",
+    desc: "AI technologies natively embedded - automating reporting workflows and surfacing deep insights into every layer of investment reporting.",
   },
 ];
 
@@ -34,8 +34,7 @@ const Differentiators = () => {
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-7xl mb-12 text-center md:text-center text-lg">
-          We combine deep industry expertise with next-generation technology to 
-          transform your investment operations.
+         We combine deep industry expertise with next-generation technology to transform your performance measurement operations.
         </p>
 
         {/* Differentiators Grid */}

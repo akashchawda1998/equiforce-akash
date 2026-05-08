@@ -22,8 +22,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12  items-start pb-8 border-b border-gray-100">
           {/* LEFT CTA */}
           <div className="md:col-span-4 text-center md:text-left">
+           
             <h2 className="text-2xl sm:text-2xl md:text-2xl font-bold text-[#000E24] leading-tight mb-6">
-              Transform Your Investment <br className="hidden sm:block" />
+              Transform Your Performance Measurement
               Operations with <br className="hidden sm:block" />
               EquiForce
             </h2>

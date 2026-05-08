@@ -9,7 +9,7 @@ import img4 from "../../assets/images/steve.jpg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
 import img7 from "../../assets/images/img8.png";
-
+import avatar from "../../assets/images/default-avatar.jpeg"
 import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
@@ -48,7 +48,7 @@ const team = [
     name: "Pushpendra Thakur",
     email: "pushpendra@equiforce.ai",
 
-        role: "Advisory Technology",
+    role: "Advisory Technology",
 
 
     img: img2,
@@ -94,10 +94,29 @@ const team = [
   {
 
     name: "Steve Everley",
-    email:"steve@equiforce.ai",
-    role: "Head of Business",
-    role1: "Development",
+    email: "steve@equiforce.ai",
+    role: "CFO",
+    role1: "Global Business Development",
     img: img4,
+
+    bio: [
+      `Steve Everley leads Business Development for EquiForce (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
+      "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
+    ]
+
+  },
+
+
+
+
+
+   {
+
+    name: "Todd",
+    email: "todd@equiforce.ai",
+    role: "Director Business Development",
+    role1: "",
+    img: avatar,
 
     bio: [
       `Steve Everley leads Business Development for EquiForce (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
@@ -113,7 +132,7 @@ const team = [
   {
 
     name: "Edmund J. Woo",
-email:"contact@equiforce.ai",
+    email: "contact@equiforce.ai",
     role: "Head of Client Relations",
 
     img: img5,
@@ -133,7 +152,7 @@ email:"contact@equiforce.ai",
   {
 
     name: "Dylan Tran",
-email:"contact@equiforce.ai",
+    email: "contact@equiforce.ai",
     role: "Analyst",
 
     img: img6,
@@ -150,23 +169,23 @@ email:"contact@equiforce.ai",
 
 
 
-    {
+  {
 
     name: "Stephen Hua",
-email:"contact@equiforce.ai",
+    email: "contact@equiforce.ai",
     role: "Technical Consultant",
 
     img: img7,
 
     bio: [
 
-"Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
-"At EquiForce, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
-"Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
-"With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
-"He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
-"In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
-"Stephen’s approach reflects EquiForce core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
+      "Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
+      "At EquiForce, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
+      "Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
+      "With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
+      "He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
+      "In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
+      "Stephen’s approach reflects EquiForce core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
     ]
 
   },
@@ -194,7 +213,7 @@ const Team = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
-          {team.slice(0, 4).map((member, i) => (
+          {team.slice(0, 5).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={setSelectedMember} />
           ))}
         </div>
@@ -205,7 +224,7 @@ const Team = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
           {/* Empty divs to center the bottom two if needed, or just map them */}
-          {team.slice(4).map((member, i) => (
+          {team.slice(5).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={setSelectedMember} />
           ))}
         </div>
@@ -283,7 +302,7 @@ const Team = () => {
 };
 
 const MemberCard = ({ member, onSelect }) => (
-  <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
+  <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6  flex flex-col items-center group transition-all hover:shadow-xl">
     {/* Profile Image */}
     <div
       onClick={() => onSelect(member)}

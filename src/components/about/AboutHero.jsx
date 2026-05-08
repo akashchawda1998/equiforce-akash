@@ -21,8 +21,7 @@ const AboutHero = () => {
       <p className="text-gray-600 max-w-4xl mx-auto font-medium">
         EquiForce empowers investment management firms with{" "}
         <span className="text-[#FF8000]"> purpose-built </span> technology -
-        delivering precision-engineered solutions for investment operations &
-        reconciliation, performance measurement, GIPS® composite
+        delivering precision-engineered solutions for performance measurement, GIPS® composite
         management, and AI-powered investment reporting. More than a software
         provider, we are a{" "}
         <span className="text-[#FF8000]">
