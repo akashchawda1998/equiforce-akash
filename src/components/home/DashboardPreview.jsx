@@ -118,7 +118,8 @@ const DashboardPreview = () => {
             <span className="text-[#d97706]">
               Investment Measurement Platform & Consulting Partner
             </span>{" "}
-            for your firm
+            for your <span className="tracking-tight
+">firm</span>
           </h2>
         </div>
 

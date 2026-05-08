@@ -132,7 +132,7 @@ const Features = () => {
         </h2>
 
         <p className="text-blue-100/80 max-w-2xl mx-auto mb-8 text-sm">
-          EquiForce delivers specialized solutions across performance measurement, GIPS composite management and AI-Powered Investment Reporting
+          EquiForce delivers specialized solutions across performance measurement, GIPS® composite management and AI-Powered Investment Reporting
         </p>
 
 
