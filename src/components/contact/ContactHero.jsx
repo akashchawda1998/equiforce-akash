@@ -71,7 +71,7 @@ const ContactPage = () => {
 
         <title>Request a Demo | Contact EquiForce</title>
  
-        <meta name="description" content="Have questions or need a demo? Contact EquiForce to learn how our AI-powered platform can transform your investment operations and reporting workflows.">
+        <meta name="description" content="Have questions or need a demo? Contact EquiForce to learn how our AI-powered platform can transform your Performance Measurement and Reporting Workflows.">
 
         </meta>
 
@@ -100,7 +100,7 @@ const ContactPage = () => {
 
 
         {/* MAIN CONTENT SECTION */}
-        <section className="px-4 pb-20 -mt-12 md:-mt-24 relative z-20">
+        <section className="px-4 pb-20 -mt-12 md:-mt-24 relative z-20" id="contactus">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               {/* LEFT: CONTACT FORM */}
@@ -260,7 +260,7 @@ const ContactPage = () => {
                 Schedule a live platform demo with our technical experts.
               </p>
 
-              <Link to="/contact">
+              <Link to="/contact#contactus">
                 <button className="w-full md:w-auto border border-[#d97706] text-[#d97706] px-8 py-3 rounded-lg font-bold hover:bg-[#d97706] hover:text-white transition-all">
                   Request Demo
                 </button>

@@ -29,10 +29,8 @@ const team = [
 
     bio: [
 
-      "Jane co founded EquiForce (EFS) in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers.  EFS combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
-
-      "Before launching EFS, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back  and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
-
+      "Jane co-founded EquiForce in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. EquiForce combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
+      "Before launching EquiForce, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
       "She holds a B.S. from the University of Southern California (cum laude) and has earned both the Chartered Financial Analyst® (CFA®) and the Certificate in Investment Performance Measurement (CIPM) designations."
 
     ]
@@ -43,25 +41,6 @@ const team = [
 
 
 
-  {
-
-    name: "Pushpendra Thakur",
-    email: "pushpendra@equiforce.ai",
-
-    role: "Advisory Technology",
-
-
-    img: img2,
-
-    bio: [
-
-      "Pushpendra Thakur is the Co-Founder and Chief Technology Officer of EquiForce (EFS), where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for investment operations, performance measurement, and enterprise reporting. Since co-founding EFS in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EFS, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
-
-      "With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
-
-    ]
-
-  },
 
 
 
@@ -81,12 +60,9 @@ const team = [
 
     bio: [
 
-      "Vincent co founded EquiForce (EFS) in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EFS’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
-
-      "Before launching EFS, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, reconciliation, performance measurement, analytics, GIPS compliance, and reporting automation. He has a long track record of designing and implementing technology that automates processes, enhances data integrity, and enables firms to scale efficiently. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, Kayne Anderson Rudnick Investment Management, and ACR Alpine Capital Research.",
-
+      "Vincent co-founded EquiForce in 2026 with a mission to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. As Chief Product Officer, he leads the vision, strategy, and development of EquiForce’s product suite, ensuring the platform delivers scalable, intuitive, and data accurate solutions for complex investment workflows.",
+      "Before launching EquiForce, Vincent spent more than 25 years in senior roles across portfolio accounting, investment operations, reconciliation, performance measurement, analytics, GIPS compliance, and reporting automation. He has a long track record of designing and implementing technology that automates processes, enhances data integrity, and enables firms to scale efficiently. His career includes senior positions at PIMCO, Macquarie Allegiance Capital, Oaktree Capital, Kayne Anderson Rudnick Investment Management, and ACR Alpine Capital Research.",
       "Vincent holds an MBA (with Distinction) from the New York Institute of Technology, a B.S. from Baylor University, and the Certificate in Investment Performance Measurement (CIPM) designation."
-
     ]
 
   },
@@ -100,7 +76,8 @@ const team = [
     img: img4,
 
     bio: [
-      `Steve Everley leads Business Development for EquiForce (EFS), driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EFS delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
+
+      `Steve serves as CFO and leads Global Business Development for EquiForce, driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EquiForce delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
       "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
     ]
 
@@ -123,6 +100,26 @@ const team = [
     ]
 
   },
+
+
+    {
+
+    name: "Pushpendra Thakur",
+    email: "pushpendra@equiforce.ai",
+
+    role: "Advisory Technology",
+
+
+    img: img2,
+
+    bio: [
+
+"Pushpendra Thakur is the Co-Founder and Advisory Technology of EquiForce, where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for performance measurement and enterprise reporting. Since co-founding EquiForce in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EquiForce, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
+"With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
+    ]
+
+  },
+
 
 
 

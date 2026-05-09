@@ -65,6 +65,7 @@ const FeatureSection = ({ item, index }) => {
 
   return (
     <>
+
       <div id={item.id} className="pt-20 pb-5 md:pt-20 md:pb-10">      <div
         className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 ${isEven ? "" : "md:flex-row-reverse"
           }`}

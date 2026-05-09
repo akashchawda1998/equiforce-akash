@@ -162,7 +162,7 @@ const Navbar = () => {
 
                           {/* Book Meeting */}
                           <Link
-                            to="/contact"
+                            to="/contact#contactus"
                             onClick={() => setPlatformOpen(false)}
                             className="bg-[#eef7f8] rounded-2xl p-5 flex justify-between items-center group hover:bg-[#d4ecee] hover:shadow-md transition-all duration-300"
                           >
@@ -198,7 +198,7 @@ const Navbar = () => {
                 Meet Our Team
               </Link>
 
-              <Link to="/contact" className="text-xs  uppercase hover:text-[#d97706] transition-all">
+              <Link to="/contact#contactus" className="text-xs  uppercase hover:text-[#d97706] transition-all">
                 Contact
               </Link>
 

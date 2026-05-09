@@ -6,10 +6,10 @@ const AboutHero = () => {
 
 <>
 
-<title>About EquiForce | Investment Operations, Performance Measurement GIPS® Solutions and AI-powered reporting</title>
+<title>About EquiForce AI | Performance Measurement & GIPS® Solutions and AI-powered reporting</title>
             <Helmet>
 
-<meta name="description" content="EquiForce s olutions empowers investment firms with technology for investment operations, reconciliation, performance measurement, GIPS® composite management, and AI-powered reporting. Backed by 30 years of expertise.">
+<meta name="description" content="EquiForce delivers specialized solutions across performance measurement, GIPS® composite management and AI-Powered Investment Reporting.">
 
 </meta>
 </Helmet>

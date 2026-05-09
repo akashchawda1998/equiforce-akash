@@ -114,9 +114,11 @@ const DashboardPreview = () => {
             className="text-2xl md:text-4xl font-bold leading-tight max-w-4xl mx-auto"
             style={{ color: NAVY }}
           >
+
+
             The Single{" "}
             <span className="text-[#d97706]">
-              Investment Measurement Platform & Consulting Partner
+               Performance Measurement Platform & Consulting Partner
             </span>{" "}
             for your <span className="tracking-tight
 ">firm</span>
