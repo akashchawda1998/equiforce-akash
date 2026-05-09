@@ -252,7 +252,7 @@ const ContactPage = () => {
         <img src={bgchatboat} className="hidden img-fluid" />
 
         {/* CTA SECTION - Mobile stacking optimized */}
-        <section className="bg-[#0B2341] text-white py-12 md:py-20">
+        {/* <section className="bg-[#0B2341] text-white py-12 md:py-20">
           <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-8">
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl">
               <h3 className="text-xl font-bold mb-2">Try for Free</h3>
@@ -267,7 +267,7 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );
