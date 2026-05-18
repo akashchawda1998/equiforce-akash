@@ -9,6 +9,7 @@ import img4 from "../../assets/images/steve.jpg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
 import img7 from "../../assets/images/img8.png";
+import todd from '../../assets/images/todoo.jpg';
 import avatar from "../../assets/images/default-avatar.jpeg"
 import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -93,7 +94,7 @@ const team = [
     email: "todd@equiforce.ai",
     role: "Director Business Development",
     role1: "",
-    img: avatar,
+    img: todd,
 
     bio: [
       ""
