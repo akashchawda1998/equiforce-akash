@@ -210,7 +210,7 @@ const Team = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
-          {team.slice(0, 5).map((member, i) => (
+          {team.slice(0, 4).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={setSelectedMember} />
           ))}
         </div>
@@ -221,7 +221,7 @@ const Team = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
           {/* Empty divs to center the bottom two if needed, or just map them */}
-          {team.slice(5).map((member, i) => (
+          {team.slice(4).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={setSelectedMember} />
           ))}
         </div>
