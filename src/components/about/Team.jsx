@@ -68,21 +68,21 @@ const team = [
 
   },
 
-  {
+  // {
 
-    name: "Steve Everley",
-    email: "steve@equiforce.ai",
-    role: "CFO",
-    role1: "Global Business Development",
-    img: img4,
+  //   name: "Steve Everley",
+  //   email: "steve@equiforce.ai",
+  //   role: "CFO",
+  //   role1: "Global Business Development",
+  //   img: img4,
 
-    bio: [
+  //   bio: [
 
-      `Steve serves as CFO and leads Global Business Development for EquiForce, driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EquiForce delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
-      "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
-    ]
+  //     `Steve serves as CFO and leads Global Business Development for EquiForce, driving the firm’s growth strategy and strategic partnerships. With over 30 years of technical leadership, Steve excels at bridging the "operational scale gap" for mid-sized wealth and asset management firms. His "systems-thinking" approach, rooted in an engineering background and executive experience at Intel and HP, ensures that EquiForce delivers scalable, precision-engineered solutions that transform complex back-office data into actionable business insights.`,
+  //     "A seasoned fintech entrepreneur, Steve previously co-founded Versoft, where he served as CFO and led sales, developing the firm’s business infrastructure, legal frameworks, and strategies. Most recently, he played a pivotal role at F2 Strategy, leading the high-profile integration of MD Solutions into their core offering. This deep experience in navigating the technical and business complexities of the RIA space allows Steve to act as a strategic partner for EFS clients, helping them modernize workflows, strengthen controls, and scale with confidence."
+  //   ]
 
-  },
+  // },
 
 
 
