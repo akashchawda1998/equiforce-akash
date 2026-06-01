@@ -90,7 +90,7 @@ const team = [
 
    {
 
-    name: "Todd",
+    name: "Todd Brunskill",
     email: "todd@equiforce.ai",
     role: "Chief Revenue Officer",
     role1: "",

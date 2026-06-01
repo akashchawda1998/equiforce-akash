@@ -24,7 +24,7 @@ function Hero() {
         <div className="w-full lg:w-1/2 text-white z-10">
           
           <p className="uppercase text-[#d97706] tracking-widest mt-10 mb-3 text-sm font-semibold">
-            Nearly 3 Decades of Industry Expertise
+            Over 3 Decades of Industry Expertise
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 leading-snug">
