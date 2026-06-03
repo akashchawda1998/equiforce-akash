@@ -146,46 +146,46 @@ const team = [
 
 
 
-  {
+  // {
 
-    name: "Dylan Tran",
-    email: "contact@equiforce.ai",
-    role: "Analyst",
+  //   name: "Dylan Tran",
+  //   email: "contact@equiforce.ai",
+  //   role: "Analyst",
 
-    img: img6,
+  //   img: img6,
 
-    bio: [
+  //   bio: [
 
-      "As an Analyst at EquiForce (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.", "Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
+  //     "As an Analyst at EquiForce (EFS), Dylan supports the firm’s data operations and implementation efforts. He is responsible for implementation of data validation, and quality control across client datasets, ensuring accuracy and consistency throughout the onboarding and reporting processes.", "Dylan holds a B.A. from the University of California, Los Angeles (UCLA)."
 
-    ]
+  //   ]
 
-  },
-
-
+  // },
 
 
 
-  {
 
-    name: "Stephen Hua",
-    email: "contact@equiforce.ai",
-    role: "Technical Consultant",
 
-    img: img7,
+  // {
 
-    bio: [
+  //   name: "Stephen Hua",
+  //   email: "contact@equiforce.ai",
+  //   role: "Technical Consultant",
 
-      "Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
-      "At EquiForce, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
-      "Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
-      "With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
-      "He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
-      "In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
-      "Stephen’s approach reflects EquiForce core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
-    ]
+  //   img: img7,
 
-  },
+  //   bio: [
+
+  //     "Stephen Hua brings over 16 years of hands-on experience in investment operations, performance measurement, and data analytics, supporting asset managers with a focus on liquid credit strategies.",
+  //     "At EquiForce, Stephen embodies our practitioner-led approach - combining deep industry expertise with practical execution to help firms modernize their middle-office functions. He partners with emerging and established managers to enhance reconciliation, performance reporting, and data integrity—delivering institutional-quality processes without the complexity and cost of legacy systems.",
+  //     "Stephen has led end-to-end reconciliation and reporting environments, ensuring accuracy across holdings, transactions, and pricing data while strengthening controls and improving operational reliability. He is a trusted expert in optimizing workflows and building scalable processes that support growth and evolving client demands.",
+  //     "With extensive experience in performance attribution and analytics, Stephen enables firms to better understand and communicate their results. He develops intuitive, centralized reporting solutions that bring clarity to portfolio and benchmark performance, empowering investment teams with actionable insights.",
+  //     "He also plays a key role in designing robust data frameworks—working alongside technology teams to implement efficient, purpose-built solutions that improve transparency, scalability, and decision-making. His technical expertise includes Power BI, SQL, Bloomberg, FactSet, and the Geneva accounting system.",
+  //     "In addition, Stephen supports client-facing initiatives such as RFPs and DDQs, helping firms articulate their operational strength and performance story to investors.",
+  //     "Stephen’s approach reflects EquiForce core mission: to act as a true strategic partner—combining technology and experienced operators to elevate investment operations and deliver measurable impact."
+  //   ]
+
+  // },
 
 
 
