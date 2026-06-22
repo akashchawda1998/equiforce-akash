@@ -92,7 +92,7 @@ const team = [
 
     name: "Todd Brunskill",
     email: "todd@equiforce.ai",
-    role: "Chief Revenue Officer",
+    role: "Sales Consultant",
     role1: "",
     img: todd,
 
