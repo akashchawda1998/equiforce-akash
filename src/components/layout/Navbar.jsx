@@ -198,6 +198,10 @@ const Navbar = () => {
                 Meet Our Team
               </Link>
 
+              <Link to="/insights" className="text-xs  uppercase hover:text-[#d97706] transition-all">
+                Insights
+              </Link>
+
               <Link to="/contact#contactus" className="text-xs  uppercase hover:text-[#d97706] transition-all">
                 Contact
               </Link>
@@ -276,6 +280,7 @@ const Navbar = () => {
 
               <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Our Company</Link>
               <Link to="/team" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Meet our Team</Link>
+              <Link to="/insights" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Insights</Link>
 
               <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">
                 Contact
