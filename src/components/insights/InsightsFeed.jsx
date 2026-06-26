@@ -56,7 +56,7 @@ const InsightsFeed = () => {
             </button>
 
             {/* Content */}
-            <div className="p-5 sm:p-3 lg:p-4 text-white flex flex-col justify-between">
+            <div className="p-5 sm:p-3 lg:p-5 text-white flex flex-col justify-between">
 
               <div>
 
@@ -67,7 +67,7 @@ const InsightsFeed = () => {
 
               {/* Footer */}
 
-              <div className="border-t border-white/10  pt-5">
+              <div className="border-t border-white/10  pt-2 mt-2">
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
 
