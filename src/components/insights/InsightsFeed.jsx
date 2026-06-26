@@ -34,7 +34,7 @@ const InsightsFeed = () => {
             {/* Image */}
             <button
               onClick={() => setVideoOpen(true)}
-              className="relative group w-full h-[230px] sm:h-[320px] md:h-full overflow-hidden"
+              className="relative group w-full h-[330px] sm:h-[320px] md:h-full overflow-hidden"
             >
               <img
                 src={featured.image}
@@ -56,7 +56,7 @@ const InsightsFeed = () => {
             </button>
 
             {/* Content */}
-            <div className="px-5   sm:p-3 lg:p-4 text-white flex flex-col justify-between">
+            <div className="p-5 sm:p-3 lg:p-4 text-white flex flex-col justify-between">
 
               <div>
 
