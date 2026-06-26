@@ -1,7 +1,7 @@
 import { FiPlay, FiCalendar, FiUser, FiX } from "react-icons/fi";
 import { useState } from "react";
 import podcastVideo from "../../assets/images/podcast1.mp4";
-import podcasimg1 from "../../assets/images/TSG TIME with Pat and Doug.png";
+import podcasimg1 from "../../assets/images/tsg.png";
 
 const InsightsFeed = () => {
   const [videoOpen, setVideoOpen] = useState(false);
