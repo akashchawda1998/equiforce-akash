@@ -226,24 +226,56 @@ const ContactPage = () => {
 
                 {/* OFFICE LOCATIONS */}
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
-                    Our Offices
-                  </h3>
-                  <div className="grid grid-cols-1 gap-2">
-                    {[{ city: "Los Angeles, CA" }, { city: "Indore, India" }].map(
-                      (loc, index) => (
-                        <div key={index} className="flex items-start gap-4 p-4">
-                          <div className="text-[#d97706] mt-1 shrink-0">
-                            <MapPin size={22} />
-                          </div>
-                          <div>
-                            <p className="font-bold text-gray-800">{loc.city}</p>
-                          </div>
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </div>
+  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
+    Our Offices
+  </h3>
+  <div className="grid grid-cols-1 gap-2">
+    {[
+      {
+        city: "Los Angeles, CA",
+        company: "EquiForce Solutions Inc.",
+        address: "1575 Westwood Blvd Ste 302",
+        zip: "Los Angeles, CA 90024",
+        country: "United States",
+        isHQ: true,
+      },
+      {
+        city: "Indore, India",
+        company: "",
+        address: "",
+        zip: "",
+        country: "India",
+        isHQ: false,
+      },
+    ].map((loc, index) => (
+      <div key={index} className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition">
+        <div className="text-[#d97706] mt-1 shrink-0">
+          <MapPin size={22} />
+        </div>
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+            <p className="font-bold text-gray-800">{loc.city}</p>
+            {loc.isHQ && (
+              <span className="inline-flex items-center gap-1 bg-[#d97706]/10 text-[#d97706] text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide border border-[#d97706]/30">
+              Headquarters
+              </span>
+            )}
+          </div>
+          {loc.company && (
+            <p className="text-sm font-semibold text-gray-700">{loc.company}</p>
+          )}
+          {loc.address && (
+            <p className="text-sm text-gray-500">{loc.address}</p>
+          )}
+          {loc.zip && (
+            <p className="text-sm text-gray-500">{loc.zip}</p>
+          )}
+          <p className="text-xs text-[#d97706] font-medium mt-1">{loc.country}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
               </div>
             </div>
           </div>
