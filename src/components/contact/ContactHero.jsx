@@ -257,7 +257,7 @@ const ContactPage = () => {
             <p className="font-bold text-gray-800">{loc.city}</p>
             {loc.isHQ && (
               <span className="inline-flex items-center gap-1 bg-[#d97706]/10 text-[#d97706] text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide border border-[#d97706]/30">
-              Headquarters
+              Headquarter
               </span>
             )}
           </div>
