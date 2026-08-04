@@ -23,7 +23,8 @@ const Benefits = () => {
       {/* Wave */}
       <img
         src={wave}
-        alt="background wave"
+        alt=""
+        aria-hidden="true"
         className="absolute bottom-0 left-0 w-full opacity-30 pointer-events-none mix-blend-overlay"
       />
 
@@ -134,20 +135,24 @@ const Benefits = () => {
             {/* Image */}
             <img
               src={benefitImg}
-              alt="investment benefits"
+              alt="EquiForce key investment benefits breakdown"
               className="relative z-10 w-full max-w-[320px] sm:max-w-[420px] md:max-w-[480px] rounded-2xl shadow-2xl border border-white/10"
             />
 
             {/* Play Button Pulse Overlay */}
             <div className="absolute flex items-center justify-center z-20">
               {/* Outer pulse ring */}
-              <span className="absolute inline-flex h-24 w-24 rounded-full bg-[#d97706]/40 animate-ping"></span>
+              <span className="absolute inline-flex h-24 w-24 rounded-full bg-[#d97706]/40 animate-ping" aria-hidden="true"></span>
 
               {/* Second ring */}
-              <span className="absolute inline-flex h-16 w-16 rounded-full bg-[#d97706]/60 animate-pulse"></span>
+              <span className="absolute inline-flex h-16 w-16 rounded-full bg-[#d97706]/60 animate-pulse" aria-hidden="true"></span>
 
               {/* Main button */}
-              <button className="relative z-10 w-16 h-16 rounded-full bg-white shadow-[0_0_20px_rgba(217,119,6,0.5)] flex items-center justify-center hover:scale-110 transition-transform duration-300">
+              <button
+                type="button"
+                aria-label="Play key benefits overview video"
+                className="relative z-10 w-16 h-16 rounded-full bg-white shadow-[0_0_20px_rgba(217,119,6,0.5)] flex items-center justify-center hover:scale-110 transition-transform duration-300 focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              >
                 <div className="ml-1 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[14px] border-l-[#d97706]"></div>
               </button>
             </div>

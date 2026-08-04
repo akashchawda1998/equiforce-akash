@@ -61,14 +61,15 @@ const SignIn = () => {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Input */}
             <div>
-              <label className="block text-sm font-bold mb-2" style={{ color: NAVY }}>Email Address</label>
+              <label htmlFor="signin-email" className="block text-sm font-bold mb-2" style={{ color: NAVY }}>Email Address</label>
               <div className="relative">
-                <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiMail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
                 <input
+                  id="signin-email"
                   type="email"
                   required
                   placeholder="name@company.com"
-                  className="w-full pl-12 pr-4 py-3.5 rounded-xl border  border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-black bg-gray-50/50"
+                  className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-black bg-gray-50/50"
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
@@ -77,26 +78,28 @@ const SignIn = () => {
             {/* Password Input */}
             <div>
               <div className="flex justify-between mb-2">
-                <label className="block text-sm font-bold  " style={{ color: NAVY }}>Password</label>
-                <Link to="/forgot-password" size="sm" className="text-cyan-600 text-xs font-bold hover:underline">
+                <label htmlFor="signin-password" className="block text-sm font-bold" style={{ color: NAVY }}>Password</label>
+                <Link to="/forgot-password" className="text-cyan-600 text-xs font-bold hover:underline">
                   Forgot Password?
                 </Link>
               </div>
               <div className="relative">
-                <FiLock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FiLock className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
                 <input
+                  id="signin-password"
                   type={showPassword ? "text" : "password"}
                   required
                   placeholder="••••••••"
-                  className="w-full pl-12 pr-12 py-3.5 rounded-xl border placeholder-mauve-400 text-black bg-gray-50/50 border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all bg-gray-50/50"
+                  className="w-full pl-12 pr-12 py-3.5 rounded-xl border placeholder-mauve-400 text-black bg-gray-50/50 border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
                 <button
                   type="button"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-md p-1"
                 >
-                  {showPassword ? <FiEyeOff size={18} /> : <FiEye size={18} />}
+                  {showPassword ? <FiEyeOff size={18} aria-hidden="true" /> : <FiEye size={18} aria-hidden="true" />}
                 </button>
               </div>
             </div>

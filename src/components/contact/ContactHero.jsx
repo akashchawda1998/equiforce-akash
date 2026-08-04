@@ -93,7 +93,8 @@ const ContactPage = () => {
 
           <img
             src={contactimg}
-            alt="background design"
+            alt=""
+            aria-hidden="true"
             className="absolute bottom-0 left-0 w-full h-1/2 md:h-full object-cover opacity-30 pointer-events-none"
           />
         </section>
@@ -111,74 +112,102 @@ const ContactPage = () => {
 
                 <form className="space-y-5" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="contact-firstName" className="sr-only">First Name</label>
+                      <input
+                        id="contact-firstName"
+                        name="firstName"
+                        type="text"
+                        placeholder="First Name *"
+                        required
+                        className={inputStyle}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="contact-lastName" className="sr-only">Last Name</label>
+                      <input
+                        id="contact-lastName"
+                        name="lastName"
+                        type="text"
+                        placeholder="Last Name *"
+                        required
+                        className={inputStyle}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="contact-email" className="sr-only">Business Email</label>
                     <input
-                      name="firstName"
-                      type="text"
-                      placeholder="First Name *"
-                      className={inputStyle}
-                      onChange={handleChange}
-                    />
-                    <input
-                      name="lastName"
-                      type="text"
-                      placeholder="Last Name *"
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      placeholder="Business Email *"
+                      required
                       className={inputStyle}
                       onChange={handleChange}
                     />
                   </div>
 
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Business Email *"
-                    className={inputStyle}
-                    onChange={handleChange}
-                  />
+                  <div>
+                    <label htmlFor="contact-company" className="sr-only">Company Name</label>
+                    <input
+                      id="contact-company"
+                      name="company"
+                      type="text"
+                      placeholder="Company Name *"
+                      required
+                      className={inputStyle}
+                      onChange={handleChange}
+                    />
+                  </div>
 
-                  <input
-                    name="company"
-                    type="text"
-                    placeholder="Company Name *"
-                    className={inputStyle}
-                    onChange={handleChange}
-                  />
+                  <div>
+                    <label htmlFor="contact-service" className="sr-only">Select Service</label>
+                    <select
+                      id="contact-service"
+                      name="service"
+                      className={`${inputStyle} appearance-none pr-10`}
+                      onChange={handleChange}
+                      required
+                      defaultValue=""
+                    >
+                      <option value="" disabled hidden>
+                        Select Service *
+                      </option>
+                      <option>Performance Measurement</option>
+                      <option> GIPS® Composite Management</option>
+                      <option>AI-Powered Investment Reporting</option>
+                      <option>Consulting</option>
+                    </select>
+                  </div>
 
-                  <select
-                    name="service"
-                    className={`${inputStyle} appearance-none pr-10`}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="" disabled selected hidden>
-                      Select Service
-                    </option>
-
-                    {/* <option>Investment Operations & Reconciliation</option> */}
-                    <option>Performance Measurement</option>
-                    <option> GIPS® Composite Management</option>
-                    <option>AI-Powered Investment Reporting</option>
-                    <option>Consulting</option>
-                  </select>
-
-                  <textarea
-                    name="message"
-                    rows="4"
-                    placeholder="How can we help you?"
-                    onChange={handleChange}
-                    className="w-full text-black p-4 border border-gray-300 rounded-md"
-                  />
+                  <div>
+                    <label htmlFor="contact-message" className="sr-only">Message</label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      rows="4"
+                      placeholder="How can we help you?"
+                      onChange={handleChange}
+                      className="w-full text-black p-4 border border-gray-300 rounded-md focus-visible:ring-2 focus-visible:ring-[#d97706]"
+                    />
+                  </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className={`w-full md:w-auto px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md
+                    className={`w-full md:w-auto px-10 py-4 rounded-xl font-bold transition-all duration-300 shadow-md focus-visible:ring-2 focus-visible:ring-[#d97706]
     ${loading
                         ? "bg-gray-400 cursor-not-allowed"
                         : "bg-[#d97706] hover:bg-[#b46002] text-white active:scale-95"}
   `}
                   >
                     {loading ? "Submitting..." : "Submit Inquiry"}
-                  </button>              </form>
+                  </button>
+                </form>
               </div>
 
               {/* RIGHT: LOCATIONS & DIRECT EMAILS */}
@@ -281,7 +310,7 @@ const ContactPage = () => {
           </div>
         </section>
 
-        <img src={bgchatboat} className="hidden img-fluid" />
+        <img src={bgchatboat} alt="" aria-hidden="true" className="hidden img-fluid" />
 
         {/* CTA SECTION - Mobile stacking optimized */}
         {/* <section className="bg-[#0B2341] text-white py-12 md:py-20">

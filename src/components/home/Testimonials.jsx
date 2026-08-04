@@ -68,7 +68,7 @@ const Testimonials = () => {
               <div className="flex items-center gap-4 mb-5 md:mb-6">
                 <img
                   src={t.image}
-                  alt={t.name}
+                  alt={`Portrait of ${t.name}, ${t.role}`}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
                 />
 

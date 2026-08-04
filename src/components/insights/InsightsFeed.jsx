@@ -33,8 +33,10 @@ const InsightsFeed = () => {
 
             {/* Image */}
             <button
+              type="button"
+              aria-label={`Play video: ${featured.title}`}
               onClick={() => setVideoOpen(true)}
-              className="relative group w-full h-[330px] sm:h-[320px] md:h-full overflow-hidden"
+              className="relative group w-full h-[330px] sm:h-[320px] md:h-full overflow-hidden focus-visible:ring-2 focus-visible:ring-[#d97706]"
             >
               <img
                 src={featured.image}
@@ -112,9 +114,11 @@ const InsightsFeed = () => {
       )}
 
       {/* Video Modal */}
-
       {videoOpen && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Video player: ${featured.title}`}
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
           onClick={() => setVideoOpen(false)}
         >
@@ -123,10 +127,12 @@ const InsightsFeed = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              type="button"
+              aria-label="Close video player"
               onClick={() => setVideoOpen(false)}
-              className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center z-10"
+              className="absolute top-3 right-3 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center z-10 focus-visible:ring-2 focus-visible:ring-[#d97706]"
             >
-              <FiX size={20} />
+              <FiX size={20} aria-hidden="true" />
             </button>
 
             <div className="aspect-video">

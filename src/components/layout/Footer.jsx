@@ -152,21 +152,21 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-[13px]">
+        <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-[13px]">
           <p className="text-center md:text-left">
             ©2026{" "}
-            <span className="font-semibold text-gray-600">
+            <span className="font-semibold text-gray-800">
               EquiForce
             </span>{" "}
             · All rights reserved.
           </p>
 
-          <div className="flex items-center gap-2 text-gray-500">
-            <Link to="/privacy-policy" className="hover:text-[#d97706]">
+          <div className="flex items-center gap-2 text-gray-600">
+            <Link to="/privacy-policy" className="hover:text-[#b45309]">
               Privacy Policy
             </Link>
-            <span className="hidden md:block">|</span>
-            <Link to="/terms-of-service" className="hover:text-[#d97706]">
+            <span className="hidden md:block" aria-hidden="true">|</span>
+            <Link to="/terms-of-service" className="hover:text-[#b45309]">
               Terms of Service
             </Link>
           </div>
@@ -175,10 +175,12 @@ const Footer = () => {
           {show && (
             <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:-top-6">
               <button
+                type="button"
+                aria-label="Scroll to top of page"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg hover:scale-110 transition-all duration-300"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-[#000E24] hover:bg-[#d97706] text-white shadow-lg hover:scale-110 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#d97706]"
               >
-                <FiArrowUp size={18} />
+                <FiArrowUp size={18} aria-hidden="true" />
               </button>
             </div>
           )}

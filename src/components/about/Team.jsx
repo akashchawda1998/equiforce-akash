@@ -230,8 +230,14 @@ const Team = () => {
       {/* MODAL PORTAL */}
       {selectedMember && createPortal(
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="member-bio-title"
           className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto"
           onClick={() => setSelectedMember(null)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setSelectedMember(null);
+          }}
         >
           <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
             <div
@@ -240,10 +246,12 @@ const Team = () => {
             >
               {/* Close Button */}
               <button
+                type="button"
+                aria-label={`Close bio for ${selectedMember.name}`}
                 onClick={() => setSelectedMember(null)}
-                className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black"
+                className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-md p-1"
               >
-                <IoClose />
+                <IoClose aria-hidden="true" />
               </button>
 
               {/* Top Section: Image + Name/Role */}
@@ -260,7 +268,7 @@ const Team = () => {
 
                 {/* Right Name/Role */}
                 <div className="flex flex-col justify-center">
-                  <h3 className="text-xl md:text-3xl text-gray-800 font-semibold mb-1">
+                  <h3 id="member-bio-title" className="text-xl md:text-3xl text-gray-800 font-semibold mb-1">
                     {selectedMember.name}
                   </h3>
                   <p className="text-sm text-[#0066a1] font-bold uppercase tracking-wide">
@@ -283,7 +291,7 @@ const Team = () => {
                 {/* Highlighted Footer Text */}
                 <p className="mt-6 text-sm italic pt-6 border-t border-gray-50">
                   Building the future of{" "}
-                  <span className="text-[#d97706] font-semibold">
+                  <span className="text-[#b45309] font-semibold">
                     scalable, cost-efficient technology and advisory services
                   </span>
                   .
@@ -299,11 +307,13 @@ const Team = () => {
 };
 
 const MemberCard = ({ member, onSelect }) => (
-  <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6  flex flex-col items-center group transition-all hover:shadow-xl">
-    {/* Profile Image */}
-    <div
+  <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6 flex flex-col items-center group transition-all hover:shadow-xl">
+    {/* Profile Image Trigger */}
+    <button
+      type="button"
+      aria-label={`View bio for ${member.name}`}
       onClick={() => onSelect(member)}
-      className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer"
+      className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-full"
     >
       <div className="w-36 h-36 rounded-full p-1 bg-gradient-to-tr from-blue-900 to-[#d97706]">
         <div className="w-full h-full rounded-full border-4 border-white overflow-hidden">
@@ -314,7 +324,7 @@ const MemberCard = ({ member, onSelect }) => (
           />
         </div>
       </div>
-    </div>
+    </button>
 
     {/* Name */}
     <h4 className="text-[#000E24] text-sm font-semibold mb-1 mt-10 text-center truncate max-w-full">
@@ -330,17 +340,19 @@ const MemberCard = ({ member, onSelect }) => (
     {/* Email */}
     <a
       href={`mailto:${member.email}`}
-      className="text-yellow-600 text-xs font-semibold mb-6 hover:underline flex items-center gap-1"
+      aria-label={`Email ${member.name} at ${member.email}`}
+      className="text-amber-700 text-xs font-semibold mb-6 hover:underline flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-[#d97706]"
     >
-      <FaRegEnvelope /> {member.email}
+      <FaRegEnvelope aria-hidden="true" /> {member.email}
     </a>
 
     {/* View Bio Button */}
     <button
+      type="button"
       onClick={() => onSelect(member)}
-      className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition"
+      className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition focus-visible:ring-2 focus-visible:ring-[#d97706]"
     >
-      View Bio <span className="ml-1 text-lg">›</span>
+      View Bio <span className="ml-1 text-lg" aria-hidden="true">›</span>
     </button>
   </div>
 );

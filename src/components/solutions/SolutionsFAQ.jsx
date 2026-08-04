@@ -68,19 +68,24 @@ const SolutionsFAQ = () => {
                 return (
                   <div
                     key={i}
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    className={`border rounded-xl p-4 md:p-5 cursor-pointer transition
-                    ${
+                    className={`border rounded-xl p-4 md:p-5 transition ${
                       isOpen
                         ? "bg-white shadow-md border-gray-200"
                         : "bg-white/70 border-gray-200 hover:bg-white"
                     }`}
                   >
-                    {/* Question */}
-                    <div className="flex items-center justify-between gap-4">
-                      <h4 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
+                    {/* Question Header */}
+                    <button
+                      type="button"
+                      id={`sol-faq-header-${i}`}
+                      aria-expanded={isOpen}
+                      aria-controls={`sol-faq-answer-${i}`}
+                      onClick={() => setOpen(isOpen ? null : i)}
+                      className="w-full flex items-center justify-between gap-4 text-left cursor-pointer focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-lg"
+                    >
+                      <h3 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
                         {i + 1}. {item.q}
-                      </h4>
+                      </h3>
 
                       <div
                         className={`shrink-0 w-8 h-8 md:w-9 md:h-9 flex items-center justify-center rounded-lg transition
@@ -91,18 +96,24 @@ const SolutionsFAQ = () => {
                         }`}
                       >
                         {isOpen ? (
-                          <FiArrowUp size={16} />
+                          <FiArrowUp size={16} aria-hidden="true" />
                         ) : (
-                          <FiArrowRight size={16} />
+                          <FiArrowRight size={16} aria-hidden="true" />
                         )}
                       </div>
-                    </div>
+                    </button>
 
                     {/* Answer */}
                     {isOpen && (
-                      <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
-                        {item.a}
-                      </p>
+                      <div
+                        id={`sol-faq-answer-${i}`}
+                        role="region"
+                        aria-labelledby={`sol-faq-header-${i}`}
+                      >
+                        <p className="text-gray-600 text-sm md:text-base mt-4 leading-relaxed">
+                          {item.a}
+                        </p>
+                      </div>
                     )}
                   </div>
                 );

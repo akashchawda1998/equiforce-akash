@@ -40,7 +40,8 @@ const PartnerSection = () => {
                 href="https://www.goldenrtech.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 text-sm text-[#d97706] hover:underline"
+                aria-label="Visit Golden R Technologies website (opens in new tab)"
+                className="mt-4 text-sm text-[#b45309] hover:underline font-semibold focus-visible:ring-2 focus-visible:ring-[#d97706]"
               >
                 Click to Golden R website →
               </a>

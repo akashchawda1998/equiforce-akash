@@ -131,7 +131,7 @@ const DashboardPreview = () => {
           <div className="relative z-10 overflow-hidden">
             <img
               src={SinglePlatformImg}
-              alt="Dashboard"
+              alt="EquiForce Unified Platform Dashboard Preview"
               className="w-full h-auto"
             />
           </div>

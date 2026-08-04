@@ -35,8 +35,12 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       <ScrollToTop />
-      <Navbar />
-      {children}
+      <header>
+        <Navbar />
+      </header>
+      <main id="main-content" tabIndex="-1" className="outline-none">
+        {children}
+      </main>
       {/* Only show Footer if the current path is NOT in the hideFooterPaths array */}
       {!hideFooterPaths.includes(location.pathname) && <Footer />}
     </>

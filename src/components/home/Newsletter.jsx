@@ -51,13 +51,17 @@ const Newsletter = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <input
-                  type="email"
-                  placeholder="Enter your work email"
-                  className="px-5 py-3 rounded-xl w-full sm:w-80 outline-none border border-gray-200"
-                />
+                <div>
+                  <label htmlFor="newsletter-email" className="sr-only">Enter your work email</label>
+                  <input
+                    id="newsletter-email"
+                    type="email"
+                    placeholder="Enter your work email"
+                    className="px-5 py-3 rounded-xl w-full sm:w-80 outline-none border border-gray-200 focus-visible:ring-2 focus-visible:ring-[#d97706]"
+                  />
+                </div>
 
-                <button className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition">
+                <button type="button" className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition focus-visible:ring-2 focus-visible:ring-[#d97706]">
                   Try for Free
                 </button>
               </div>
@@ -74,16 +78,21 @@ const Newsletter = () => {
           <div className="relative mt-12 md:mt-16 flex justify-center">
             <img
               src={dashboard}
+              alt="EquiForce performance measurement dashboard preview"
               className="w-full max-w-[500px] md:max-w-[700px] rounded-2xl shadow-xl"
             />
 
             <img
               src={stat1}
+              alt=""
+              aria-hidden="true"
               className="hidden md:block absolute -left-10 bottom-10 w-40 lg:w-52 rounded-xl shadow-lg animate-[float_6s_ease-in-out_infinite]"
             />
 
             <img
               src={stat2}
+              alt=""
+              aria-hidden="true"
               className="hidden md:block absolute -right-10 bottom-6 w-40 lg:w-52 rounded-xl shadow-lg animate-[float_6s_ease-in-out_infinite]"
             />
           </div>

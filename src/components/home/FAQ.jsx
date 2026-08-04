@@ -61,19 +61,22 @@ const FAQ = () => {
               className="border border-gray-200 rounded-xl p-4 md:p-5 text-left transition"
             >
               {/* Header */}
-              <div
+              <button
+                type="button"
+                id={`faq-header-${i}`}
+                aria-expanded={open === i}
+                aria-controls={`faq-answer-${i}`}
                 onClick={() => setOpen(open === i ? null : i)}
-                className="flex justify-between items-center gap-4 cursor-pointer"
+                className="w-full flex justify-between items-center gap-4 text-left cursor-pointer focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-lg"
               >
                 {/* Question */}
-                <h4 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
+                <h3 className="text-gray-800 font-medium text-sm md:text-base leading-snug">
                   {i + 1}. {item.q}
-                </h4>
+                </h3>
 
                 {/* Icon */}
                 <div
                   className={`shrink-0 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-lg transition
-
                   ${
                     open === i
                       ? "bg-gradient-to-r from-[#d97706] to-[#d97706] text-white"
@@ -81,15 +84,18 @@ const FAQ = () => {
                   }`}
                 >
                   {open === i ? (
-                    <ArrowUp size={16} />
+                    <ArrowUp size={16} aria-hidden="true" />
                   ) : (
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} aria-hidden="true" />
                   )}
                 </div>
-              </div>
+              </button>
 
               {/* Answer */}
               <div
+                id={`faq-answer-${i}`}
+                role="region"
+                aria-labelledby={`faq-header-${i}`}
                 className={`grid transition-all duration-300 ${
                   open === i ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"
                 }`}

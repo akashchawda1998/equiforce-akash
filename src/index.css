@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
 
 body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -67,3 +67,23 @@ h6 {
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+/* Accessibility Focus States for ADA / WCAG 2.1 AA Compliance */
+:focus-visible {
+  outline: 2px solid #b45309 !important;
+  outline-offset: 2px !important;
+}
+
+/* Screen reader utility class */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+}
+

@@ -1,17 +1,33 @@
+import { useEffect } from "react";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DemoModal = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose]);
+
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="demo-modal-title"
+      aria-hidden={!isOpen}
       className={`fixed inset-0 z-[999] transition-all duration-300 ${
-        isOpen ? "visible opacity-100" : "invisible opacity-0"
+        isOpen ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"
       }`}
     >
       {/* Overlay */}
       <div
         onClick={onClose}
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+        aria-hidden="true"
       ></div>
 
       {/* RIGHT PANEL */}
@@ -24,14 +40,16 @@ const DemoModal = ({ isOpen, onClose }) => {
 
           {/* Close */}
           <button
+            type="button"
+            aria-label="Close modal"
             onClick={onClose}
-            className="mb-6 text-gray-500 hover:text-black"
+            className="mb-6 text-gray-500 hover:text-black focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-md p-1"
           >
-            <X size={22} />
+            <X size={22} aria-hidden="true" />
           </button>
 
           {/* Heading */}
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+          <h2 id="demo-modal-title" className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
             Try for Free
           </h2>
 
@@ -41,59 +59,70 @@ const DemoModal = ({ isOpen, onClose }) => {
           </p>
 
           {/* FORM */}
-          <div className="space-y-4">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
 
             {/* Full Name */}
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
-            />
+            <div>
+              <label htmlFor="modal-fullname" className="sr-only">Full Name</label>
+              <input
+                id="modal-fullname"
+                type="text"
+                placeholder="Full Name"
+                className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              />
+            </div>
 
             {/* Email */}
-            <input
-              type="email"
-              placeholder="Work Email"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
-            />
+            <div>
+              <label htmlFor="modal-email" className="sr-only">Work Email</label>
+              <input
+                id="modal-email"
+                type="email"
+                placeholder="Work Email"
+                className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              />
+            </div>
 
             {/* Company */}
-            <input
-              type="text"
-              placeholder="Company Name"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
-            />
+            <div>
+              <label htmlFor="modal-company" className="sr-only">Company Name</label>
+              <input
+                id="modal-company"
+                type="text"
+                placeholder="Company Name"
+                className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              />
+            </div>
 
             {/* Role */}
-            <input
-              type="text"
-              placeholder="Your Role (e.g. Portfolio Manager)"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
-            />
-
-            {/* AUM */}
-            {/* <select className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 outline-none">
-              <option>Assets Under Management (AUM)</option>
-              <option>$0 - $100M</option>
-              <option>$100M - $1B</option>
-              <option>$1B - $10B</option>
-              <option>$10B+</option>
-            </select> */}
+            <div>
+              <label htmlFor="modal-role" className="sr-only">Your Role</label>
+              <input
+                id="modal-role"
+                type="text"
+                placeholder="Your Role (e.g. Portfolio Manager)"
+                className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              />
+            </div>
 
             {/* Message */}
-            <textarea
-              rows="4"
-              placeholder="Tell us about your investment operations requirements"
-              className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none"
-            ></textarea>
+            <div>
+              <label htmlFor="modal-message" className="sr-only">Requirements message</label>
+              <textarea
+                id="modal-message"
+                rows="4"
+                placeholder="Tell us about your investment operations requirements"
+                className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+              ></textarea>
+            </div>
 
             {/* CTA */}
-            
-            <Link to="/contact">
-            <button className="w-full bg-gradient-to-r from-[#d97706] to-[#d97706] 
-              hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition">
+            <Link
+              to="/contact"
+              onClick={onClose}
+              className="block w-full text-center bg-gradient-to-r from-[#d97706] to-[#d97706] hover:shadow-lg hover:shadow-cyan-400/40 text-white py-3 rounded-xl font-medium hover:scale-[1.02] transition"
+            >
               Request Demo
-            </button>
             </Link>
 
             {/* Trust */}
@@ -101,7 +130,7 @@ const DemoModal = ({ isOpen, onClose }) => {
               ✔ No obligation • ✔ Secure & confidential • ✔ Expert consultation
             </p>
 
-          </div>
+          </form>
 
         </div>
       </div>
