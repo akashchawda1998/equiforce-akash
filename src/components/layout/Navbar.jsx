@@ -187,7 +187,7 @@ const Navbar = () => {
             {/* Right Side Actions */}
             <div className="flex items-center gap-2 md:gap-6">
               <Link
-                to="https://app.equiforce.ai/login"
+                to="https://app.equiforce.ai"
                 className="text-xs uppercase hidden sm:block font-bold text-white hover:text-[#d97706] transition-all"
               >
                 Sign In
