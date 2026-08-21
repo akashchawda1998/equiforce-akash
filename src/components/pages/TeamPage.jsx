@@ -1,5 +1,6 @@
 import React from "react";
 import Team from "../about/Team";
+import { Helmet } from "react-helmet";
 
 
 const TeamPage = () => {
@@ -7,9 +8,11 @@ const TeamPage = () => {
 
     
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Meet Our Team | EquiForce Leadership &amp; Experts</title>
+        <meta name="description" content="Meet the EquiForce team — experienced leaders in investment operations, performance measurement, GIPS® compliance, and fintech." />
+      </Helmet>
 
-      
-      
       {/* Spacer for Fixed Navbar */}
       <div className="h-18 bg-[#000E24]"></div>
 

@@ -3,26 +3,32 @@ import stat1 from "../../assets/images/benefit-image-left.png";
 import stat2 from "../../assets/images/benefit-image-right2.png";
 
 const Newsletter = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add newsletter/demo request submission logic here
+  };
+
   return (
     <section className="">
       {/* Container */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16">
         {/* Background Box */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12  text-center">
-          {/* Floating Shapes */}
-          <div className="hidden sm:block absolute top-10 left-10 animate-[float_6s_ease-in-out_infinite]">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ede9fe] via-[#e0f2fe] to-[#f5f3ff] px-4 sm:px-6 md:px-12 text-center">
+
+          {/* Floating Shapes — decorative, hidden from screen readers */}
+          <div className="hidden sm:block absolute top-10 left-10 animate-[float_6s_ease-in-out_infinite]" aria-hidden="true">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-orange-400 rounded-lg rotate-12 shadow-md"></div>
           </div>
 
-          <div className="hidden sm:block absolute top-10 right-10 animate-[float_5s_ease-in-out_infinite]">
+          <div className="hidden sm:block absolute top-10 right-10 animate-[float_5s_ease-in-out_infinite]" aria-hidden="true">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full shadow-md"></div>
           </div>
 
-          <div className="hidden sm:block absolute bottom-20 left-10 animate-[float_7s_ease-in-out_infinite]">
+          <div className="hidden sm:block absolute bottom-20 left-10 animate-[float_7s_ease-in-out_infinite]" aria-hidden="true">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-green-400 rounded-full shadow-md"></div>
           </div>
 
-          <div className="hidden sm:block absolute bottom-20 right-10 animate-[float_6s_ease-in-out_infinite]">
+          <div className="hidden sm:block absolute bottom-20 right-10 animate-[float_6s_ease-in-out_infinite]" aria-hidden="true">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-red-400 rounded-lg rotate-12 shadow-md"></div>
           </div>
 
@@ -35,7 +41,7 @@ const Newsletter = () => {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 mb-4 md:mb-6">
-              Transform Your  <span class="text-[#d97706]"> Investment </span>Operations <span class="text-[#d97706]"> Today</span>
+              Transform Your <span className="text-[#d97706]">Investment</span> Operations <span className="text-[#d97706]">Today</span>
             </h2>
 
             <p className="text-gray-600 mb-8 md:mb-10">
@@ -50,21 +56,31 @@ const Newsletter = () => {
                 Schedule a personalized demo with our experts
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* ADA FIX: wrapped in <form> so Enter key works and submit is semantic */}
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
                 <div>
                   <label htmlFor="newsletter-email" className="sr-only">Enter your work email</label>
                   <input
                     id="newsletter-email"
                     type="email"
                     placeholder="Enter your work email"
+                    required
+                    aria-required="true"
                     className="px-5 py-3 rounded-xl w-full sm:w-80 outline-none border border-gray-200 focus-visible:ring-2 focus-visible:ring-[#d97706]"
                   />
                 </div>
 
-                <button type="button" className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition focus-visible:ring-2 focus-visible:ring-[#d97706]">
+                {/* ADA FIX: type="submit" so Enter key in email field submits */}
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto bg-gradient-to-r from-[#d97706] to-[#d97706] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition focus-visible:ring-2 focus-visible:ring-[#d97706]"
+                >
                   Try for Free
                 </button>
-              </div>
+              </form>
 
               <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-5 text-xs sm:text-sm text-gray-500">
                 <span>✔ No Obligation Consultation</span>
@@ -82,6 +98,7 @@ const Newsletter = () => {
               className="w-full max-w-[500px] md:max-w-[700px] rounded-2xl shadow-xl"
             />
 
+            {/* Decorative floating stat images — aria-hidden */}
             <img
               src={stat1}
               alt=""

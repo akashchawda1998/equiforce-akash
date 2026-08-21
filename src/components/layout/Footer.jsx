@@ -114,7 +114,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 group">
-                  <FiMail className="text-[#d97706]" />
+                  <FiMail className="text-[#d97706]" aria-hidden="true" />
                   <a
                     href="mailto:contact@equiforce.ai"
                     className="group-hover:text-[#d97706] break-all"
@@ -123,7 +123,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="flex items-center gap-3 group">
-                  <FiPhone className="text-[#d97706]" />
+                  <FiPhone className="text-[#d97706]" aria-hidden="true" />
                   <a
                     href="tel:+16268388118"
                     className="group-hover:text-[#d97706]"
@@ -138,9 +138,10 @@ const Footer = () => {
       href="https://www.linkedin.com/company/equiforcesolutions/"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Follow EquiForce on LinkedIn (opens in new tab)"
       className="inline-flex items-center gap-2 bg-[#0A66C2] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#004182] transition duration-300 shadow-sm hover:shadow-md"
     >
-      <FaLinkedinIn className="text-white" />
+      <FaLinkedinIn className="text-white" aria-hidden="true" />
       Follow us on LinkedIn
     </a>
   </div>

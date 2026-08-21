@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone, FiUsers } from "react-icons/fi";
 import logo from "../../assets/images/logoorg.png";
@@ -18,17 +18,68 @@ const Navbar = () => {
   const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
+  // Refs for focus management
+  const menuButtonRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+
+  // Close menu and return focus to hamburger button
+  const closeMenu = useCallback(() => {
+    setMenuOpen(false);
+    // Return focus to the hamburger toggle after a tick
+    setTimeout(() => menuButtonRef.current?.focus(), 50);
+  }, []);
+
   // Handle escape key to close menus
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
-        setMenuOpen(false);
-        setPlatformOpen(false);
+        if (menuOpen) {
+          closeMenu();
+        } else {
+          setPlatformOpen(false);
+        }
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [menuOpen, closeMenu]);
+
+  // Focus trap for mobile menu overlay
+  useEffect(() => {
+    if (!menuOpen || !mobileMenuRef.current) return;
+
+    // Move focus into the overlay when it opens
+    const FOCUSABLE = [
+      'a[href]', 'button:not([disabled])', 'input', 'select', 'textarea',
+      '[tabindex]:not([tabindex="-1"])'
+    ].join(',');
+
+    const focusableEls = Array.from(
+      mobileMenuRef.current.querySelectorAll(FOCUSABLE)
+    ).filter((el) => !el.closest('[aria-hidden="true"]'));
+
+    if (focusableEls.length) focusableEls[0].focus();
+
+    const trapFocus = (e) => {
+      if (e.key !== 'Tab') return;
+      const first = focusableEls[0];
+      const last = focusableEls[focusableEls.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', trapFocus);
+    return () => document.removeEventListener('keydown', trapFocus);
+  }, [menuOpen]);
 
   return (
     <>
@@ -203,9 +254,11 @@ const Navbar = () => {
               {/* Mobile Menu Toggle */}
               <button
                 type="button"
+                ref={menuButtonRef}
                 aria-expanded={menuOpen}
+                aria-controls="mobile-menu-overlay"
                 aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() => menuOpen ? closeMenu() : setMenuOpen(true)}
                 className="md:hidden text-2xl p-1 z-[60] text-white focus-visible:ring-2 focus-visible:ring-[#d97706]"
               >
                 {menuOpen ? <FiX className="text-[#000E24]" aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
@@ -214,8 +267,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Overlay — focus-trapped when open */}
         <div
+          id="mobile-menu-overlay"
+          ref={mobileMenuRef}
+          role="dialog"
+          aria-label="Navigation menu"
           aria-hidden={!menuOpen}
           className={`fixed inset-0 bg-white z-[55] transform transition-transform duration-300 ease-in-out md:hidden ${menuOpen ? "translate-x-0" : "translate-x-full"
             }`}
@@ -253,11 +310,11 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Our Company</Link>
-              <Link to="/team" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Meet our Team</Link>
-              <Link to="/insights" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Insights</Link>
+              <Link to="/about" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Our Company</Link>
+              <Link to="/team" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Meet our Team</Link>
+              <Link to="/insights" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Insights</Link>
 
-              <Link to="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">
+              <Link to="/contact" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">
                 Contact
               </Link>
 
@@ -266,14 +323,14 @@ const Navbar = () => {
               <Link
                 to="https://app.equiforce.ai/"
                 className="text-gray-500 hover:text-[#d97706] transition-colors"
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Sign In
               </Link>
               <Link
                 to="/contact"
                 className="w-full py-4 text-center block rounded-xl text-white shadow-lg active:scale-95 transition-transform bg-[#d97706] hover:bg-[#b46002]"
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Try for Free
               </Link>
