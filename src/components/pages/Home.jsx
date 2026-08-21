@@ -10,10 +10,16 @@ import PartnerSection from "../home/PartnerSection";
 import Pricing from "../home/Pricing";
 import SinglePlatform from "../home/SinglePlatform";
 import Testimonials from "../home/Testimonials";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>EquiForce | Performance Measurement &amp; GIPS® Composite Reporting</title>
+        <meta name="description" content="EquiForce is your strategic partner in performance measurement, GIPS® composite reporting, and AI-powered investment reporting. Over 3 decades of industry expertise." />
+      </Helmet>
+
       <Hero />
 
       {/* 👇 Important: wrap sections for smooth reveal */}

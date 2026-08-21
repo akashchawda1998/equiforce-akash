@@ -5,6 +5,7 @@ import AboutIntro from "../about/AboutIntro";
 import Team from "../about/Team";
 import AboutFeatures from "../about/AboutFeatures";
 import AboutTestimonials from "../about/AboutTestimonials";
+import { Helmet } from "react-helmet";
 
 import icon1 from "../../assets/images/ani-image1.webp";
 import icon2 from "../../assets/images/ani-image2.webp";
@@ -34,7 +35,10 @@ const About = () => {
   }, [hash]);
   return (
     <div className="relative overflow-hidden">
-      {/* 🔹 Subtle Floating Icons (lighter than Home) */}
+      <Helmet>
+        <title>About EquiForce | Investment Operations Experts</title>
+        <meta name="description" content="Learn about EquiForce — our mission to modernize investment operations, performance measurement, and enterprise reporting for asset managers worldwide." />
+      </Helmet>
 
       {/* 🔹 Sections */}
 

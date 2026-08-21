@@ -57,11 +57,12 @@ const Testimonials = () => {
           and intelligent operational insights.
         </p>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Cards — role=list so screen readers announce count */}
+        <div role="list" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((t, i) => (
             <div
               key={i}
+              role="listitem"
               className="h-full flex flex-col justify-between bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl p-5 md:p-6 text-left shadow-md hover:shadow-lg transition"
             >
               {/* Top Profile */}

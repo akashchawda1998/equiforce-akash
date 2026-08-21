@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 // Note: Ensure these paths remain correct for your local environment
@@ -204,6 +204,19 @@ const team = [
 
 const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null);
+  // Track which card button opened the modal to return focus on close
+  const triggerRef = useRef(null);
+
+  const handleOpen = (member, triggerEl) => {
+    triggerRef.current = triggerEl;
+    setSelectedMember(member);
+  };
+
+  const handleClose = () => {
+    setSelectedMember(null);
+    // Return focus to the card that opened the modal
+    setTimeout(() => triggerRef.current?.focus(), 50);
+  };
 
   useEffect(() => {
     if (selectedMember) document.body.style.overflow = "hidden";
@@ -221,18 +234,18 @@ const Team = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
           {team.slice(0, 4).map((member, i) => (
-            <MemberCard key={i} member={member} onSelect={setSelectedMember} />
+            <MemberCard key={i} member={member} onSelect={handleOpen} />
           ))}
         </div>
 
         {/* Section 2: Client Relations & Product Support */}
         <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-24 border-t border-gray-200 pt-16">
-          Client Relations & Product Support
+          Client Relations &amp; Product Support
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
           {/* Empty divs to center the bottom two if needed, or just map them */}
           {team.slice(4).map((member, i) => (
-            <MemberCard key={i} member={member} onSelect={setSelectedMember} />
+            <MemberCard key={i} member={member} onSelect={handleOpen} />
           ))}
         </div>
       </div>
@@ -244,9 +257,9 @@ const Team = () => {
           aria-modal="true"
           aria-labelledby="member-bio-title"
           className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-md overflow-y-auto"
-          onClick={() => setSelectedMember(null)}
+          onClick={handleClose}
           onKeyDown={(e) => {
-            if (e.key === "Escape") setSelectedMember(null);
+            if (e.key === "Escape") handleClose();
           }}
         >
           <div className="flex items-start justify-center min-h-screen p-4 md:p-20">
@@ -258,7 +271,7 @@ const Team = () => {
               <button
                 type="button"
                 aria-label={`Close bio for ${selectedMember.name}`}
-                onClick={() => setSelectedMember(null)}
+                onClick={handleClose}
                 className="absolute top-4 right-4 text-3xl text-gray-400 hover:text-black focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-md p-1"
               >
                 <IoClose aria-hidden="true" />
@@ -322,7 +335,7 @@ const MemberCard = ({ member, onSelect }) => (
     <button
       type="button"
       aria-label={`View bio for ${member.name}`}
-      onClick={() => onSelect(member)}
+      onClick={(e) => onSelect(member, e.currentTarget)}
       className="absolute -top-16 left-1/2 transform -translate-x-1/2 cursor-pointer focus-visible:ring-2 focus-visible:ring-[#d97706] rounded-full"
     >
       <div className="w-36 h-36 rounded-full p-1 bg-gradient-to-tr from-blue-900 to-[#d97706]">
@@ -359,8 +372,9 @@ const MemberCard = ({ member, onSelect }) => (
     {/* View Bio Button */}
     <button
       type="button"
-      onClick={() => onSelect(member)}
-      className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition focus-visible:ring-2 focus-visible:ring-[#d97706]"
+      aria-label={`View bio for ${member.name}`}
+      onClick={(e) => onSelect(member, e.currentTarget)}
+      className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
     >
       View Bio <span className="ml-1 text-lg" aria-hidden="true">›</span>
     </button>

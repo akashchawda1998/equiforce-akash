@@ -120,6 +120,7 @@ const ContactPage = () => {
                         type="text"
                         placeholder="First Name *"
                         required
+                        aria-required="true"
                         className={inputStyle}
                         onChange={handleChange}
                       />
@@ -132,6 +133,7 @@ const ContactPage = () => {
                         type="text"
                         placeholder="Last Name *"
                         required
+                        aria-required="true"
                         className={inputStyle}
                         onChange={handleChange}
                       />
@@ -146,6 +148,7 @@ const ContactPage = () => {
                       type="email"
                       placeholder="Business Email *"
                       required
+                      aria-required="true"
                       className={inputStyle}
                       onChange={handleChange}
                     />
@@ -159,6 +162,7 @@ const ContactPage = () => {
                       type="text"
                       placeholder="Company Name *"
                       required
+                      aria-required="true"
                       className={inputStyle}
                       onChange={handleChange}
                     />
@@ -172,15 +176,16 @@ const ContactPage = () => {
                       className={`${inputStyle} appearance-none pr-10`}
                       onChange={handleChange}
                       required
+                      aria-required="true"
                       defaultValue=""
                     >
                       <option value="" disabled hidden>
                         Select Service *
                       </option>
-                      <option>Performance Measurement</option>
-                      <option> GIPS® Composite Management</option>
-                      <option>AI-Powered Investment Reporting</option>
-                      <option>Consulting</option>
+                      <option value="performance-measurement">Performance Measurement</option>
+                      <option value="gips-composite-management"> GIPS® Composite Management</option>
+                      <option value="ai-powered-reporting">AI-Powered Investment Reporting</option>
+                      <option value="consulting">Consulting</option>
                     </select>
                   </div>
 
