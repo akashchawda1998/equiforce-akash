@@ -90,7 +90,7 @@ const team = [
 
 
 
-   {
+  {
 
     name: "Todd Brunskill",
     email: "todd@equiforce.ai",
@@ -105,7 +105,7 @@ const team = [
   },
 
 
-    {
+  {
 
     name: "Pushpendra Thakur",
     email: "pushpendra@equiforce.ai",
@@ -117,8 +117,8 @@ const team = [
 
     bio: [
 
-"Pushpendra Thakur is the Co-Founder and Advisory Technology of EquiForce, where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for performance measurement and enterprise reporting. Since co-founding EquiForce in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EquiForce, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
-"With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
+      "Pushpendra Thakur is the Co-Founder and Advisory Technology of EquiForce, where he defines the firm’s technology vision and leads the architecture of scalable, high-performance platforms for performance measurement and enterprise reporting. Since co-founding EquiForce in 2026, he has focused on building purpose-engineered solutions that combine modern cloud architecture, data engineering, and AI to help asset managers improve data integrity, strengthen controls, and generate decision-grade insights. He is also the Founder of GoldenR Technology (2024), a fintech firm specializing in advanced data platforms and intelligent automation; through its strategic partnership with EquiForce, GoldenR enables the delivery of robust, next-generation data and analytics capabilities.",
+      "With deep expertise in financial technology and enterprise data architecture, Pushpendra has a strong track record of delivering large-scale, high-impact solutions for global investment firms. His experience includes building industry-first platforms such as an integrated Form PF reporting solution and a fully automated FX trading system, as well as architecting high-performance data ecosystems capable of processing complex, multi-source portfolio data at scale. He has led cloud transformation initiatives, including migration to AWS-based data lakes, and designed end-to-end frameworks spanning data ingestion, validation, performance computation, and reporting—enabling firms to operate with greater efficiency, accuracy, and resilience."
     ]
 
   },
@@ -166,7 +166,7 @@ const team = [
 
     name: "Dylan Tran",
     email: "dylan@equiforce.ai",
-    role: "Analyst",
+    role: "Quality Assurance Associate",
 
     img: dylan,
 
