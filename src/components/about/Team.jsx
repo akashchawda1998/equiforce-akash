@@ -128,21 +128,6 @@ const team = [
 
 
 
-  {
-
-    name: "Edmund J. Woo",
-    email: "contact@equiforce.ai",
-    role: "Head of Client Relations",
-
-    img: img5,
-
-    bio: [
-
-      "As Head of Client Relations at EquiForce (EFS), Edmund leads all aspects of client engagement, relationship management, and implementation success. He ensures that every client partnership is supported with clear communication, seamless onboarding, and long term strategic alignment.", "Before joining EFS, Edmund spent nearly three decades in senior client relations roles at Wilshire Analytics and Charles River Development, where he built deep expertise in managing complex client needs across investment technology and analytics platforms.", "Edmund holds an MBA and B.S. from the University of Arizona."
-
-    ]
-
-  },
 
   {
 

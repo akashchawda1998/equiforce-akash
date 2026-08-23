@@ -26,6 +26,7 @@ import Consultant from "./components/about/Consultant";
 import TermsOfService from "./components/pages/TermsOfService";
 import GipsDisclaimer from "./components/pages/GipsDisclaimer";
 import Insights from "./components/pages/Insights";
+import Accessibility from "./components/pages/Accessibility";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -78,6 +79,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy-policy" element={<PrivacyNotice />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               {/* <Route path="/ GIPS®" element={<GipsDisclaimer />} /> */}
               <Route path="/consultant" element={<Consultant />} />
 

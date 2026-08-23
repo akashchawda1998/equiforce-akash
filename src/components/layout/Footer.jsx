@@ -154,13 +154,17 @@ const Footer = () => {
 
         {/* BOTTOM */}
         <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-[13px]">
-          <p className="text-center md:text-left">
-            ©2026{" "}
-            <span className="font-semibold text-gray-800">
-              EquiForce
-            </span>{" "}
-            · All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-3 text-center md:text-left">
+            <p>
+              ©2026{" "}
+              <span className="font-semibold text-gray-800">EquiForce</span>
+              {" "}· All rights reserved.
+            </p>
+            <span className="hidden md:block" aria-hidden="true">·</span>
+            <Link to="/accessibility" className="hover:text-[#b45309]">
+              Accessibility
+            </Link>
+          </div>
 
           <div className="flex items-center gap-2 text-gray-600">
             <Link to="/privacy-policy" className="hover:text-[#b45309]">
@@ -171,6 +175,8 @@ const Footer = () => {
               Terms of Service
             </Link>
           </div>
+
+
 
           {/* Scroll to Top */}
           {show && (
