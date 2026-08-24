@@ -161,9 +161,9 @@ const Footer = () => {
               {" "}· All rights reserved.
             </p>
             <span className="hidden md:block" aria-hidden="true">·</span>
-            <Link to="/accessibility" className="hover:text-[#b45309]">
+            {/* <Link to="/accessibility" className="hover:text-[#b45309]">
               Accessibility
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex items-center gap-2 text-gray-600">
