@@ -155,7 +155,7 @@ const Accessibility = () => {
                       href="mailto:accessibility@equiforce.ai"
                       className="text-[#b45309] underline hover:opacity-80"
                     >
-                      accessibility@equiforce.ai
+                      contact@equiforce.ai
                     </a>
                   </span>
                 </li>
