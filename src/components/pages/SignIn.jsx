@@ -67,9 +67,10 @@ const SignIn = () => {
                 <input
                   id="signin-email"
                   type="email"
+                  autoComplete="email"
                   required
                   placeholder="name@company.com"
-                  className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all text-black bg-gray-50/50"
+                  className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-[#d97706] outline-none transition-all text-black bg-gray-50/50"
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
@@ -88,9 +89,10 @@ const SignIn = () => {
                 <input
                   id="signin-password"
                   type={showPassword ? "text" : "password"}
+                  autoComplete="current-password"
                   required
                   placeholder="••••••••"
-                  className="w-full pl-12 pr-12 py-3.5 rounded-xl border placeholder-mauve-400 text-black bg-gray-50/50 border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
+                  className="w-full pl-12 pr-12 py-3.5 rounded-xl border placeholder-mauve-400 text-black bg-gray-50/50 border-gray-200 focus:border-cyan-500 focus:ring-2 focus:ring-[#d97706] outline-none transition-all"
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
                 <button

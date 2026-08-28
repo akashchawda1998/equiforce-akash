@@ -63,10 +63,11 @@ const DemoModal = ({ isOpen, onClose }) => {
 
             {/* Full Name */}
             <div>
-              <label htmlFor="modal-fullname" className="sr-only">Full Name</label>
+              <label htmlFor="modal-fullname" className="block text-xs font-bold text-gray-700 mb-1">Full Name</label>
               <input
                 id="modal-fullname"
                 type="text"
+                autoComplete="name"
                 placeholder="Full Name"
                 className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
               />
@@ -74,10 +75,11 @@ const DemoModal = ({ isOpen, onClose }) => {
 
             {/* Email */}
             <div>
-              <label htmlFor="modal-email" className="sr-only">Work Email</label>
+              <label htmlFor="modal-email" className="block text-xs font-bold text-gray-700 mb-1">Work Email</label>
               <input
                 id="modal-email"
                 type="email"
+                autoComplete="email"
                 placeholder="Work Email"
                 className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
               />
@@ -85,10 +87,11 @@ const DemoModal = ({ isOpen, onClose }) => {
 
             {/* Company */}
             <div>
-              <label htmlFor="modal-company" className="sr-only">Company Name</label>
+              <label htmlFor="modal-company" className="block text-xs font-bold text-gray-700 mb-1">Company Name</label>
               <input
                 id="modal-company"
                 type="text"
+                autoComplete="organization"
                 placeholder="Company Name"
                 className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
               />
@@ -96,10 +99,11 @@ const DemoModal = ({ isOpen, onClose }) => {
 
             {/* Role */}
             <div>
-              <label htmlFor="modal-role" className="sr-only">Your Role</label>
+              <label htmlFor="modal-role" className="block text-xs font-bold text-gray-700 mb-1">Your Role</label>
               <input
                 id="modal-role"
                 type="text"
+                autoComplete="organization-title"
                 placeholder="Your Role (e.g. Portfolio Manager)"
                 className="w-full p-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
               />
@@ -107,7 +111,7 @@ const DemoModal = ({ isOpen, onClose }) => {
 
             {/* Message */}
             <div>
-              <label htmlFor="modal-message" className="sr-only">Requirements message</label>
+              <label htmlFor="modal-message" className="block text-xs font-bold text-gray-700 mb-1">Requirements Message</label>
               <textarea
                 id="modal-message"
                 rows="4"

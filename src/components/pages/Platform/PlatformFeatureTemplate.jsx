@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -129,7 +130,7 @@ const FeatureSection = ({ item, index }) => {
 };
 
 // ─── MAIN PAGE ────────────────────────────────
-const PlatformAllFeaturesPage = () => {
+const PlatformAllFeaturesPage = ({ data }) => {
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -155,12 +156,26 @@ const PlatformAllFeaturesPage = () => {
     }
   }, [hash]);
 
+  const pageTitle = data
+    ? `${data.titleStart.trim()} ${data.titleHighlight ? data.titleHighlight.trim() : ""} | EquiForce`
+    : "Solutions | EquiForce";
+
+  const pageDesc = data?.heroDescription || "EquiForce specialized solutions across performance measurement, GIPS composite management, and AI-powered reporting.";
+
   return (
     <div className="min-h-screen bg-white px-4 md:px-10">
+      <Helmet font-size="14">
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
-        {allData.map((item, index) => (
-          <FeatureSection key={item.id} item={item} index={index} />
-        ))}
+        {data ? (
+          <FeatureSection item={data.features[0]} index={0} />
+        ) : (
+          allData.map((item, index) => (
+            <FeatureSection key={item.id} item={item.features[0]} index={index} />
+          ))
+        )}
       </div>
     </div>
   );

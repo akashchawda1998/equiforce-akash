@@ -113,67 +113,71 @@ const ContactPage = () => {
                 <form className="space-y-5" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="contact-firstName" className="sr-only">First Name</label>
+                      <label htmlFor="contact-firstName" className="block text-xs font-bold text-gray-700 mb-1">First Name *</label>
                       <input
                         id="contact-firstName"
                         name="firstName"
                         type="text"
+                        autoComplete="given-name"
                         placeholder="First Name *"
                         required
                         aria-required="true"
-                        className={inputStyle}
+                        className={`${inputStyle} focus-visible:ring-2 focus-visible:ring-[#d97706]`}
                         onChange={handleChange}
                       />
                     </div>
                     <div>
-                      <label htmlFor="contact-lastName" className="sr-only">Last Name</label>
+                      <label htmlFor="contact-lastName" className="block text-xs font-bold text-gray-700 mb-1">Last Name *</label>
                       <input
                         id="contact-lastName"
                         name="lastName"
                         type="text"
+                        autoComplete="family-name"
                         placeholder="Last Name *"
                         required
                         aria-required="true"
-                        className={inputStyle}
+                        className={`${inputStyle} focus-visible:ring-2 focus-visible:ring-[#d97706]`}
                         onChange={handleChange}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="contact-email" className="sr-only">Business Email</label>
+                    <label htmlFor="contact-email" className="block text-xs font-bold text-gray-700 mb-1">Business Email *</label>
                     <input
                       id="contact-email"
                       name="email"
                       type="email"
+                      autoComplete="email"
                       placeholder="Business Email *"
                       required
                       aria-required="true"
-                      className={inputStyle}
+                      className={`${inputStyle} focus-visible:ring-2 focus-visible:ring-[#d97706]`}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-company" className="sr-only">Company Name</label>
+                    <label htmlFor="contact-company" className="block text-xs font-bold text-gray-700 mb-1">Company Name *</label>
                     <input
                       id="contact-company"
                       name="company"
                       type="text"
+                      autoComplete="organization"
                       placeholder="Company Name *"
                       required
                       aria-required="true"
-                      className={inputStyle}
+                      className={`${inputStyle} focus-visible:ring-2 focus-visible:ring-[#d97706]`}
                       onChange={handleChange}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-service" className="sr-only">Select Service</label>
+                    <label htmlFor="contact-service" className="block text-xs font-bold text-gray-700 mb-1">Select Service *</label>
                     <select
                       id="contact-service"
                       name="service"
-                      className={`${inputStyle} appearance-none pr-10`}
+                      className={`${inputStyle} appearance-none pr-10 focus-visible:ring-2 focus-visible:ring-[#d97706]`}
                       onChange={handleChange}
                       required
                       aria-required="true"
@@ -190,14 +194,14 @@ const ContactPage = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="contact-message" className="sr-only">Message</label>
+                    <label htmlFor="contact-message" className="block text-xs font-bold text-gray-700 mb-1">Message</label>
                     <textarea
                       id="contact-message"
                       name="message"
                       rows="4"
                       placeholder="How can we help you?"
                       onChange={handleChange}
-                      className="w-full text-black p-4 border border-gray-300 rounded-md focus-visible:ring-2 focus-visible:ring-[#d97706]"
+                      className="w-full text-black p-4 border border-gray-300 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
                     />
                   </div>
 

@@ -153,25 +153,33 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="relative pt-8 md:pt-10 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-[13px]">
-          <div className="flex flex-col md:flex-row items-center md:items-center gap-1 md:gap-3 text-center md:text-left">
+        <div className="relative pt-8 md:pt-10 flex flex-col lg:flex-row items-center justify-between gap-4 text-gray-600 text-[13px]">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-1 text-center lg:text-left">
             <p>
               ©2026{" "}
               <span className="font-semibold text-gray-800">EquiForce</span>
               {" "}· All rights reserved.
             </p>
-            <span className="hidden md:block" aria-hidden="true">·</span>
-            {/* <Link to="/accessibility" className="hover:text-[#b45309]">
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <Link to="/accessibility" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Accessibility
-            </Link> */}
+            </Link>
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <Link to="/accessibility-policy" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
+              Accessibility Policy
+            </Link>
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <Link to="/accessibility-checklist" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
+              Compliance Checklist
+            </Link>
           </div>
 
-          <div className="flex items-center gap-2 text-gray-600">
-            <Link to="/privacy-policy" className="hover:text-[#b45309]">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-gray-600">
+            <Link to="/privacy-policy" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Privacy Policy
             </Link>
-            <span className="hidden md:block" aria-hidden="true">|</span>
-            <Link to="/terms-of-service" className="hover:text-[#b45309]">
+            <span className="hidden sm:inline" aria-hidden="true">|</span>
+            <Link to="/terms-of-service" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Terms of Service
             </Link>
           </div>

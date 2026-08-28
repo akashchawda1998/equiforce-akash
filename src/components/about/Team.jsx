@@ -34,7 +34,7 @@ const team = [
 
       "Jane co-founded EquiForce in 2026 to modernize and streamline investment operations, performance measurement, and enterprise reporting for small and mid sized asset managers. EquiForce combines purpose built, cost efficient modern technology with deep industry expertise to help firms elevate data quality, strengthen controls, and deliver more insightful reporting.",
       "Before launching EquiForce, Jane spent nearly 3 decades in leadership roles across investment operations, performance measurement and attribution, GIPS compliance, enterprise reporting, and data architecture. She has a proven track record of transforming back and middle office functions, modernizing reporting infrastructures, and implementing scalable, high impact data and reporting solutions. Her career includes key roles at Oaktree Capital Management, Capital Group, Kayne Anderson Rudnick Investment Management, ACR Alpine Capital Research, and fintech innovator Wilshire Analytics.",
-      "She holds a B.S. from the University of Southern California (cum laude) and has earned both the Chartered Financial Analyst® (CFA®) and the Certificate in Investment Performance Measurement (CIPM) designations."
+      "She holds a B.S. from the University of Southern California (<span lang=\"la\">cum laude</span>) and has earned both the Chartered Financial Analyst® (CFA®) and the Certificate in Investment Performance Measurement (CIPM) designations."
 
     ]
 
@@ -293,7 +293,7 @@ const Team = () => {
               {/* Bio Section */}
               <div className="text-left text-gray-600 space-y-6 text-base md:text-md leading-relaxed border-t border-gray-100 pt-2 font-light max-w-3xl">
                 {selectedMember.bio.map((para, idx) => (
-                  <p key={idx}>{para}</p>
+                  <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
                 ))}
 
                 {/* Highlighted Footer Text */}

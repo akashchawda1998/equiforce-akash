@@ -27,6 +27,10 @@ import TermsOfService from "./components/pages/TermsOfService";
 import GipsDisclaimer from "./components/pages/GipsDisclaimer";
 import Insights from "./components/pages/Insights";
 import Accessibility from "./components/pages/Accessibility";
+import AccessibilityChecklist from "./components/pages/AccessibilityChecklist";
+import AccessibilityPolicy from "./components/pages/AccessibilityPolicy";
+
+import { Helmet } from "react-helmet";
 
 // Helper component to handle conditional Footer rendering
 const LayoutWrapper = ({ children }) => {
@@ -35,6 +39,9 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <>
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <html lang="en" />
+      </Helmet>
       <ScrollToTop />
       <header>
         <Navbar />
@@ -80,6 +87,8 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyNotice />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/accessibility-checklist" element={<AccessibilityChecklist />} />
+              <Route path="/accessibility-policy" element={<AccessibilityPolicy />} />
               {/* <Route path="/ GIPS®" element={<GipsDisclaimer />} /> */}
               <Route path="/consultant" element={<Consultant />} />
 

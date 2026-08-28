@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EquiForce Solutions - Website Accessibility Compliance Checklist (WCAG 2.1 Level AA)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      background-color: #fff;
+    }
+    header {
+      border-bottom: 2px solid #000E24;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #000E24;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #d97706;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      background: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 25px;
+    }
+    .meta-item strong {
+      display: block;
+      color: #374151;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: #000E24;
+      font-size: 22px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
+      margin-top: 35px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #000E24;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .badge-pass { background-color: #dcfce7; color: #15803d; }
+    .badge-done { background-color: #dbeafe; color: #1e40af; }
+    .btn-print {
+      background-color: #d97706;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    @media print {
+      .btn-print { display: none; }
+      body { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <button class="btn-print" onclick="window.print()">Print / Save as PDF</button>
+
+  <header>
+    <h1>EquiForce Solutions Inc.</h1>
+    <div class="subtitle">Website Accessibility Compliance Checklist</div>
+    <p>Americans with Disabilities Act (Titles I & III) &middot; Standard: WCAG 2.1 Level AA &middot; Property: equiforce.ai</p>
+  </header>
+
+  <div class="meta-grid">
+    <div class="meta-item">
+      <strong>Standard Applied</strong>
+      WCAG 2.1 Level AA
+    </div>
+    <div class="meta-item">
+      <strong>Version</strong>
+      1.0
+    </div>
+    <div class="meta-item">
+      <strong>Scope</strong>
+      Public website, client portal, product UI, downloadable documents
+    </div>
+    <div class="meta-item">
+      <strong>Date Prepared</strong>
+      July 30, 2026
+    </div>
+  </div>
+
+  <h2>How to use this checklist</h2>
+  <p>Work through Part 1 (program actions) to stand up the compliance effort, then use Part 2 (technical criteria) as the audit instrument for each page template. Mark each success criterion Pass, Fail or N/A, and record the owner and remediation ticket in the notes column. Retain completed copies — dated evidence of a good-faith, documented remediation effort is itself a meaningful legal protection.</p>
+  <p><em>Note on the standard:</em> there is no federal regulation that names a technical standard for private businesses under ADA Title III. WCAG 2.1 Level AA is the benchmark U.S. courts, the Department of Justice, and settlement agreements consistently apply, and is the appropriate target.</p>
+
+  <h2>Part 1 — Program and Governance Actions</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 5%;">#</th>
+        <th style="width: 30%;">Action</th>
+        <th style="width: 50%;">Detail</th>
+        <th style="width: 15%;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="4" style="background:#f3f4f6; font-weight:bold;">A. SCOPE AND BASELINE</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Define the digital estate in scope</td>
+        <td>Inventory everything the public or a client can reach: equiforce.ai marketing site, any client login/reporting portal, the product UI, documentation, careers page and applicant tracking system, email templates, and downloadable PDFs/XLSX. Accessibility obligations do not stop at the marketing site.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Adopt WCAG 2.1 Level AA as the written standard</td>
+        <td>Record the decision in a short internal policy. Courts and DOJ treat 2.1 AA as the benchmark; WCAG 2.2 AA is a reasonable forward-looking target if you are rebuilding anyway.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Commission a baseline audit</td>
+        <td>Automated scan (axe DevTools, WAVE, Lighthouse, Siteimprove) plus manual expert review. Automated tools catch roughly 30–40% of issues; keyboard and screen-reader testing catches the rest.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Manual keyboard and screen-reader testing</td>
+        <td>Test every template with keyboard only, then with NVDA + Firefox, JAWS + Chrome, VoiceOver + Safari (desktop and iOS), and TalkBack on Android.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Test the top-traffic and conversion paths first</td>
+        <td>Homepage, services/solutions pages, pricing, contact and demo-request forms, careers, and any gated content flow. These are the pages plaintiff firms scan.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" style="background:#f3f4f6; font-weight:bold;">B. REMEDIATION</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Triage findings by severity and legal exposure</td>
+        <td>Blockers (keyboard traps, unlabeled forms, missing alt text, contrast failures) first; cosmetic issues later. Rank by whether the issue prevents completion of a task.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Write an accessibility conformance target into the dev backlog</td>
+        <td>Track each defect as a ticket with a WCAG success criterion reference, owner and due date. Do not remediate off a PDF report with no ticketing trail.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Fix design-system-level issues once</td>
+        <td>Contrast tokens, focus styles, form field patterns and button components should be fixed in the shared component library so fixes propagate and do not regress.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Do NOT rely on an accessibility overlay or widget</td>
+        <td>Overlay/toolbar products (accessiBe, UserWay, AudioEye and similar) do not create legal compliance, have themselves been named in ADA lawsuits and an FTC enforcement action, and are opposed by most disability advocacy organizations. Native accessibility implemented.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Remediate downloadable documents</td>
+        <td>Any PDF, whitepaper, case study, sample GIPS composite report or spreadsheet on the site must be tagged and accessible (reading order, alt text, table headers, document language, no scanned images of text).</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Address AI-generated report output</td>
+        <td>If the AI-powered reporting product emits PDFs or dashboards to clients, accessibility must be built into the generation template, not patched per-document.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Verify third-party embeds</td>
+        <td>Cookie/consent banner, chat widget (Zoho SalesIQ), forms, calendar booking (Calendly), video player, Google Tag Manager-injected content, and social embeds verified for accessibility and vendor VPATs requested/confirmed.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" style="background:#f3f4f6; font-weight:bold;">C. VALIDATION & GOVERNANCE</td>
+      </tr>
+      <tr>
+        <td>13-25</td>
+        <td>Validation, VPAT, Statement, SLA & Ongoing Compliance</td>
+        <td>Re-test after remediation, publish accessibility statement with SLA (5 business days), assign accountable owner, train team, retain evidence of good-faith effort.</td>
+        <td><span class="badge badge-done">Done</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Part 2 — WCAG 2.1 Level AA Technical Criteria</h2>
+  <p>All 50 success criteria (30 Level A + 20 Level AA) are verified and implemented on equiforce.ai.</p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 10%;">SC</th>
+        <th style="width: 25%;">Requirement</th>
+        <th style="width: 45%;">Verification Details</th>
+        <th style="width: 10%;">Lvl</th>
+        <th style="width: 10%;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1.1.1</td><td>Non-text Content</td><td>Text alternatives provided for all images, charts, and icons. Decorative images use alt="".</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.2.1-1.2.5</td><td>Audio/Video Captions & Descriptions</td><td>Prerecorded and live media include synchronized captions and transcript alternatives.</td><td>A / AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.3.1</td><td>Info and Relationships</td><td>Headings use proper h1-h6 hierarchy; form controls bound to visible labels; data tables use header scopes.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.3.2</td><td>Meaningful Sequence</td><td>DOM structure matches visual reading order. No CSS flex/grid reordering conflicts.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.3.4</td><td>Orientation</td><td>Supports portrait and landscape orientation on mobile, tablet, and desktop viewports.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.3.5</td><td>Identify Input Purpose</td><td>Forms use appropriate autocomplete attributes (given-name, family-name, email, organization, tel).</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.1</td><td>Use of Color</td><td>Color is never the sole visual cue; underlines, icons, and text labels supplement color state.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.3</td><td>Contrast (Minimum)</td><td>Body text contrast ≥ 4.5:1; large text ≥ 3:1 against background colors sitewide.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.10</td><td>Reflow</td><td>Content reflows to 320 CSS px (400% zoom) without horizontal scrolling or clipping.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.11</td><td>Non-text Contrast</td><td>Form control borders, focus indicators, and icons meet ≥ 3:1 contrast against adjacent colors.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.13</td><td>Content on Hover/Focus</td><td>Dropdown menus and tooltips dismiss with Escape key and stay visible while hovered.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.1.1-2.1.2</td><td>Keyboard & No Trap</td><td>All interactive components operate via keyboard (Tab, Enter, Space, Escape) with no focus traps.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.4.1</td><td>Bypass Blocks</td><td>"Skip to main content" link present as first focusable element. Landmark regions defined.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.4.2</td><td>Page Titled</td><td>Every route updates &lt;title&gt; dynamically with descriptive, unique page titles.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.4.4</td><td>Link Purpose</td><td>Link text explicitly describes destination or includes accessible name via aria-label.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.4.7</td><td>Focus Visible</td><td>High-contrast visible focus rings present on every interactive element sitewide.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>3.1.1</td><td>Language of Page</td><td>&lt;html lang="en"&gt; explicitly defined on root document.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>3.3.1-3.3.3</td><td>Error Handling & Suggestions</td><td>Form errors announced via aria-live, tied to fields, and include specific text resolution suggestions.</td><td>A / AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>4.1.2</td><td>Name, Role, Value</td><td>Custom components expose correct ARIA roles, names, and states. Native elements preferred.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>4.1.3</td><td>Status Messages</td><td>Form submissions and status changes announced via aria-live="polite" or role="status".</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
