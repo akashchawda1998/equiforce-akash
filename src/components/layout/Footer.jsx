@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-12  items-start pb-8 border-b border-gray-100">
           {/* LEFT CTA */}
           <div className="md:col-span-4 text-center md:text-left">
-           
+
             <h2 className="text-2xl sm:text-2xl md:text-2xl font-bold text-[#000E24] leading-tight mb-6">
               Transform Your Performance Measurement
               Operations with <br className="hidden sm:block" />
@@ -132,20 +132,20 @@ const Footer = () => {
                   </a>
                 </li>
 
-                  <li className="flex items-center gap-3 group">
-     <div className="">
-    <a
-      href="https://www.linkedin.com/company/equiforcesolutions/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Follow EquiForce on LinkedIn (opens in new tab)"
-      className="inline-flex items-center gap-2 bg-[#0A66C2] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#004182] transition duration-300 shadow-sm hover:shadow-md"
-    >
-      <FaLinkedinIn className="text-white" aria-hidden="true" />
-      Follow us on LinkedIn
-    </a>
-  </div>
-    </li>
+                <li className="flex items-center gap-3 group">
+                  <div className="">
+                    <a
+                      href="https://www.linkedin.com/company/equiforcesolutions/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Follow EquiForce on LinkedIn (opens in new tab)"
+                      className="inline-flex items-center gap-2 bg-[#0A66C2] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-[#004182] transition duration-300 shadow-sm hover:shadow-md"
+                    >
+                      <FaLinkedinIn className="text-white" aria-hidden="true" />
+                      Follow us on LinkedIn
+                    </a>
+                  </div>
+                </li>
 
               </ul>
             </div>
@@ -161,7 +161,7 @@ const Footer = () => {
               {" "}· All rights reserved.
             </p>
             <span className="hidden sm:inline" aria-hidden="true">·</span>
-            <Link to="/accessibility" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
+            {/* <Link to="/accessibility" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Accessibility
             </Link>
             <span className="hidden sm:inline" aria-hidden="true">·</span>
@@ -171,7 +171,7 @@ const Footer = () => {
             <span className="hidden sm:inline" aria-hidden="true">·</span>
             <Link to="/accessibility-checklist" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Compliance Checklist
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 text-gray-600">
