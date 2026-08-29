@@ -18,7 +18,7 @@ const TermsOfService = () => {
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 space-y-8 text-gray-700 leading-relaxed text-sm md:text-base">
 
           <p>
-            Welcome to Equiforce, LLC. By accessing or using our
+            Welcome to EquiForce Solutions Inc.. By accessing or using our
             website, you agree to be bound by these Terms of Service (“Terms”).
             If you do not agree to these Terms, please do not use our website.
           </p>
@@ -113,10 +113,10 @@ const TermsOfService = () => {
               7. Relationship with Client Subscription Agreement
             </h2>
             <p>
-              If you are a client of Equiforce, LLC and use our SaaS
+              If you are a client of EquiForce Solutions Inc. and use our SaaS
               platform, your relationship with us is governed by the terms of
               your written agreement (the “Client Subscription Agreement”) with
-              Equiforce, LLC. These Terms of Service apply only to
+              EquiForce Solutions Inc.. These Terms of Service apply only to
               general website usage and do not alter or affect the terms of the
               Client Subscription Agreement.
             </p>
@@ -127,7 +127,7 @@ const TermsOfService = () => {
               8. Limitation of Liability
             </h2>
             <p>
-              To the fullest extent permitted by law, Equiforce, LLC
+              To the fullest extent permitted by law, EquiForce Solutions Inc.
               and its affiliates are not liable for any damages arising from
               your use of the website, including but not limited to direct,
               indirect, incidental, or consequential damages.
@@ -139,7 +139,7 @@ const TermsOfService = () => {
               9. Indemnification
             </h2>
             <p>
-              You agree to indemnify and hold Equiforce, LLC, its
+              You agree to indemnify and hold EquiForce Solutions Inc., its
               officers, directors, employees, and agents harmless from any
               claims or damages resulting from your breach of these Terms or
               your violation of any law or the rights of a third party.
@@ -183,11 +183,7 @@ const TermsOfService = () => {
               13. Dispute Resolution
             </h2>
             <p>
-              Any dispute or claim arising out of or related to these Terms will
-              be resolved by binding arbitration under the rules of
-              [arbitration organization]. All proceedings will take place in
-              Illinois, and this agreement will be governed by the laws of
-              California.
+              Any dispute or claim arising out of or related to these Terms will be resolved by binding arbitration under the rules of [arbitration organization]. All proceedings will take place in Illinois, and this agreement will be governed by the laws of California.
             </p>
           </div>
 
@@ -203,7 +199,7 @@ const TermsOfService = () => {
 
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm md:text-base">
               <p className="font-semibold text-gray-900">
-                Equiforce, LLC
+                EquiForce Solutions Inc.
               </p>
               <p>Email: contact@equiforce.ai</p>
               <p>Phone: +1 (626) 838-8118</p>
@@ -211,7 +207,7 @@ const TermsOfService = () => {
           </div>
 
           <p className="font-medium text-gray-900">
-            Thank you for visiting Equiforce, LLC.
+            Thank you for visiting EquiForce Solutions Inc..
           </p>
 
         </div>
