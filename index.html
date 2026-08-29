@@ -53,8 +53,8 @@ Performance Measurement & GIPS® Composite Reporting">
       "draggable": false,
       "btnStyle": {
         "vPosition": [
-          "80%",
-          "80%"
+          "calc(100vh - 80px)",
+          "calc(100vh - 80px)"
         ],
         "margin": [
           "0",
@@ -65,7 +65,7 @@ Performance Measurement & GIPS® Composite Reporting">
           "0.5"
         ],
         "color": {
-          "main": "#1c4bb6",
+          "main": "#d97706",
           "second": "#ffffff"
         },
         "icon": {
@@ -104,6 +104,13 @@ Performance Measurement & GIPS® Composite Reporting">
 
 </head>
 <style>
+  /* Force EqualWeb accessibility icon to bottom left */
+  #INDmenu-btn, .INDmenu-btn, #accessibility-btn, div[id*="interdeal"], div[class*="equalweb"] {
+    top: auto !important;
+    bottom: 20px !important;
+    left: 20px !important;
+  }
+
   #zsiq_cus_sticker {
     width: 54px !important;
     right: 10px;
