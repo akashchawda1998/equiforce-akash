@@ -39,9 +39,7 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en" }}>
-        <html lang="en" />
-      </Helmet>
+      <Helmet htmlAttributes={{ lang: "en" }} />
       <ScrollToTop />
       <header>
         <Navbar />
