@@ -29,6 +29,7 @@ import Insights from "./components/pages/Insights";
 import Accessibility from "./components/pages/Accessibility";
 import AccessibilityChecklist from "./components/pages/AccessibilityChecklist";
 import AccessibilityPolicy from "./components/pages/AccessibilityPolicy";
+import Security from "./components/pages/Security";
 
 import { Helmet } from "react-helmet";
 
@@ -87,6 +88,8 @@ function App() {
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/accessibility-checklist" element={<AccessibilityChecklist />} />
               <Route path="/accessibility-policy" element={<AccessibilityPolicy />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/security-compliance" element={<Security />} />
               {/* <Route path="/ GIPS®" element={<GipsDisclaimer />} /> */}
               <Route path="/consultant" element={<Consultant />} />
 

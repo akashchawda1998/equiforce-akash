@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, ChevronDown, Mail } from "lucide-react";
+import { MapPin, ChevronDown, Mail, Globe } from "lucide-react";
 import contactimg from "../../assets/images/bg.png";
 import bgchatboat from "../../assets/images/bgchat.jpeg";
 import { Link } from "react-router-dom";
@@ -264,56 +264,108 @@ const ContactPage = () => {
 
                 {/* OFFICE LOCATIONS */}
                 <div>
-  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
-    Our Offices
-  </h3>
-  <div className="grid grid-cols-1 gap-2">
-    {[
-      {
-        city: "Los Angeles, CA",
-        company: "EquiForce Solutions Inc.",
-        address: "1575 Westwood Blvd Ste 302",
-        zip: "Los Angeles, CA 90024",
-        country: "United States",
-        isHQ: true,
-      },
-      {
-        city: "Indore, India",
-        company: "",
-        address: "",
-        zip: "",
-        country: "India",
-        isHQ: false,
-      },
-    ].map((loc, index) => (
-      <div key={index} className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition">
-        <div className="text-[#d97706] mt-1 shrink-0">
-          <MapPin size={22} />
-        </div>
-        <div className="flex-1">
-          <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-            <p className="font-bold text-gray-800">{loc.city}</p>
-            {loc.isHQ && (
-              <span className="inline-flex items-center gap-1 bg-[#d97706]/10 text-[#d97706] text-[10px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide border border-[#d97706]/30">
-              Headquarter
-              </span>
-            )}
-          </div>
-          {loc.company && (
-            <p className="text-sm font-semibold text-gray-700">{loc.company}</p>
-          )}
-          {loc.address && (
-            <p className="text-sm text-gray-500">{loc.address}</p>
-          )}
-          {loc.zip && (
-            <p className="text-sm text-gray-500">{loc.zip}</p>
-          )}
-          <p className="text-xs text-[#d97706] font-medium mt-1">{loc.country}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+                  <div className="flex items-center justify-between mb-6 border-b pb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                      Our Offices
+                    </h3>
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 bg-amber-50 text-[#d97706] rounded-full border border-amber-200/80 shadow-xs">
+                      <Globe size={13} className="text-[#d97706]" />
+                      5 Locations
+                    </span>
+                  </div>
+
+                  <div className="space-y-6">
+                    {/* UNITED STATES SECTION */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-base">🇺🇸</span>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                          United States
+                        </h4>
+                      </div>
+
+                      <div className="space-y-3">
+                        {/* HQ Featured Card */}
+                        <div className="p-4 rounded-2xl border border-amber-300/80 bg-gradient-to-br from-amber-50/60 via-white to-orange-50/30 shadow-sm hover:shadow-md transition-all duration-300">
+                          <div className="flex items-start gap-3.5">
+                            <div className="bg-[#d97706] text-white p-2.5 rounded-xl shadow-sm shrink-0 mt-0.5">
+                              <MapPin size={20} />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
+                                <p className="font-bold text-gray-900 text-base">
+                                  Los Angeles, CA
+                                </p>
+                                <span className="inline-flex items-center gap-1 bg-[#d97706] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
+                                  Headquarter
+                                </span>
+                              </div>
+                              <p className="text-xs font-semibold text-gray-700">
+                                EquiForce Solutions Inc.
+                              </p>
+                              <p className="text-xs text-gray-500 mt-0.5">
+                                1575 Westwood Blvd Ste 302
+                              </p>
+                              <p className="text-xs text-gray-500">
+                                Los Angeles, CA 90024
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Other US Offices Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                          {[
+                            { city: "Las Vegas", state: "NV" },
+                            { city: "Dallas", state: "TX" },
+                            { city: "Boston", state: "MA" },
+                          ].map((loc, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-center gap-2.5 p-3 rounded-xl border border-gray-200/80 bg-gray-50/50 hover:bg-orange-50/40 hover:border-amber-300 transition-all duration-200 group"
+                            >
+                              <div className="text-[#d97706] bg-amber-100/70 group-hover:bg-[#d97706] group-hover:text-white p-1.5 rounded-lg transition-colors shrink-0">
+                                <MapPin size={16} />
+                              </div>
+                              <div className="min-w-0">
+                                <p className="font-bold text-gray-800 text-xs truncate">
+                                  {loc.city}, {loc.state}
+                                </p>
+                                <p className="text-[10px] text-gray-400 font-medium">
+                                  United States
+                                </p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* INDIA SECTION */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-base">🇮🇳</span>
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                          India
+                        </h4>
+                      </div>
+
+                      <div className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-200/80 bg-gray-50/50 hover:bg-orange-50/40 hover:border-amber-300 transition-all duration-200 group">
+                        <div className="text-[#d97706] bg-amber-100/70 group-hover:bg-[#d97706] group-hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                          <MapPin size={18} />
+                        </div>
+                        <div>
+                          <p className="font-bold text-gray-800 text-sm">
+                            Indore, India
+                          </p>
+                          <p className="text-xs text-gray-400 font-medium">
+                            India Office
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

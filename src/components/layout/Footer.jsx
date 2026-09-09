@@ -2,6 +2,7 @@ import { FiArrowUp, FiMail, FiLinkedin, FiPhone } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn } from "react-icons/fa";
+import Soc2Badge from "../common/Soc2Badge";
 
 const Footer = () => {
   const [show, setShow] = useState(false);
@@ -147,6 +148,10 @@ const Footer = () => {
                   </div>
                 </li>
 
+                <li className="pt-3">
+                  <Soc2Badge />
+                </li>
+
               </ul>
             </div>
           </div>
@@ -161,17 +166,6 @@ const Footer = () => {
               {" "}· All rights reserved.
             </p>
             <span className="hidden sm:inline" aria-hidden="true">·</span>
-            {/* <Link to="/accessibility" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
-              Accessibility
-            </Link>
-            <span className="hidden sm:inline" aria-hidden="true">·</span>
-            <Link to="/accessibility-policy" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
-              Accessibility Policy
-            </Link>
-            <span className="hidden sm:inline" aria-hidden="true">·</span>
-            <Link to="/accessibility-checklist" className="hover:text-[#d97706] font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
-              Compliance Checklist
-            </Link> */}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3 text-gray-600">
@@ -181,6 +175,10 @@ const Footer = () => {
             <span className="hidden sm:inline" aria-hidden="true">|</span>
             <Link to="/terms-of-service" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Terms of Service
+            </Link>
+            <span className="hidden sm:inline" aria-hidden="true">|</span>
+            <Link to="/security" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
+              Security & Compliance
             </Link>
           </div>
 
