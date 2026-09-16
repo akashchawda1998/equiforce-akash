@@ -34,23 +34,25 @@ import Unsubscribe from "./components/pages/Unsubscribe";
 
 import { Helmet } from "react-helmet";
 
-// Helper component to handle conditional Footer rendering
+// Helper component to handle pages that use the shared layout
 const LayoutWrapper = ({ children }) => {
   const location = useLocation();
-  const hideFooterPaths = ["/signin"];
+  const hideHeaderFooterPaths = ["/signin", "/page/unsubscribe"];
+  const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname);
 
   return (
     <>
       <Helmet htmlAttributes={{ lang: "en" }} />
       <ScrollToTop />
-      <header>
-        <Navbar />
-      </header>
+      {!hideHeaderFooter && (
+        <header>
+          <Navbar />
+        </header>
+      )}
       <main id="main-content" tabIndex="-1" className="outline-none">
         {children}
       </main>
-      {/* Only show Footer if the current path is NOT in the hideFooterPaths array */}
-      {!hideFooterPaths.includes(location.pathname) && <Footer />}
+      {!hideHeaderFooter && <Footer />}
     </>
   );
 };
@@ -91,7 +93,7 @@ function App() {
               <Route path="/accessibility-policy" element={<AccessibilityPolicy />} />
               <Route path="/security" element={<Security />} />
               <Route path="/security-compliance" element={<Security />} />
-              <Route path="/unsubscribe" element={<Unsubscribe />} />
+              <Route path="/page/unsubscribe" element={<Unsubscribe />} />
               {/* <Route path="/ GIPS®" element={<GipsDisclaimer />} /> */}
               <Route path="/consultant" element={<Consultant />} />
 
