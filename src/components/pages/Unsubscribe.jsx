@@ -32,8 +32,8 @@ const Unsubscribe = () => {
 
     try {
       const response = await fetch(
-        // "https://equoforce-api.vercel.app/api/email/unsubscribe",
-        "http://localhost:3000/api/email/unsubscribe",
+        "https://equoforce-api.vercel.app/api/email/unsubscribe",
+        // "http://localhost:3000/api/email/unsubscribe",
         {
           method: "POST",
           headers: {
