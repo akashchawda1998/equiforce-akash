@@ -30,7 +30,8 @@ const ContactPage = () => {
 
     try {
       const res = await fetch(
-        "https://equoforce-api.vercel.app/api/email/contact",
+        // "https://equoforce-api.vercel.app/api/email/contact",
+        "http://localhost:3000/api/email/contact",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
