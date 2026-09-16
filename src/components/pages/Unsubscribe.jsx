@@ -5,7 +5,6 @@ import {
   AlertCircle,
   Loader2,
   ArrowLeft,
-  Mail,
   ShieldCheck,
 } from "lucide-react";
 import { Helmet } from "react-helmet";
@@ -40,7 +39,7 @@ const Unsubscribe = () => {
 
     try {
       const response = await fetch(
-        "https://8b3c-2401-4900-1c19-9f60-85c9-1c63-d98b-736.ngrok-free.app/api/email/unsubscribe",
+        "https://equoforce-api.vercel.app/api/email/unsubscribe",
         // "http://localhost:3000/api/email/unsubscribe",
         {
           method: "POST",
@@ -100,32 +99,10 @@ const Unsubscribe = () => {
         />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(7,23,44,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(7,23,44,0.035)_1px,transparent_1px)] bg-size-[56px_56px]" />
 
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl items-center justify-center px-4 py-8 sm:px-8 lg:py-12">
-          <section className="grid w-full overflow-hidden rounded-2xl border border-white/60 bg-white shadow-[0_28px_90px_rgba(7,23,44,0.18)] lg:grid-cols-[0.85fr_1.15fr]">
-            <aside className="relative flex min-h-70 flex-col justify-between overflow-hidden bg-[#07172c] p-7 text-white sm:p-10 lg:min-h-155 lg:p-12">
-              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full border border-white/10" />
-              <div className="absolute -bottom-28 -left-20 h-64 w-64 rounded-full border border-[#d97706]/30" />
-              <div className="relative">
-                <div className="mb-8 flex items-center gap-3" aria-label="EquiForce">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2 shadow-sm">
-                    <img src={logo} alt="" className="h-full w-full object-contain" />
-                  </span>
-                 
-                </div>
-                <h2 className="max-w-sm text-3xl font-bold leading-tight sm:text-4xl">
-                  Your inbox should work for you.
-                </h2>
-                <p className="mt-5 max-w-sm text-sm leading-6 text-slate-300">
-                  We respect your attention. Use this page to stop future EquiForce notifications in just a few seconds.
-                </p>
-              </div>
-              <div className="relative mt-10 hidden items-center gap-3 border-t border-white/15 pt-6 text-xs leading-5 text-slate-300 sm:flex">
-                <ShieldCheck size={18} className="shrink-0 text-emerald-400" />
-                <span>Your request is handled securely and only applies to this email address.</span>
-              </div>
-            </aside>
-
-            <div className="relative flex items-center justify-center bg-white p-6 sm:p-10 lg:p-12">
+        <div className="relative z-10 mx-auto flex min-h-screen w-full items-center justify-center px-4 py-8 sm:px-6">
+          <section className="w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_28px_90px_rgba(7,23,44,0.16)]">
+            <div className="h-1.5 bg-[#d97706]" />
+            <div className="relative flex items-center justify-center bg-white px-6 py-10 sm:px-12 sm:py-12">
           
             {isSuccess ? (
               <div className="w-full max-w-xl py-6 text-center animate-[fadeIn_0.5s_ease-in-out]">
@@ -162,14 +139,16 @@ const Unsubscribe = () => {
                 </div>
               </div>
             ) : (
-              <div className="w-full max-w-xl">
+              <div className="w-full max-w-md">
                 <div className="mb-8 text-center">
-                  <div className="mx-auto mb-5 h-1 w-12 bg-[#d97706]" />
+                  <Link to="/" className="mb-8 inline-flex justify-center" aria-label="EquiForce home">
+                    <img src={logo} alt="EquiForce" className="h-12 w-auto object-contain" />
+                  </Link>
                   <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-                    Stop future notifications
+                    Want to stop receiving our emails?
                   </h1>
                   <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500">
-                    Enter your email address below to unsubscribe from future EquiForce notifications and email updates.
+                    Enter your email address below and we&apos;ll unsubscribe you from EquiForce updates.
                   </p>
                 </div>
 
@@ -186,7 +165,7 @@ const Unsubscribe = () => {
                       htmlFor="unsubscribe-email"
                       className="mb-2 block text-xs font-bold tracking-wider text-slate-700 uppercase"
                     >
-                      Email address to unsubscribe <span className="text-[#d97706]">*</span>
+                      Email address <span className="text-[#d97706]">*</span>
                     </label>
                     <div className="relative">
                       <input
@@ -218,7 +197,7 @@ const Unsubscribe = () => {
                         <span>Stopping notifications...</span>
                       </>
                     ) : (
-                      <span>Stop future notifications</span>
+                      <span>Unsubscribe me</span>
                     )}
                   </button>
                 </form>
@@ -226,7 +205,7 @@ const Unsubscribe = () => {
                 <div className="mt-8 flex items-start gap-3 border-t border-slate-200 pt-5">
                   <ShieldCheck size={18} className="mt-0.5 shrink-0 text-emerald-600" />
                   <p className="text-xs leading-5 text-slate-500">
-                    This will stop future EquiForce notifications for this email address. Changed your mind or need help?{" "}
+                    You will stop receiving future EquiForce updates at this address. Need help or changed your mind?{" "}
                     <Link
                       to="/contact"
                       className="font-semibold text-[#b45309] hover:underline"
