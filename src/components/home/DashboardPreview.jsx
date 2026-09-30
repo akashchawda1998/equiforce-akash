@@ -1,4 +1,4 @@
-import SinglePlatformImg from "../../assets/images/bgdashboard1.png";
+import SinglePlatformImg from "../../assets/images/bg-dashbaord.png";
 
 const NAVY = "#000E24";
 
@@ -118,7 +118,7 @@ const DashboardPreview = () => {
 
             The Single{" "}
             <span className="text-[#d97706]">
-               Performance Measurement Platform & Consulting Partner
+              Performance Measurement Platform & Consulting Partner
             </span>{" "}
             for your <span className="tracking-tight
 ">firm</span>
@@ -128,11 +128,11 @@ const DashboardPreview = () => {
         {/* Image Section */}
         <div className="relative max-w-5xl mx-auto">
 
-          <div className="relative z-10 overflow-hidden">
+          <div className="relative z-10 overflow-hidden rounded-xl md:rounded-2xl">
             <img
               src={SinglePlatformImg}
               alt="EquiForce Unified Platform Dashboard Preview"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-xl md:rounded-2xl"
             />
           </div>
 

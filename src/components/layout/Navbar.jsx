@@ -245,10 +245,10 @@ const Navbar = () => {
               </Link>
 
               <Link
-                className="text-xs uppercase px-3 py-2 md:px-5 md:py-2.5 rounded-xl font-bold shadow-md hover:scale-105 transition-all bg-[#d97706] text-white hover:bg-[#b46002]"
+                className="text-xs uppercase px-4 py-2 md:px-5 md:py-2.5 rounded-full font-bold shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-r from-[#d97706] to-[#3b82f6] text-white"
                 to="/contact"
               >
-                Try for Free
+                Request a Demo
               </Link>
 
               {/* Mobile Menu Toggle */}
@@ -329,10 +329,10 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/contact"
-                className="w-full py-4 text-center block rounded-xl text-white shadow-lg active:scale-95 transition-transform bg-[#d97706] hover:bg-[#b46002]"
+                className="w-full py-3.5 text-center block rounded-full text-white shadow-lg active:scale-95 transition-all duration-300 font-bold bg-gradient-to-r from-[#d97706] to-[#3b82f6]"
                 onClick={closeMenu}
               >
-                Try for Free
+                Request a Demo
               </Link>
             </div>
           </div>

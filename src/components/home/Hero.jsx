@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="relative w-full bg-gradient-to-b from-[#000E24] to-[#0f2f5c] overflow-hidden">
+    <div className="relative w-full bg-gradient-to-b from-[#000E24] to-[#0f2f5c] overflow-hidden px-2">
 
       {/* Background — decorative, hidden from assistive tech */}
       <div className="absolute inset-0" aria-hidden="true">
@@ -12,38 +12,35 @@ function Hero() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 px-6 md:px-10 pt-12 sm:pt-16 md:pt-20 lg:pt-24">
+      <div className="relative max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 px-2 lg:px-8 pt-12 sm:pt-16 md:pt-20 lg:pt-24">
 
         {/* LEFT */}
         <div className="w-full lg:w-1/2 text-white z-10">
 
-          <p className="uppercase text-[#d97706] tracking-widest mt-10 mb-3 text-sm font-semibold">
-            Over 3 Decades of Industry Expertise
+          <p className="inline-flex items-center gap-2 uppercase tracking-wider sm:tracking-widest mt-6 sm:mt-10 mb-3 text-xs sm:text-sm font-semibold whitespace-nowrap">
+            <span className="text-[#d97706] shrink-0">{'>>'}</span>
+            <span className="text-white">DRIVING PERFORMANCE FORWARD</span>
+            <span className="text-[#d97706] shrink-0">{'>>'}</span>
           </p>
 
-          <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold mb-4 sm:mb-6 leading-snug">
-            Your Strategic <span className="text-[#d97706]">Partner</span> in
-            <br className="hidden sm:block" />
-            <span>
-              {" "}
-              Performance Measurement &amp; GIPS® Composite Reporting
+          <h1 className="text-xl min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-extrabold mb-4 sm:mb-6 leading-tight sm:leading-snug lg:leading-[1.18]">
+            <span className="block">
+              Your Strategic <span className="text-[#d97706]">Partner</span> in
             </span>
+            <span className="block">Performance Measurement,</span>
+            <span className="block">GIPS® Composite &amp;</span>
+            <span className="block">Consulting Services</span>
           </h1>
 
-          <p className="uppercase max-w-lg text-gray-300 mb-8 font-medium text-sm md:text-base">
+          <p className="uppercase max-w-2xl text-gray-300 mb-8 font-medium text-sm md:text-base leading-relaxed">
             <span className="text-[#d97706]">
-              Empowering investment management with practitioner expertise &amp; a
-              technology edge
+              Empowering investment management with practitioner expertise &amp;
+              <br className="hidden sm:block" /> a technology edge
             </span>
           </p>
 
           {/* ADA FIX: replaced <Link><button> nesting with a single styled <Link> */}
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-[#d97706] to-[#3b82f6] hover:scale-105 transition-transform duration-300 font-medium shadow-lg text-white"
-          >
-            Request a Demo
-          </Link>
+
 
         </div>
 
@@ -75,9 +72,9 @@ function Hero() {
       </div>
 
       {/* DISCLAIMER */}
-      <div className="relative max-w-screen-xl mx-auto flex flex-col lg:flex-row items-start lg:items-end gap-10 px-6 md:px-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+      <div className="relative max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-start lg:items-end gap-10 px-2 lg:px-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         {/* ADA FIX: improved text color from ~#b4b4b4d4 (fails contrast) to #9ca3af (gray-400, passes on dark bg) */}
-        <p className="text-xs text-gray-400 max-w-full leading-relaxed pt-5 opacity-90">
+        <p className="text-xs lg:text-[11.6px] text-gray-400 max-w-full leading-relaxed pt-5 opacity-90">
           Global Investment Performance Standards (GIPS®) GIPS® is a registered
           trademark owned by CFA Institute. CFA Institute does not endorse or
           promote this organization, nor does it warrant the accuracy or quality
