@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -11,57 +11,194 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 
-// ✅ Images
-import r1 from "./recon1.png";
-import r2 from "./recon2.png";
+// ✅ Images from src/assets/slidesimage
+// Performance & Attribution
+import accountsReturn from "../../../assets/slidesimage/Accounts Return.png";
+import securityReturns from "../../../assets/slidesimage/Security Returns.png";
+import portfolioContribution from "../../../assets/slidesimage/Portfolio Contribution.png";
+import contributionAnalysis from "../../../assets/slidesimage/Contribution Analysis.png";
+import performanceAttribution from "../../../assets/slidesimage/Performance Attribution.png";
+import performanceStatistics from "../../../assets/slidesimage/Performance Statistics.png";
+import performancePeriodLock from "../../../assets/slidesimage/Performance Period Lock.png";
 
-import g1 from "./gipss1.png";
-import g2 from "./gipss2.png";
-import g3 from "./gipss3.png";
+// GIPS® Composite Management
+import compositeDashboard from "../../../assets/slidesimage/Composite Dashboard.png";
+import compositeRiskStats from "../../../assets/slidesimage/Composite Risk Statistics.png";
+import verificationReadyDashboard from "../../../assets/slidesimage/Verification-Ready Dashboard.png";
+import gipsReporting from "../../../assets/slidesimage/GIPS® Reporting.png";
+import gipsVerificationReport from "../../../assets/slidesimage/GIPS® Verification Report.png";
+import gipsPolicyProcedure from "../../../assets/slidesimage/GIPS® Policy & Procedure (Version Control).png";
+import gipsComplianceCheck from "../../../assets/slidesimage/GIPS® Presentation Compliance Check.png";
+import distributionLog from "../../../assets/slidesimage/Distribution Log.png";
 
-import p1 from "./performance1.png";
-import p2 from "./performance2.png";
-import p3 from "./performance3.png";
+// AI-Powered Investment Reporting
+import executiveDashboard from "../../../assets/slidesimage/Executive Dashboard.png";
+import performanceReporting from "../../../assets/slidesimage/Performance Reporting.png";
 
-import ai1 from "./ai1.png";
-import ai2 from "./ai2.png";
-import ai3 from "./ai3.png";
+// ─── CUSTOM ICONS ─────────────────────────────
+const PerformanceMeasurementIcon = () => (
+  <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="6" y1="34" x2="35" y2="34" stroke="#08636b" strokeWidth="1.8" strokeLinecap="round" />
+    <rect x="8" y="24" width="5" height="10" rx="1" fill="#14b8a6" opacity="0.35" />
+    <line x1="10.5" y1="24" x2="10.5" y2="19" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <rect x="16" y="17" width="5" height="12" rx="1" fill="#14b8a6" opacity="0.55" />
+    <line x1="18.5" y1="17" x2="18.5" y2="12" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <rect x="24" y="21" width="5" height="8" rx="1" fill="#14b8a6" opacity="0.4" />
+    <line x1="26.5" y1="21" x2="26.5" y2="17" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <polyline points="8,28 16,19 24,22 32,11" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <polyline points="29,9 32,11 30,14" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
+const GipsCompositeIcon = () => (
+  <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4 A16 16 0 0 1 35.1 23" stroke="#08636b" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <path d="M35.1 23 A16 16 0 0 1 7.2 29" stroke="#14b8a6" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <path d="M7.2 29 A16 16 0 0 1 20 4" stroke="#FF8000" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <circle cx="20" cy="20" r="7" stroke="#08636b" strokeWidth="1.6" fill="none" opacity="0.45" />
+    <circle cx="20" cy="20" r="3" fill="#08636b" />
+    <line x1="20" y1="4" x2="20" y2="13" stroke="#08636b" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+    <line x1="35.1" y1="23" x2="27.4" y2="21" stroke="#14b8a6" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+    <line x1="7.2" y1="29" x2="14" y2="23.5" stroke="#FF8000" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+  </svg>
+);
+
+const ConsultingServicesIcon = () => (
+  <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M15 13.5V10.5C15 9.4 15.9 8.5 17 8.5H23C24.1 8.5 25 9.4 25 10.5V13.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <rect
+      x="7"
+      y="13.5"
+      width="26"
+      height="18"
+      rx="3.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      fill="none"
+    />
+    <line
+      x1="8"
+      y1="20.5"
+      x2="32"
+      y2="20.5"
+      stroke="#14b8a6"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+    />
+    <polyline
+      points="11.5,25.5 16,20.5 20,23 25.5,17"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <polyline
+      points="22.5,17 25.5,17 25.5,20"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
+
+const AiPoweredReportingIcon = () => (
+  <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="12" width="16" height="16" rx="3" stroke="#08636b" strokeWidth="2" fill="rgba(8,99,107,0.07)" />
+    <line x1="17.5" y1="12" x2="17.5" y2="28" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="22.5" y1="12" x2="22.5" y2="28" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="12" y1="17.5" x2="28" y2="17.5" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="12" y1="22.5" x2="28" y2="22.5" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="16" y1="12" x2="16" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="20" y1="12" x2="20" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="24" y1="12" x2="24" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="16" y1="28" x2="16" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="20" y1="28" x2="20" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="24" y1="28" x2="24" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="16" x2="6" y2="16" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="20" x2="6" y2="20" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="24" x2="6" y2="24" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="16" x2="34" y2="16" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="20" x2="34" y2="20" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="24" x2="34" y2="24" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <path d="M21.5 15 L18.5 20.5 H21 L18 25" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
 
 // ─── DATA ─────────────────────────────────────
 const allData = [
-  // {
-  //   id: "operations",
-  //   img: [r1, r2],
-  //   title: "Investment Operations & Reconciliation",
-  //   description:
-  //     "Investment data reconciliation across internal systems and custodian sources.",
-  // },
   {
     id: "performance",
-    img: [p1, p2, p3],
-    title: "Performance Measurement",
+    icon: PerformanceMeasurementIcon,
+    img: [
+      accountsReturn,
+      portfolioContribution,
+      securityReturns,
+      contributionAnalysis,
+      performanceAttribution,
+      performanceStatistics,
+      performancePeriodLock,
+    ],
+    title: "Performance and Attribution",
     description:
-      "IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.",
+      "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution, and attribution through flexible reporting and AI-powered insights.",
   },
   {
     id: "gips",
-    img: [g1, g2, g3],
+    icon: GipsCompositeIcon,
+    img: [
+      compositeDashboard,
+      compositeRiskStats,
+      verificationReadyDashboard,
+      gipsReporting,
+      gipsVerificationReport,
+      gipsPolicyProcedure,
+      gipsComplianceCheck,
+      distributionLog,
+    ],
     title: "GIPS® Composite Management",
     description:
-      "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
+      "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics, and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
+  },
+  {
+    id: "consulting",
+    icon: ConsultingServicesIcon,
+    img: [
+      verificationReadyDashboard,
+      performanceAttribution,
+      gipsPolicyProcedure,
+      executiveDashboard,
+    ],
+    title: "Consulting Services",
+    description:
+      "Empowering institutional asset managers, wealth managers, hedge funds and private market investment firms with institutional-grade performance, attribution, GIPS® composite management, and operational expertise.",
   },
   {
     id: "ai-reporting",
-    img: [ai1, ai2, ai3],
+    icon: AiPoweredReportingIcon,
+    img: [
+      executiveDashboard,
+      performanceReporting,
+      gipsReporting,
+    ],
     title: "AI-Powered Investment Reporting",
     description:
-      "Intelligent investment reporting that surfaces accurate insights into every reporting layer.",
+      "Intelligent investment reporting that surfaces accurate insights across every layer of the reporting process.",
   },
 ];
 
 // ─── FEATURE SECTION ──────────────────────────
 const FeatureSection = ({ item, index }) => {
   const isEven = index % 2 === 0;
+  const Icon = item.icon;
 
   return (
     <>
@@ -75,19 +212,34 @@ const FeatureSection = ({ item, index }) => {
           className="w-full md:w-1/2 flex flex-col gap-4"
           data-aos={isEven ? "fade-right" : "fade-left"}
         >
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-[#d97706]/10 flex items-center justify-center text-[#d97706] font-bold">
-              {index + 1}
-            </div>
+          <div className="flex items-center gap-3.5 sm:gap-4">
+            {Icon && (
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#dff4f3] flex items-center justify-center shrink-0 border border-teal-200/50 shadow-xs">
+                <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
+                  <Icon />
+                </div>
+              </div>
+            )}
+            <h2 className="text-2xl md:text-3xl lg:text-3xl font-bold text-[#000E24] leading-tight">
+              {item.title}
+            </h2>
           </div>
-
-          <h2 className="text-2xl md:text-4xl font-bold text-[#000E24]">
-            {item.title}
-          </h2>
 
           <p className="text-gray-500 text-base md:text-lg">
             {item.description}
           </p>
+
+          {item.id === "consulting" && (
+            <div className="pt-2">
+              <Link
+                to="/consultant"
+                className="inline-flex items-center gap-2 text-sm md:text-base font-semibold text-[#d97706] hover:text-[#b45309] transition-colors group"
+              >
+                Meet Our Principal Consultants
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* SLIDER */}
@@ -114,8 +266,8 @@ const FeatureSection = ({ item, index }) => {
                 <div className="w-full ">
                   <img
                     src={img}
-                    alt={`slide-${i}`}
-                    className="w-full h-full object-cover rounded-lg"
+                    alt={`${item.title} Slide ${i + 1}`}
+                    className="w-full h-auto object-contain rounded-xl shadow-lg border border-gray-200/80"
                   />
                 </div>
               </SwiperSlide>

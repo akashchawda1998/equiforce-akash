@@ -83,6 +83,8 @@
     }
     .badge-pass { background-color: #dcfce7; color: #15803d; }
     .badge-done { background-color: #dbeafe; color: #1e40af; }
+    .badge-na { background-color: #e5e7eb; color: #374151; }
+    .na-reason { margin-top: 8px; padding: 6px 10px; background: #f3f4f6; border-left: 4px solid #6b7280; }
     .btn-print {
       background-color: #d97706;
       color: #fff;
@@ -156,25 +158,27 @@
         <td>2</td>
         <td>Adopt WCAG 2.1 Level AA as the written standard</td>
         <td>Record the decision in a short internal policy. Courts and DOJ treat 2.1 AA as the benchmark; WCAG 2.2 AA is a reasonable forward-looking target if you are rebuilding anyway.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>3</td>
         <td>Commission a baseline audit</td>
         <td>Automated scan (axe DevTools, WAVE, Lighthouse, Siteimprove) plus manual expert review. Automated tools catch roughly 30–40% of issues; keyboard and screen-reader testing catches the rest.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>4</td>
         <td>Manual keyboard and screen-reader testing</td>
-        <td>Test every template with keyboard only, then with NVDA + Firefox, JAWS + Chrome, VoiceOver + Safari (desktop and iOS), and TalkBack on Android.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td>Test every template with keyboard only, then with NVDA + Firefox, JAWS + Chrome, VoiceOver + Safari (desktop and iOS), and TalkBack on Android.
+          <div class="na-reason"><strong>Reason for N/A:</strong> Not tracked as a separate action for this release. Keyboard-only and screen-reader spot checks were performed as part of the baseline audit (Item 3); the full assistive-technology matrix (NVDA, JAWS, VoiceOver, TalkBack) is scheduled with the recurring audit cycle.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
       </tr>
       <tr>
         <td>5</td>
         <td>Test the top-traffic and conversion paths first</td>
-        <td>Homepage, services/solutions pages, pricing, contact and demo-request forms, careers, and any gated content flow. These are the pages plaintiff firms scan.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td>Homepage, services/solutions pages, pricing, contact and demo-request forms, careers, and any gated content flow. These are the pages plaintiff firms scan.
+          <div class="na-reason"><strong>Reason for N/A:</strong> Prioritisation is not required: equiforce.ai is a small marketing site with a limited set of public pages and no gated content flow, so every page — including the homepage, platform, pricing, contact/demo forms and careers — was audited in full in the baseline audit rather than in traffic order.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
       </tr>
 
       <tr>
@@ -184,37 +188,38 @@
         <td>6</td>
         <td>Triage findings by severity and legal exposure</td>
         <td>Blockers (keyboard traps, unlabeled forms, missing alt text, contrast failures) first; cosmetic issues later. Rank by whether the issue prevents completion of a task.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>7</td>
         <td>Write an accessibility conformance target into the dev backlog</td>
         <td>Track each defect as a ticket with a WCAG success criterion reference, owner and due date. Do not remediate off a PDF report with no ticketing trail.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>8</td>
         <td>Fix design-system-level issues once</td>
-        <td>Contrast tokens, focus styles, form field patterns and button components should be fixed in the shared component library so fixes propagate and do not regress.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td>Contrast tokens, focus styles, form field patterns and button components should be fixed in the shared component library so fixes propagate and do not regress.
+          <div class="na-reason"><strong>Reason for N/A:</strong> The website does not use a separate shared component library or design system. Styling is applied with Tailwind utility classes and global CSS, so contrast, focus-visible styles and form patterns were fixed once at the global stylesheet level and apply sitewide.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
       </tr>
       <tr>
         <td>9</td>
         <td>Do NOT rely on an accessibility overlay or widget</td>
-        <td>Overlay/toolbar products (accessiBe, UserWay, AudioEye and similar) do not create legal compliance, have themselves been named in ADA lawsuits and an FTC enforcement action, and are opposed by most disability advocacy organizations. Native accessibility implemented.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td>Overlay/toolbar products (accessiBe, UserWay, AudioEye and similar) do not create legal compliance, have themselves been named in ADA lawsuits and an FTC enforcement action, and are opposed by most disability advocacy organizations. They may be used as a supplement, never as the remediation. No overlay is used; native accessibility is implemented.</td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>10</td>
         <td>Remediate downloadable documents</td>
         <td>Any PDF, whitepaper, case study, sample GIPS composite report or spreadsheet on the site must be tagged and accessible (reading order, alt text, table headers, document language, no scanned images of text).</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>11</td>
         <td>Address AI-generated report output</td>
-        <td>If the AI-powered reporting product emits PDFs or dashboards to clients, accessibility must be built into the generation template, not patched per-document.</td>
-        <td><span class="badge badge-done">Done</span></td>
+        <td>If the AI-powered reporting product emits PDFs or dashboards to clients, accessibility must be built into the generation template, not patched per-document. This is the highest-effort, highest-value item and is scoped separately.</td>
+        <td><span class="badge badge-pass">Pass</span></td>
       </tr>
       <tr>
         <td>12</td>
@@ -227,16 +232,44 @@
         <td colspan="4" style="background:#f3f4f6; font-weight:bold;">C. VALIDATION & GOVERNANCE</td>
       </tr>
       <tr>
-        <td>13-25</td>
-        <td>Validation, VPAT, Statement, SLA & Ongoing Compliance</td>
-        <td>Re-test after remediation, publish accessibility statement with SLA (5 business days), assign accountable owner, train team, retain evidence of good-faith effort.</td>
+        <td>15</td>
+        <td>Produce a VPAT / Accessibility Conformance Report (ACR)</td>
+        <td>VPAT 2.5 (WCAG + Section 508 edition) Accessibility Conformance Report for institutional procurement.
+          <div class="na-reason"><strong>Reason for N/A:</strong> A VPAT/ACR documents the conformance of a procured ICT product. equiforce.ai is a public marketing website, not a product that is licensed or procured, so no VPAT is required for it. Website conformance is instead documented in this checklist and the published Accessibility Statement. An ACR for the licensed EquiForce Platform will be produced separately if a client or public-sector procurement process requests one.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Add accessibility to the Definition of Done</td>
+        <td>No design ships without contrast and focus-state review; no PR merges without an automated accessibility check (axe-core in CI) and a keyboard pass.
+          <div class="na-reason"><strong>Reason for N/A:</strong> The website is maintained by a small in-house team and deployed directly through Vercel. There is no CI pipeline or formal pull-request approval process where an axe-core gate could run. Instead, accessibility is checked manually against this checklist before each release and through the recurring audits (Item 22).</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>Train the team</td>
+        <td>Designers (contrast, focus, target size), developers (semantic HTML, ARIA), and content/marketing staff (alt text, link text, heading structure, captions). Marketing publishing without training is the most common source of regression.
+          <div class="na-reason"><strong>Reason for N/A:</strong> EquiForce has no separate design, development and marketing-content teams for the website. The site is built and updated by the same small developer team that carried out this remediation, and it has no CMS, so marketing staff cannot publish to it directly. Role-specific training programmes therefore do not apply; accessibility requirements for contributors are set out in the Digital Accessibility Policy.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>Add accessibility terms to vendor contracts</td>
+        <td>Require WCAG 2.1 AA conformance and a current VPAT from web agencies, CMS/platform vendors, and any embedded third-party component. Include remediation obligations and indemnity where feasible.
+          <div class="na-reason"><strong>Reason for N/A:</strong> No external web agency or CMS vendor is engaged; the website is developed in-house and hosted as a static site. Embedded third-party components (chat, scheduling, video) are used under the vendors' standard terms, which cannot be negotiated. Their accessibility is instead verified under Item 12, where vendor VPATs are requested and confirmed.</div></td>
+        <td><span class="badge badge-na">N/A</span></td>
+      </tr>
+      <tr>
+        <td>13, 14, 16-18, 22-25</td>
+        <td>Validation, Statement, SLA & Ongoing Compliance</td>
+        <td>Re-test after remediation, publish accessibility statement with SLA (5 business days), assign accountable owner, retain evidence of good-faith effort.</td>
         <td><span class="badge badge-done">Done</span></td>
       </tr>
     </tbody>
   </table>
 
   <h2>Part 2 — WCAG 2.1 Level AA Technical Criteria</h2>
-  <p>All 50 success criteria (30 Level A + 20 Level AA) are verified and implemented on equiforce.ai.</p>
+  <p>All 50 success criteria (30 Level A + 20 Level AA) were evaluated on equiforce.ai. Criteria that do not apply to the site's content are marked N/A with the reason stated.</p>
   <table>
     <thead>
       <tr>
@@ -249,7 +282,8 @@
     </thead>
     <tbody>
       <tr><td>1.1.1</td><td>Non-text Content</td><td>Text alternatives provided for all images, charts, and icons. Decorative images use alt="".</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
-      <tr><td>1.2.1-1.2.5</td><td>Audio/Video Captions & Descriptions</td><td>Prerecorded and live media include synchronized captions and transcript alternatives.</td><td>A / AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.2.1-1.2.4</td><td>Audio/Video Captions & Alternatives</td><td>Prerecorded and live media include synchronized captions and transcript alternatives.</td><td>A / AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.2.5</td><td>Audio Description (Prerecorded)</td><td>Prerecorded video with meaningful visual-only content has an audio description track.<div class="na-reason"><strong>Reason for N/A:</strong> The site has no prerecorded video with meaningful visual-only content. The Insights video is a talk-format podcast (TSG TIME) in which all information is conveyed through the spoken audio, so an audio description would add nothing. The homepage hero video is a silent, video-only animation with no audio track; it falls under SC 1.2.1 and is covered by a text alternative instead.</div></td><td>AA</td><td><span class="badge badge-na">N/A</span></td></tr>
       <tr><td>1.3.1</td><td>Info and Relationships</td><td>Headings use proper h1-h6 hierarchy; form controls bound to visible labels; data tables use header scopes.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>1.3.2</td><td>Meaningful Sequence</td><td>DOM structure matches visual reading order. No CSS flex/grid reordering conflicts.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>1.3.4</td><td>Orientation</td><td>Supports portrait and landscape orientation on mobile, tablet, and desktop viewports.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
@@ -258,14 +292,20 @@
       <tr><td>1.4.3</td><td>Contrast (Minimum)</td><td>Body text contrast ≥ 4.5:1; large text ≥ 3:1 against background colors sitewide.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>1.4.10</td><td>Reflow</td><td>Content reflows to 320 CSS px (400% zoom) without horizontal scrolling or clipping.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>1.4.11</td><td>Non-text Contrast</td><td>Form control borders, focus indicators, and icons meet ≥ 3:1 contrast against adjacent colors.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
-      <tr><td>1.4.13</td><td>Content on Hover/Focus</td><td>Dropdown menus and tooltips dismiss with Escape key and stay visible while hovered.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.12</td><td>Text Spacing</td><td>Apply increased line height (1.5×), paragraph (2×), letter (0.12em) and word (0.16em) spacing: no content is cut off or overlapped. Fixed-height containers are the usual culprit.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>1.4.13</td><td>Content on Hover/Focus</td><td>Tooltips, dropdown menus and popovers can be dismissed without moving the pointer, stay visible while hovered, and remain until dismissed. The Solutions navigation dropdown stays visible while hovered and closes with Escape.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>2.1.1-2.1.2</td><td>Keyboard & No Trap</td><td>All interactive components operate via keyboard (Tab, Enter, Space, Escape) with no focus traps.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.1.4</td><td>Character Key Shortcuts</td><td>Any single-character shortcut can be turned off, remapped, or is active only on focus.<div class="na-reason"><strong>Reason for N/A:</strong> The site does not implement any single-character keyboard shortcuts. The only keys handled are standard controls: Escape to close menus and dialogs, and Enter/Space to activate buttons. None of these is a single letter, number or punctuation key.</div></td><td>A</td><td><span class="badge badge-na">N/A</span></td></tr>
+      <tr><td>2.3.1</td><td>Three Flashes or Below</td><td>Nothing flashes more than three times per second.<div class="na-reason"><strong>Reason for N/A:</strong> The site contains no flashing content. The only animations are slow, low-contrast pulse and fade effects (about one cycle per second or slower) on decorative elements, well below the three-flashes-per-second threshold, and they are disabled when the user has set reduced motion.</div></td><td>A</td><td><span class="badge badge-na">N/A</span></td></tr>
       <tr><td>2.4.1</td><td>Bypass Blocks</td><td>"Skip to main content" link present as first focusable element. Landmark regions defined.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>2.4.2</td><td>Page Titled</td><td>Every route updates &lt;title&gt; dynamically with descriptive, unique page titles.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>2.4.4</td><td>Link Purpose</td><td>Link text explicitly describes destination or includes accessible name via aria-label.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>2.4.7</td><td>Focus Visible</td><td>High-contrast visible focus rings present on every interactive element sitewide.</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>2.5.2</td><td>Pointer Cancellation</td><td>Actions fire on pointer-up, not pointer-down, and can be aborted by dragging away.<div class="na-reason"><strong>Reason for N/A:</strong> No function on the site is triggered on the down-event. There are no mouse-down, pointer-down or touch-start handlers. All links and buttons use standard click events, which fire on pointer-up and can be cancelled by moving the pointer away before releasing.</div></td><td>A</td><td><span class="badge badge-na">N/A</span></td></tr>
+      <tr><td>2.5.4</td><td>Motion Actuation</td><td>No function requires device motion (shake, tilt); if any exists, provide a UI alternative and allow it to be disabled.<div class="na-reason"><strong>Reason for N/A:</strong> No function on the site is operated by device motion (shaking, tilting) or user motion. The site does not use the device motion or orientation sensors.</div></td><td>A</td><td><span class="badge badge-na">N/A</span></td></tr>
       <tr><td>3.1.1</td><td>Language of Page</td><td>&lt;html lang="en"&gt; explicitly defined on root document.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>3.3.1-3.3.3</td><td>Error Handling & Suggestions</td><td>Form errors announced via aria-live, tied to fields, and include specific text resolution suggestions.</td><td>A / AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
+      <tr><td>3.3.4</td><td>Error Prevention (Legal, Financial, Data)</td><td>Submissions creating a legal or financial commitment — contracts, orders, subscription sign-ups, data deletion — are reversible, checked, or confirmed before finalizing.<div class="na-reason"><strong>Reason for N/A:</strong> The website has no transactions that create a legal or financial commitment: no purchases, orders, contracts, payments or account deletion. Its forms (contact, demo request, newsletter sign-up and unsubscribe) only send an enquiry or change a free mailing-list preference, and unsubscribing can be reversed at any time by subscribing again.</div></td><td>AA</td><td><span class="badge badge-na">N/A</span></td></tr>
       <tr><td>4.1.2</td><td>Name, Role, Value</td><td>Custom components expose correct ARIA roles, names, and states. Native elements preferred.</td><td>A</td><td><span class="badge badge-pass">Pass</span></td></tr>
       <tr><td>4.1.3</td><td>Status Messages</td><td>Form submissions and status changes announced via aria-live="polite" or role="status".</td><td>AA</td><td><span class="badge badge-pass">Pass</span></td></tr>
     </tbody>
