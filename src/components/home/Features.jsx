@@ -3,25 +3,6 @@ import { Link } from "react-router-dom";
 
 /* ---------------- ICONS ---------------- */
 
-const InvestmentOpsIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="3" y="8" width="13" height="24" rx="2" stroke="#08636b" strokeWidth="1.8" fill="none" />
-    <line x1="6" y1="14" x2="13" y2="14" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="6" y1="18" x2="13" y2="18" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="6" y1="22" x2="10" y2="22" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="6" y1="26" x2="13" y2="26" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <rect x="24" y="8" width="13" height="24" rx="2" stroke="#08636b" strokeWidth="1.8" fill="none" />
-    <line x1="27" y1="14" x2="34" y2="14" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="27" y1="18" x2="34" y2="18" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="30" y1="22" x2="34" y2="22" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="27" y1="26" x2="34" y2="26" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="16" y1="17" x2="24" y2="17" stroke="#FF8000" strokeWidth="2" strokeLinecap="round" />
-    <polyline points="19,14.5 16,17 19,19.5" stroke="#FF8000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    <line x1="16" y1="23" x2="24" y2="23" stroke="#FF8000" strokeWidth="2" strokeLinecap="round" />
-    <polyline points="21,20.5 24,23 21,25.5" stroke="#FF8000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-  </svg>
-);
-
 const PerformanceMeasurementIcon = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <line x1="6" y1="34" x2="35" y2="34" stroke="#08636b" strokeWidth="1.8" strokeLinecap="round" />
@@ -49,6 +30,60 @@ const GipsCompositeIcon = () => (
   </svg>
 );
 
+const ConsultingServicesIcon = () => (
+  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Briefcase Handle */}
+    <path
+      d="M15 13.5V10.5C15 9.4 15.9 8.5 17 8.5H23C24.1 8.5 25 9.4 25 10.5V13.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* Briefcase Body */}
+    <rect
+      x="7"
+      y="13.5"
+      width="26"
+      height="18"
+      rx="3.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      fill="none"
+    />
+
+    {/* Horizontal Seam Line */}
+    <line
+      x1="8"
+      y1="20.5"
+      x2="32"
+      y2="20.5"
+      stroke="#14b8a6"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+    />
+
+    {/* Orange Upward Trend Arrow */}
+    <polyline
+      points="11.5,25.5 16,20.5 20,23 25.5,17"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <polyline
+      points="22.5,17 25.5,17 25.5,20"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
+
 const AiPoweredReportingIcon = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="12" y="12" width="16" height="16" rx="3" stroke="#08636b" strokeWidth="2" fill="rgba(8,99,107,0.07)" />
@@ -71,46 +106,55 @@ const AiPoweredReportingIcon = () => (
     <path d="M21.5 15 L18.5 20.5 H21 L18 25" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
   </svg>
 );
+
 /* ---------------- DATA ---------------- */
 
 const features = [
-  // {
-  //   title: (
-  //     <>
-  //       Investment Operations & Reconciliation
-  //     </>
-  //   ),
-  //   desc: "Investment data reconciliation across internal systems and custodian sources.",
-  //   icon: InvestmentOpsIcon,
-  //   link: "/performance-measurement#operations",
-  // },
   {
     title: (
       <>
-        Performance  Measurement
+        Performance and <br className="hidden sm:inline" />
+        Attribution
       </>
     ),
-    desc: "IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.",
+    titleText: "Performance and Attribution",
+    desc: "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution, and attribution through flexible reporting and AI-powered insights.",
     icon: PerformanceMeasurementIcon,
     link: "/performance-measurement#performance",
   },
   {
     title: (
       <>
-          GIPS® Composite  Management
+        GIPS® Composite <br className="hidden sm:inline" />
+        Management
       </>
     ),
-    desc: "End-to-end composite management — built to deliver reliable, compliant performance reporting.",
+    titleText: "GIPS® Composite Management",
+    desc: "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics, and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
     icon: GipsCompositeIcon,
     link: "/performance-measurement#gips",
   },
   {
     title: (
       <>
-        AI-Powered Investment Reporting
+        Consulting <br className="hidden sm:inline" />
+        Services
       </>
     ),
-    desc: "Intelligent investment reporting that surfaces accurate insights into every reporting layer.",
+    titleText: "Consulting Services",
+    desc: "Empowering institutional asset managers, wealth managers, hedge funds and private market investment firms with institutional-grade performance, attribution, GIPS® composite management and operational expertise.",
+    icon: ConsultingServicesIcon,
+    link: "/consultant",
+  },
+  {
+    title: (
+      <>
+        AI-Powered <br className="hidden sm:inline" />
+        Investment Reporting
+      </>
+    ),
+    titleText: "AI-Powered Investment Reporting",
+    desc: "Intelligent investment reporting that surfaces accurate insights across every layer of the reporting process.",
     icon: AiPoweredReportingIcon,
     link: "/performance-measurement#ai-reporting",
   },
@@ -120,23 +164,16 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="bg-[#000E24] py-10" id="features">
+    <section className="bg-[#000E24] py-12 md:py-16" id="features">
       <div className="max-w-[1400px] mx-auto px-4 text-center">
-        
-        <span className="bg-[#d97706] text-white px-4 py-1 rounded-full text-xs uppercase">
-          Core Solutions
-        </span>
-
-        <h2 className="text-3xl font-bold text-white mt-4 mb-4">
+        <h2 className="text-3xl font-bold text-white mb-4">
           Our Firm <span className="text-[#d97706]">Solutions</span>
         </h2>
 
-        <p className="text-blue-100/80 max-w-2xl mx-auto mb-8 text-sm">
-          EquiForce delivers specialized solutions across performance measurement, GIPS® composite management and AI-Powered Investment Reporting
-        </p>
+        <p className="text-blue-100/80 max-w-3xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
+          EquiForce delivers specialized solutions across Performance and Attribution, GIPS® Composite Management, Consulting Services and AI-Powered Investment Reporting        </p>
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item, index) => {
             const Icon = item.icon;
 
@@ -146,19 +183,22 @@ const Features = () => {
                 key={index}
                 className="group bg-white rounded-2xl p-6 hover:shadow-xl transition-all flex flex-col text-left"
               >
-                <div className="mb-4">
-                  <Icon />
+                <div className="flex items-center gap-3.5 mb-5 min-h-[60px]">
+                  <div className="w-14 h-14 rounded-full bg-[#D6F5F2] flex items-center justify-center shrink-0 border border-teal-200/40 group-hover:scale-105 group-hover:shadow-md group-hover:shadow-teal-500/10 transition-all duration-300">
+                    <div className="w-10 h-10 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
+                      <Icon />
+                    </div>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-[#000E24] group-hover:text-[#d97706] leading-snug min-h-[48px] flex flex-col justify-center">
+                    {item.title}
+                  </h3>
                 </div>
 
-                <h3 className="text-lg font-bold text-[#000E24] mb-3 group-hover:text-[#d97706]">
-                  {item.title}
-                </h3>
-
-                <p className="text-gray-500 text-sm mb-4 flex-grow">
+                <p className="text-gray-500 text-sm mb-4 flex-grow leading-relaxed">
                   {item.desc}
                 </p>
 
-                <div className="text-[#d97706] font-semibold text-xs">
+                <div className="text-[#d97706] font-semibold text-xs flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                   Explore →
                 </div>
               </Link>

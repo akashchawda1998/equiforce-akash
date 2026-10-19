@@ -1,10 +1,137 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { FiMenu, FiX, FiChevronDown, FiArrowRight, FiPhone, FiUsers } from "react-icons/fi";
+import {
+  FiMenu,
+  FiX,
+  FiChevronDown,
+  FiArrowRight,
+  FiPhone,
+} from "react-icons/fi";
 import logo from "../../assets/images/logoorg.png";
 import DemoModal from "../common/DemoModal";
 
 const NAVY = "#000E24";
+
+/* ---------------- CUSTOM ICONS ---------------- */
+const PerformanceMeasurementIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="6" y1="34" x2="35" y2="34" stroke="#08636b" strokeWidth="1.8" strokeLinecap="round" />
+    <rect x="8" y="24" width="5" height="10" rx="1" fill="#14b8a6" opacity="0.35" />
+    <line x1="10.5" y1="24" x2="10.5" y2="19" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <rect x="16" y="17" width="5" height="12" rx="1" fill="#14b8a6" opacity="0.55" />
+    <line x1="18.5" y1="17" x2="18.5" y2="12" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <rect x="24" y="21" width="5" height="8" rx="1" fill="#14b8a6" opacity="0.4" />
+    <line x1="26.5" y1="21" x2="26.5" y2="17" stroke="#08636b" strokeWidth="1.6" strokeLinecap="round" />
+    <polyline points="8,28 16,19 24,22 32,11" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    <polyline points="29,9 32,11 30,14" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
+const GipsCompositeIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 4 A16 16 0 0 1 35.1 23" stroke="#08636b" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <path d="M35.1 23 A16 16 0 0 1 7.2 29" stroke="#14b8a6" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <path d="M7.2 29 A16 16 0 0 1 20 4" stroke="#FF8000" strokeWidth="3" strokeLinecap="round" fill="none" />
+    <circle cx="20" cy="20" r="7" stroke="#08636b" strokeWidth="1.6" fill="none" opacity="0.45" />
+    <circle cx="20" cy="20" r="3" fill="#08636b" />
+    <line x1="20" y1="4" x2="20" y2="13" stroke="#08636b" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+    <line x1="35.1" y1="23" x2="27.4" y2="21" stroke="#14b8a6" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+    <line x1="7.2" y1="29" x2="14" y2="23.5" stroke="#FF8000" strokeWidth="1.3" strokeDasharray="2 2" opacity="0.6" />
+  </svg>
+);
+
+const ConsultingServicesIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M15 13.5V10.5C15 9.4 15.9 8.5 17 8.5H23C24.1 8.5 25 9.4 25 10.5V13.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <rect
+      x="7"
+      y="13.5"
+      width="26"
+      height="18"
+      rx="3.5"
+      stroke="#08636b"
+      strokeWidth="2.2"
+      fill="none"
+    />
+    <line
+      x1="8"
+      y1="20.5"
+      x2="32"
+      y2="20.5"
+      stroke="#14b8a6"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+    />
+    <polyline
+      points="11.5,25.5 16,20.5 20,23 25.5,17"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <polyline
+      points="22.5,17 25.5,17 25.5,20"
+      stroke="#FF7A00"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </svg>
+);
+
+const AiPoweredReportingIcon = () => (
+  <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="12" y="12" width="16" height="16" rx="3" stroke="#08636b" strokeWidth="2" fill="rgba(8,99,107,0.07)" />
+    <line x1="17.5" y1="12" x2="17.5" y2="28" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="22.5" y1="12" x2="22.5" y2="28" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="12" y1="17.5" x2="28" y2="17.5" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="12" y1="22.5" x2="28" y2="22.5" stroke="#14b8a6" strokeWidth="0.9" opacity="0.4" />
+    <line x1="16" y1="12" x2="16" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="20" y1="12" x2="20" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="24" y1="12" x2="24" y2="6" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="16" y1="28" x2="16" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="20" y1="28" x2="20" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="24" y1="28" x2="24" y2="34" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="16" x2="6" y2="16" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="20" x2="6" y2="20" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="24" x2="6" y2="24" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="16" x2="34" y2="16" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="20" x2="34" y2="20" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <line x1="28" y1="24" x2="34" y2="24" stroke="#08636b" strokeWidth="2" strokeLinecap="round" />
+    <path d="M21.5 15 L18.5 20.5 H21 L18 25" stroke="#FF8000" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+  </svg>
+);
+
+const servicesList = [
+  {
+    title: "Performance and Attribution",
+    link: "/performance-measurement#performance",
+    icon: PerformanceMeasurementIcon,
+  },
+  {
+    title: "GIPS® Composite Management",
+    link: "/performance-measurement#gips",
+    icon: GipsCompositeIcon,
+  },
+  {
+    title: "Consulting Services",
+    link: "/performance-measurement#consulting",
+    icon: ConsultingServicesIcon,
+  },
+  {
+    title: "AI-Powered Investment Reporting",
+    link: "/performance-measurement#ai-reporting",
+    icon: AiPoweredReportingIcon,
+  },
+];
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -119,9 +246,9 @@ const Navbar = () => {
                       setPlatformOpen(!platformOpen);
                     }
                   }}
-                  className="text-xs uppercase flex items-center hover:text-[#d97706] transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
+                  className="text-xs uppercase flex items-center gap-1 hover:text-[#d97706] transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#d97706]"
                 >
-                  Solutions
+                  Services
                   <FiChevronDown
                     aria-hidden="true"
                     className={`transition-transform duration-300 ${platformOpen ? "rotate-180" : ""}`}
@@ -129,89 +256,60 @@ const Navbar = () => {
                 </button>
 
                 {platformOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 cursor-default z-50">
-                    <div className="w-[780px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden text-left">
-                      <div className="bg-white p-8 flex flex-col justify-between">
-                        <div className="grid grid-cols-2 gap-x-10 gap-y-8">
-                          <Link
-                            to="/performance-measurement#performance"
-                            onClick={() => setPlatformOpen(false)}
-                            className="group block"
-                          >
-                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                              Performance Measurement
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">IBOR, ABOR and PBOR returns and attribution at security, portfolio, and composite levels.</p>
-                          </Link>
-
-                          <Link
-                            to="/performance-measurement#gips"
-                            onClick={() => setPlatformOpen(false)}
-                            className="group block"
-                          >
-                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                              GIPS® Composite Management
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">End-to-end composite management — built to deliver reliable, compliant performance reporting.</p>
-                          </Link>
-
-                          <Link
-                            to="/performance-measurement#ai-reporting"
-                            onClick={() => setPlatformOpen(false)}
-                            className="group block"
-                          >
-                            <h4 className="font-bold text-[#000E24] text-base group-hover:text-[#d97706] transition-colors">
-                              AI-Powered Investment Reporting
-                            </h4>
-                            <p className="text-sm text-gray-500 mt-1 leading-snug">Intelligent investment reporting that surfaces accurate insights into every reporting layer.</p>
-                          </Link>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                          {/* Consulting Solutions */}
-                          <Link
-                            to="/consultant"
-                            onClick={() => setPlatformOpen(false)}
-                            className="bg-[#eef7f8] rounded-2xl p-5 flex justify-between items-center group hover:bg-[#d4ecee] hover:shadow-md transition-all duration-300"
-                          >
-                            <div className="flex items-start gap-4">
-                              <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-105 transition">
-                                <FiUsers className="text-[#000E24] text-lg" aria-hidden="true" />
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 cursor-default z-50">
+                    <div className="w-[380px] bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,14,36,0.14)] border border-gray-100 overflow-hidden text-left">
+                      {/* Services List */}
+                      <div className="p-2.5 space-y-1">
+                        {servicesList.map((item, idx) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={idx}
+                              to={item.link}
+                              onClick={() => setPlatformOpen(false)}
+                              className="group flex items-center justify-between p-2.5 rounded-xl hover:bg-[#f2faf9] border border-transparent hover:border-[#c5ece9]/70 transition-all duration-200"
+                            >
+                              <div className="flex items-center gap-3.5 min-w-0">
+                                <div className="w-11 h-11 rounded-full bg-[#dff4f3] group-hover:bg-[#d0efed] group-hover:scale-105 flex items-center justify-center shrink-0 transition-all duration-200 shadow-xs border border-teal-200/40">
+                                  <div className="w-8 h-8 flex items-center justify-center [&>svg]:w-full [&>svg]:h-full">
+                                    <Icon />
+                                  </div>
+                                </div>
+                                <span className="font-bold text-[#000E24] text-sm group-hover:text-[#d97706] transition-colors leading-snug">
+                                  {item.title}
+                                </span>
                               </div>
-                              <div>
-                                <h4 className="font-semibold text-[#000E24] text-sm">
-                                  Consulting Solutions
-                                </h4>
-                                <p className="text-xs text-gray-500">
-                                  Get expert guidance
-                                </p>
-                              </div>
+                              <FiArrowRight
+                                className="text-xs text-[#d97706] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 shrink-0 ml-2"
+                                aria-hidden="true"
+                              />
+                            </Link>
+                          );
+                        })}
+                      </div>
+
+                      {/* Bottom Quick-Action Banner */}
+                      <div className="bg-[#f8fcfa] border-t border-gray-100 p-2.5">
+                        <Link
+                          to="/contact#contactus"
+                          onClick={() => setPlatformOpen(false)}
+                          className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-white border border-gray-200/80 hover:border-[#08636b]/40 hover:bg-[#eef7f8] group transition-all duration-200 shadow-xs"
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <div className="w-7 h-7 rounded-full bg-[#08636b]/10 text-[#08636b] flex items-center justify-center group-hover:scale-105 transition-transform">
+                              <FiPhone className="text-xs" aria-hidden="true" />
                             </div>
-                            <FiArrowRight className="text-[#000E24] text-lg group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                          </Link>
-
-                          {/* Book Meeting */}
-                          <Link
-                            to="/contact#contactus"
-                            onClick={() => setPlatformOpen(false)}
-                            className="bg-[#eef7f8] rounded-2xl p-5 flex justify-between items-center group hover:bg-[#d4ecee] hover:shadow-md transition-all duration-300"
-                          >
-                            <div className="flex items-start gap-4">
-                              <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-105 transition">
-                                <FiPhone className="text-[#000E24] text-lg" aria-hidden="true" />
-                              </div>
-                              <div>
-                                <h4 className="font-semibold text-[#000E24] text-sm">
-                                  Book a Meeting
-                                </h4>
-                                <p className="text-xs text-gray-500">
-                                  Schedule a call
-                                </p>
-                              </div>
+                            <div>
+                              <h4 className="font-bold text-[#000E24] text-xs group-hover:text-[#08636b] transition-colors leading-tight">
+                                Book a Meeting
+                              </h4>
+                              <p className="text-[10px] text-gray-500 leading-tight">
+                                Schedule a 1-on-1 discovery call
+                              </p>
                             </div>
-                            <FiArrowRight className="text-[#000E24] text-lg group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                          </Link>
-                        </div>
+                          </div>
+                          <FiArrowRight className="text-xs text-[#08636b] group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -282,7 +380,7 @@ const Navbar = () => {
               className="flex flex-col gap-6 font-bold text-lg"
               style={{ color: NAVY }}
             >
-              {/* Mobile Accordion for Platform */}
+              {/* Mobile Accordion for Services */}
               <div>
                 <button
                   type="button"
@@ -290,22 +388,48 @@ const Navbar = () => {
                   onClick={() => setMobilePlatformOpen(!mobilePlatformOpen)}
                   className="flex items-center justify-between w-full text-left hover:text-[#d97706] transition-colors"
                 >
-                  Solutions{" "}
+                  Services{" "}
                   <FiChevronDown
                     aria-hidden="true"
-                    className={`transition-transform ${mobilePlatformOpen ? "rotate-180" : ""
-                      }`}
+                    className={`transition-transform duration-300 ${
+                      mobilePlatformOpen ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${mobilePlatformOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    mobilePlatformOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
                 >
-                  <div className="flex flex-col gap-4 text-base font-medium text-gray-600 mt-4 ml-4 pb-2">
-                    <Link to="/performance-measurement#performance" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Performance Measurement</Link>
-                    <Link to="/performance-measurement#gips" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors"> GIPS® Composite Management</Link>
-                    <Link to="/performance-measurement#ai-reporting" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">AI-Powered Investment Reporting</Link>
-                    <Link to="/consultant" onClick={() => setMenuOpen(false)} className="hover:text-[#d97706] transition-colors">Consulting Solutions</Link>
+                  <div className="flex flex-col gap-2 mt-3 ml-1 pb-2">
+                    {servicesList.map((item, idx) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={idx}
+                          to={item.link}
+                          onClick={closeMenu}
+                          className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-[#f2faf9] transition-colors"
+                        >
+                          <div className="w-10 h-10 rounded-full bg-[#dff4f3] flex items-center justify-center shrink-0 shadow-xs">
+                            <Icon />
+                          </div>
+                          <span className="text-sm font-bold text-[#000E24] hover:text-[#d97706] leading-tight">
+                            {item.title}
+                          </span>
+                        </Link>
+                      );
+                    })}
+
+                    <div className="pt-2 border-t border-gray-100 mt-1 flex flex-col gap-2">
+                      <Link
+                        to="/contact#contactus"
+                        onClick={closeMenu}
+                        className="text-xs font-semibold text-[#08636b] hover:text-[#d97706] flex items-center gap-1.5 px-2.5 py-1"
+                      >
+                        <FiPhone className="text-sm" aria-hidden="true" /> Book a Meeting
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
