@@ -18,7 +18,7 @@ const AboutHero = () => {
           Our Mission
         </h1>
 
-        <p className="text-gray-600 max-w-4xl mx-auto font-medium">
+        <p className="text-gray-600 max-w-6xl mx-auto font-medium">
 
 
 
