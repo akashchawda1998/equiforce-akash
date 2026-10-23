@@ -32,9 +32,9 @@ const Footer = () => {
 
             <Link
               to="/contact"
-              className="inline-block bg-[#d97706] hover:shadow-xl hover:shadow-orange-500/20 text-white px-7 py-2 rounded-xl font-semibold transition-all hover:-translate-y-1"
+              className="text-xs uppercase px-4 py-2 md:px-5 md:py-2.5 rounded-full font-bold shadow-md hover:scale-105 transition-all duration-300 bg-gradient-to-r from-[#d97706] to-[#3b82f6] text-white"
             >
-              Try for Free
+              Request a Demo
             </Link>
           </div>
 
