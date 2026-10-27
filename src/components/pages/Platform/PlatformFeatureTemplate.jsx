@@ -166,7 +166,7 @@ const allData = [
     ],
     title: "GIPS® Composite Management",
     description:
-      "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics, and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
+      "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
   },
   {
     id: "consulting",

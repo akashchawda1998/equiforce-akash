@@ -130,7 +130,7 @@ const features = [
       </>
     ),
     titleText: "GIPS® Composite Management",
-    desc: "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics, and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
+    desc: "A powerful rules-based composite engine that streamlines composite performance management, security-level contribution and attribution, analytics and GIPS® compliance. Includes verifier-ready reporting, policy and procedure management, and automated prospect distribution tracking.",
     icon: GipsCompositeIcon,
     link: "/performance-measurement#gips",
   },

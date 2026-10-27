@@ -90,19 +90,7 @@ const team = [
 
 
 
-  {
 
-    name: "Todd Brunskill",
-    email: "todd@equiforce.ai",
-    role: "Sales Consultant",
-    role1: "",
-    img: todd,
-
-    bio: [
-      ""
-    ]
-
-  },
 
 
   {
@@ -129,23 +117,7 @@ const team = [
 
 
 
-  {
 
-    name: "Russell (\"Russ\") Hughey",
-    email: "russ@equiforce.ai",
-    role: "Sales Consultant",
-
-    img: russ,
-
-    bio: [
-
-      "Russ joined EquiForce in 2026 to support its go-to-market strategy, customer engagement, and business development efforts. He brings deep expertise in customer success, strategic account management, and helping financial institutions gain greater value from their technology partnerships.",
-      "Before joining EquiForce, Russ spent more than 15 years in client-facing and leadership roles across WealthTech and fintech. His experience includes managing complex enterprise relationships, leading customer success and account management teams, improving adoption and retention, guiding renewals and strategic expansions, and translating customer needs into product and business priorities. He has worked extensively with wealth managers, RIAs, TAMPs, asset managers, and other financial institutions.",
-      "Throughout his career, Russ has helped clients navigate portfolio management, performance measurement and reporting, trading and rebalancing, compliance, and data aggregation solutions. His background includes leadership and strategic customer roles at First Rate, InvestEdge, Vestmark, and Charles River Development. His customer-first perspective and understanding of the WealthTech marketplace helps EquiForce connect its modern technology with the operational challenges investment firms face every day."
-
-    ]
-
-  },
 
   {
 
@@ -164,6 +136,38 @@ const team = [
 
   },
 
+
+  {
+
+    name: "Todd Brunskill",
+    email: "todd@equiforce.ai",
+    role: "Sales Consultant",
+    role1: "",
+    img: todd,
+
+    bio: [
+      ""
+    ]
+
+  },
+
+  {
+
+    name: "Russell (\"Russ\") Hughey",
+    email: "russ@equiforce.ai",
+    role: "Sales Consultant",
+
+    img: russ,
+
+    bio: [
+
+      "Russ joined EquiForce in 2026 to support its go-to-market strategy, customer engagement, and business development efforts. He brings deep expertise in customer success, strategic account management, and helping financial institutions gain greater value from their technology partnerships.",
+      "Before joining EquiForce, Russ spent more than 15 years in client-facing and leadership roles across WealthTech and fintech. His experience includes managing complex enterprise relationships, leading customer success and account management teams, improving adoption and retention, guiding renewals and strategic expansions, and translating customer needs into product and business priorities. He has worked extensively with wealth managers, RIAs, TAMPs, asset managers, and other financial institutions.",
+      "Throughout his career, Russ has helped clients navigate portfolio management, performance measurement and reporting, trading and rebalancing, compliance, and data aggregation solutions. His background includes leadership and strategic customer roles at First Rate, InvestEdge, Vestmark, and Charles River Development. His customer-first perspective and understanding of the WealthTech marketplace helps EquiForce connect its modern technology with the operational challenges investment firms face every day."
+
+    ]
+
+  },
   // {
 
   //   name: "Stephen Hua",
@@ -218,7 +222,7 @@ const Team = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
-          {team.slice(0, 4).map((member, i) => (
+          {team.slice(0, 3).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={handleOpen} />
           ))}
         </div>
@@ -229,7 +233,7 @@ const Team = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 justify-center">
           {/* Empty divs to center the bottom two if needed, or just map them */}
-          {team.slice(4).map((member, i) => (
+          {team.slice(3).map((member, i) => (
             <MemberCard key={i} member={member} onSelect={handleOpen} />
           ))}
         </div>
