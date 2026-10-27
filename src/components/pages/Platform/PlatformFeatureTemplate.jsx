@@ -149,7 +149,7 @@ const allData = [
     ],
     title: "Performance and Attribution",
     description:
-      "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution, and attribution through flexible reporting and AI-powered insights.",
+      "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution and attribution through flexible reporting and AI-powered insights.",
   },
   {
     id: "gips",
