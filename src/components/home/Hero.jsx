@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import heroVideo from "../../assets/video/EQUIFORCE.mp4";
-import { Link } from "react-router-dom";
+import { Download } from "lucide-react";
 
 function Hero() {
   return (
@@ -39,8 +39,20 @@ function Hero() {
             </span>
           </p>
 
-          {/* ADA FIX: replaced <Link><button> nesting with a single styled <Link> */}
-
+          {/* Download Brochure Button */}
+          <div className="flex flex-wrap items-center gap-4 mb-8">
+            <a
+              href="/docs/equiforce.pdf"
+              download="equiforce.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider text-white shadow-lg shadow-amber-900/30 hover:shadow-amber-500/40 hover:scale-105 active:scale-95 transition-all duration-300 bg-gradient-to-r from-[#d97706] to-[#3b82f6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#d97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#000E24]"
+              aria-label="Download EquiForce Company Brochure (PDF)"
+            >
+              <Download className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" aria-hidden="true" />
+              <span>Download Brochure</span>
+            </a>
+          </div>
 
         </div>
 
@@ -83,7 +95,7 @@ function Hero() {
       </div>
 
       {/* Animation keyframes */}
-      <style jsx>{`
+      <style>{`
         @keyframes backgroundMove {
           0% {
             background-position: 0 0;

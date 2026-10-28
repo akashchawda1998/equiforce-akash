@@ -113,12 +113,12 @@ const features = [
   {
     title: (
       <>
-        Performance and <br className="hidden sm:inline" />
+        Performance & <br className="hidden sm:inline" />
         Attribution
       </>
     ),
-    titleText: "Performance and Attribution",
-    desc: "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution, and attribution through flexible reporting and AI-powered insights.",
+    titleText: "Performance & Attribution",
+    desc: "Comprehensive multi-asset performance measurement and attribution across unlimited classification hierarchies. Analyze IBOR, ABOR and PBOR performance, contribution and attribution through flexible reporting and AI-powered insights.",
     icon: PerformanceMeasurementIcon,
     link: "/performance-measurement#performance",
   },
@@ -171,7 +171,7 @@ const Features = () => {
         </h2>
 
         <p className="text-blue-100/80 max-w-3xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-          EquiForce delivers specialized solutions across Performance and Attribution, GIPS® Composite Management, Consulting Services and AI-Powered Investment Reporting        </p>
+          EquiForce delivers specialized solutions across Performance & Attribution, GIPS® Composite Management, Consulting Services and AI-Powered Investment Reporting        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item, index) => {

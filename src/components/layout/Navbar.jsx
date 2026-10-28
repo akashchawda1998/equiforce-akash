@@ -112,7 +112,7 @@ const AiPoweredReportingIcon = () => (
 
 const servicesList = [
   {
-    title: "Performance and Attribution",
+    title: "Performance & Attribution",
     link: "/performance-measurement#performance",
     icon: PerformanceMeasurementIcon,
   },
@@ -391,15 +391,13 @@ const Navbar = () => {
                   Services{" "}
                   <FiChevronDown
                     aria-hidden="true"
-                    className={`transition-transform duration-300 ${
-                      mobilePlatformOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${mobilePlatformOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    mobilePlatformOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${mobilePlatformOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
                 >
                   <div className="flex flex-col gap-2 mt-3 ml-1 pb-2">
                     {servicesList.map((item, idx) => {
@@ -437,6 +435,7 @@ const Navbar = () => {
               <Link to="/about" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Our Company</Link>
               <Link to="/team" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Meet our Team</Link>
               <Link to="/insights" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Insights</Link>
+              <Link to="/careers" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">Careers</Link>
 
               <Link to="/contact" onClick={closeMenu} className="hover:text-[#d97706] transition-colors">
                 Contact

@@ -91,13 +91,15 @@ const Consultant = () => {
                 <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
                     {/* Section 1: Consulting Solutions */}
-                    <h2 className="text-3xl md:text-4xl font-light text-gray-700 mb-30">
+                    <h2 className="text-3xl md:text-4xl font-light text-gray-700 text-center mb-28">
                         Consulting Solutions
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-28 mb-20">
+                    <div className="flex flex-wrap justify-center gap-x-8 gap-y-28 max-w-4xl mx-auto mb-20">
                         {team.slice(0, 4).map((member, i) => (
-                            <MemberCard key={i} member={member} onSelect={handleOpen} />
+                            <div key={i} className="w-full sm:w-[calc(50%-1.25rem)] max-w-[320px] flex justify-center">
+                                <MemberCard member={member} onSelect={handleOpen} />
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -184,7 +186,7 @@ const Consultant = () => {
 };
 
 const MemberCard = ({ member, onSelect }) => (
-    <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6 px-6 flex flex-col items-center group transition-all hover:shadow-xl">
+    <div className="relative bg-white rounded-lg shadow-md pt-20 pb-6 px-6 flex flex-col items-center group transition-all hover:shadow-xl w-full h-full">
         {/* Profile Image — ADA: button for keyboard accessibility */}
         <button
             type="button"

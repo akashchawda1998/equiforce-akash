@@ -30,7 +30,7 @@ const AboutHero = () => {
           <span className="text-[#FF8000]">
             strategic partner and consultants
           </span>{" "}
-          with over three decades of investment operations expertise -
+          with over 150 years of investment operations expertise -
           integrating <span className="text-[#FF8000]">AI technologies</span> that
           enable our clients to operate with accuracy, confidence and a
           competitive edge.

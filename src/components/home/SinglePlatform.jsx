@@ -20,7 +20,7 @@ const SinglePlatform = () => {
       <div className="max-w-screen-2xl mx-auto px-2">
         {/* Heading Section */}
         <div className="text-center mb-16 md:mb-24" data-aos="fade-up">
-          <h2 
+          <h2
             className="text-3xl md:text-5xl font-bold leading-tight max-w-3xl mx-auto"
             style={{ color: NAVY }}
           >
@@ -32,9 +32,9 @@ const SinglePlatform = () => {
         <div className="relative max-w-5xl mx-auto">
           {/* Main Dashboard Image */}
           <div className="relative z-10 shadow-xl rounded-lg overflow-hidden border border-gray-100" data-aos="zoom-in">
-            <img 
-              src={SinglePlatformImg} 
-              alt="EquiForce Single Platform Overview Dashboard" 
+            <img
+              src={SinglePlatformImg}
+              alt="EquiForce Single Platform Overview Dashboard"
               className="w-full h-auto"
             />
           </div>

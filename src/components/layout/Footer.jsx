@@ -70,6 +70,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/performance-measurement#consulting"
+                  className="hover:text-[#d97706]"
+                >
+                  Consulting Services
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/performance-measurement#ai-reporting"
                   className="hover:text-[#d97706]"
                 >
@@ -98,6 +106,11 @@ const Footer = () => {
                 <li>
                   <Link to="/about#partner" className="hover:text-[#d97706]">
                     Our Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/careers" className="hover:text-[#d97706]">
+                    Careers
                   </Link>
                 </li>
                 <li>
@@ -179,6 +192,10 @@ const Footer = () => {
             <span className="hidden sm:inline" aria-hidden="true">|</span>
             <Link to="/security" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
               Security & Compliance
+            </Link>
+            <span className="hidden sm:inline" aria-hidden="true">|</span>
+            <Link to="/careers" className="hover:text-[#d97706] transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1">
+              Careers
             </Link>
           </div>
 
