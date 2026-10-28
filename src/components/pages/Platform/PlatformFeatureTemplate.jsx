@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Check, ChevronDown, CheckCircle2, Download, FileText } from "lucide-react";
+import { Check, ChevronDown, CheckCircle2, Download, FileText, ChevronLeft, ChevronRight } from "lucide-react";
 
 // ✅ Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 
 // ✅ Images from src/assets/slidesimage
@@ -275,6 +273,7 @@ const FeatureSection = ({ item, index }) => {
   const isEven = index % 2 === 0;
   const Icon = item.icon;
   const [openAccordion, setOpenAccordion] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
     <>
@@ -404,37 +403,65 @@ const FeatureSection = ({ item, index }) => {
             )}
           </div>
 
-          {/* SLIDER */}
+          {/* SLIDER WITH SMALL ORANGE ARROWS */}
           <div
-            className="w-full md:w-1/2 relative"
+            className="w-full md:w-1/2 relative group"
             data-aos={isEven ? "fade-left" : "fade-right"}
           >
-            <Swiper
-              modules={[Navigation, Autoplay]}
-              slidesPerView={1}
-              spaceBetween={10}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              navigation={true}
-              grabCursor={true}
-              className="w-full rounded-xl overflow-hidden shadow-lg border border-gray-200/80 bg-white group/slider [&_.swiper-button-prev]:w-9 [&_.swiper-button-prev]:h-9 sm:[&_.swiper-button-prev]:w-10 sm:[&_.swiper-button-prev]:h-10 [&_.swiper-button-prev]:bg-white/90 [&_.swiper-button-prev]:backdrop-blur-sm [&_.swiper-button-prev]:rounded-full [&_.swiper-button-prev]:shadow-md [&_.swiper-button-prev]:border [&_.swiper-button-prev]:border-gray-200/80 [&_.swiper-button-prev]:text-[#000E24] hover:[&_.swiper-button-prev]:bg-[#000E24] hover:[&_.swiper-button-prev]:text-white [&_.swiper-button-prev]:transition-all [&_.swiper-button-prev]:left-3 [&_.swiper-button-prev:after]:text-sm sm:[&_.swiper-button-prev:after]:text-base [&_.swiper-button-prev:after]:font-bold [&_.swiper-button-next]:w-9 [&_.swiper-button-next]:h-9 sm:[&_.swiper-button-next]:w-10 sm:[&_.swiper-button-next]:h-10 [&_.swiper-button-next]:bg-white/90 [&_.swiper-button-next]:backdrop-blur-sm [&_.swiper-button-next]:rounded-full [&_.swiper-button-next]:shadow-md [&_.swiper-button-next]:border [&_.swiper-button-next]:border-gray-200/80 [&_.swiper-button-next]:text-[#000E24] hover:[&_.swiper-button-next]:bg-[#000E24] hover:[&_.swiper-button-next]:text-white [&_.swiper-button-next]:transition-all [&_.swiper-button-next]:right-3 [&_.swiper-button-next:after]:text-sm sm:[&_.swiper-button-next:after]:text-base [&_.swiper-button-next:after]:font-bold"
-            >
-              {item.img.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <div className="w-full">
-                    <img
-                      src={img}
-                      alt={`${item.title} Slide ${i + 1}`}
-                      className="w-full h-auto object-contain rounded-xl select-none"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200/80 bg-white">
+              <Swiper
+                onSwiper={setSwiperInstance}
+                modules={[Autoplay]}
+                slidesPerView={1}
+                spaceBetween={10}
+                loop={true}
+                autoplay={{
+                  delay: 3500,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                navigation={false}
+                pagination={false}
+                grabCursor={true}
+                className="w-full"
+              >
+                {item.img.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="w-full flex items-center justify-center bg-slate-50/40">
+                      <img
+                        src={img}
+                        alt={`${item.title} Slide ${i + 1}`}
+                        className="w-full h-auto object-contain select-none"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
+              {/* Small Orange Left Arrow */}
+              {item.img && item.img.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => swiperInstance?.slidePrev()}
+                  aria-label="Previous slide"
+                  className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/95 text-[#ea580c] hover:bg-[#ea580c] hover:text-white shadow-md border border-orange-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-sm"
+                >
+                  <ChevronLeft size={16} className="stroke-[3]" />
+                </button>
+              )}
+
+              {/* Small Orange Right Arrow */}
+              {item.img && item.img.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => swiperInstance?.slideNext()}
+                  aria-label="Next slide"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/95 text-[#ea580c] hover:bg-[#ea580c] hover:text-white shadow-md border border-orange-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-sm"
+                >
+                  <ChevronRight size={16} className="stroke-[3]" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
