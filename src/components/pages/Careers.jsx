@@ -100,7 +100,7 @@ const Careers = () => {
 
       {/* ─── TOP SECTION: NAVY HERO BANNER WITH BREADCRUMB ─── */}
       <section className="bg-[#000E24] text-white pt-24 pb-12 md:pt-28 md:pb-16 text-center relative overflow-hidden">
-        <div className="max-w-9xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-4 flex justify-center">
@@ -148,7 +148,7 @@ const Careers = () => {
       </section>
 
       {/* ─── MAIN CONTENT CONTAINER ─── */}
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 space-y-10 flex-grow w-full">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 space-y-10 flex-grow w-full">
 
         {/* ─── WE ARE HIRING SPLIT CARD (Exact match to reference image) ─── */}
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200/80 overflow-hidden">

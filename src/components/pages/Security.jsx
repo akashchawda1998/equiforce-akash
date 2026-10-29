@@ -53,7 +53,7 @@ const Security = () => {
 
       {/* HERO SECTION */}
       <section className="relative bg-[#0B2341] text-white pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
-        <div className="max-w-9xl mx-auto px-6 text-center relative z-10">
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
           {/* SOC 2 BADGE EMBLEM */}
           <div className="inline-flex items-center gap-2 bg-[#0A1A2F] border border-[#2D7FF9] text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(45,127,249,0.3)]">
             <ShieldCheck size={16} className="text-[#2D7FF9]" />
@@ -88,7 +88,7 @@ const Security = () => {
       </section>
 
       {/* MAIN CONTENT SECTION */}
-      <section className="max-w-9xl mx-auto px-4 md:px-6 py-12 md:py-20 -mt-10 relative z-20">
+      <section className="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-20 -mt-10 relative z-20">
         {/* SOC 2 BANNER CARD */}
         <div className="bg-[#0A1A2F] border border-[#2D7FF9]/50 rounded-3xl p-6 md:p-10 text-white shadow-2xl mb-12 relative overflow-hidden">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 relative z-10">

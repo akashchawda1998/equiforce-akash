@@ -36,8 +36,7 @@ const InsightsFeed = () => {
       type: "PDF Document",
       size: "215 KB",
       date: "2026",
-      author: "Jane Atmodjojo, CFA®, CIPM",
-      role: "CEO & Co-Founder, EquiForce",
+      author: "tsgperformance.com/podcast hosted by: Pat Fowler & Doug Spaulding",
       description:
         "Companion slide carousel and presentation document for TSG Time Episode 41. Discover Jane Atmodjojo’s journey from practitioner to founder, key takeaways on bridging the performance technology gap, and building client-centric fintech solutions for modern asset managers.",
       downloadUrl: "/docs/Ep41-LinkedIn-Carousel.pdf",

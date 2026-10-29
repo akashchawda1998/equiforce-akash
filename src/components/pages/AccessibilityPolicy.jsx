@@ -17,7 +17,7 @@ const AccessibilityPolicy = () => {
       <div className="bg-gray-50 min-h-screen pt-24 pb-16">
         {/* HERO SECTION */}
         <section className="bg-[#000E24] text-white py-16 px-4 md:px-8 text-center relative">
-          <div className="max-w-9xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <Link to="/accessibility" className="inline-flex items-center gap-2 text-sm text-[#d97706] hover:underline mb-4 font-semibold">
               <ArrowLeft size={16} aria-hidden="true" /> Back to Accessibility Statement
             </Link>
@@ -76,7 +76,7 @@ const AccessibilityPolicy = () => {
         </section>
 
         {/* POLICY BODY */}
-        <section className="max-w-9xl mx-auto px-4 py-12">
+        <section className="max-w-5xl mx-auto px-4 py-12">
           <div className="bg-white rounded-2xl shadow-md p-6 md:p-12 space-y-10 text-gray-700 leading-relaxed text-sm md:text-base border border-gray-100">
 
             {/* Section 1 */}

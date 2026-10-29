@@ -221,7 +221,7 @@ const Team = () => {
           Executive Leadership
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-28 max-w-9xl mx-auto mb-28">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-28 max-w-5xl mx-auto mb-28">
           {team.slice(0, 3).map((member, i) => (
             <div key={i} className="w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[320px] flex justify-center">
               <MemberCard member={member} onSelect={handleOpen} />
@@ -233,7 +233,7 @@ const Team = () => {
         <h2 className="text-3xl md:text-4xl font-light text-gray-700 text-center mb-28 border-t border-gray-200 pt-16">
           Client Relations &amp; Product Support
         </h2>
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-28 max-w-9xl mx-auto mb-20">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-28 max-w-5xl mx-auto mb-20">
           {team.slice(3).map((member, i) => (
             <div key={i} className="w-full sm:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[320px] flex justify-center">
               <MemberCard member={member} onSelect={handleOpen} />
