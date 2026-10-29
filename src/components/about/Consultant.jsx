@@ -9,8 +9,7 @@ import img4 from "../../assets/images/default-avatar.jpeg";
 import img5 from "../../assets/images/5.jpeg";
 import img6 from "../../assets/images/6.jpeg";
 
-import { FaFacebookF, FaLinkedinIn, FaRegEnvelope } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaRegEnvelope, FaRegCalendarAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Helmet } from "react-helmet";
 
@@ -19,6 +18,8 @@ const team = [
     {
         name: "Jane Atmodjojo, CFA®, CIPM",
         email: "jane@equiforce.ai",
+        linkedin: "https://www.linkedin.com/in/jane-atmodjojo-cfa-cipm/",
+        appointmentUrl: "https://calendly.com/jane-equiforce/30min",
         role: "CEO",
         role1: "Principal Consultant",
         img: img1,
@@ -32,6 +33,8 @@ const team = [
     {
         name: "Vincent Tran, CIPM",
         email: "vince@equiforce.ai",
+        linkedin: "https://www.linkedin.com/in/vincent-tran-cipm-8635052b/",
+        appointmentUrl: "https://calendly.com/vince-equiforce/30min",
         role: "Chief Product Officer",
         role1: "Principal Consultant",
         img: img3,
@@ -157,6 +160,43 @@ const Consultant = () => {
                                                 {selectedMember.role1}
                                             </p>
                                         )}
+                                        <div className="flex items-center flex-wrap gap-x-3 gap-y-1 mt-2 text-xs font-semibold">
+                                            <a
+                                                href={`mailto:${selectedMember.email}`}
+                                                aria-label={`Email ${selectedMember.name} at ${selectedMember.email}`}
+                                                className="text-amber-700 hover:underline flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
+                                            >
+                                                <FaRegEnvelope aria-hidden="true" /> {selectedMember.email}
+                                            </a>
+                                            {selectedMember.linkedin && (
+                                                <>
+                                                    <span className="text-gray-300 select-none" aria-hidden="true">|</span>
+                                                    <a
+                                                        href={selectedMember.linkedin}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        aria-label={`${selectedMember.name}'s LinkedIn profile (opens in a new tab)`}
+                                                        className="text-[#0077b5] hover:text-[#005582] hover:underline flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
+                                                    >
+                                                        <FaLinkedinIn aria-hidden="true" /> LinkedIn
+                                                    </a>
+                                                </>
+                                            )}
+                                            {selectedMember.appointmentUrl && (
+                                                <>
+                                                    <span className="text-gray-300 select-none" aria-hidden="true">|</span>
+                                                    <a
+                                                        href={selectedMember.appointmentUrl}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        aria-label={`Book an appointment with ${selectedMember.name} (opens in a new tab)`}
+                                                        className="text-amber-700 hover:text-amber-800 hover:underline flex items-center gap-1.5 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
+                                                    >
+                                                        <FaRegCalendarAlt aria-hidden="true" /> Book an appointment
+                                                    </a>
+                                                </>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
 
@@ -220,20 +260,61 @@ const MemberCard = ({ member, onSelect }) => (
         <a
             href={`mailto:${member.email}`}
             aria-label={`Email ${member.name} at ${member.email}`}
-            className="text-yellow-600 text-xs font-semibold mb-6 hover:underline flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
+            className={`text-amber-700 text-xs font-semibold ${
+                member.linkedin || member.appointmentUrl ? "mb-2" : "mb-6"
+            } hover:underline flex items-center gap-1 focus-visible:ring-2 focus-visible:ring-[#d97706] rounded`}
         >
             <FaRegEnvelope aria-hidden="true" /> {member.email}
         </a>
 
+        {/* Links: LinkedIn | Book an appointment */}
+        {(member.linkedin || member.appointmentUrl) && (
+            <div className="flex items-center justify-center flex-wrap gap-2 text-xs font-semibold mb-5 px-2">
+                {member.linkedin && (
+                    <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name}'s LinkedIn profile (opens in a new tab)`}
+                        className="inline-flex items-center gap-1.5 text-[#0077b5] hover:text-[#005582] hover:underline transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1 py-0.5"
+                    >
+                        <FaLinkedinIn aria-hidden="true" className="text-sm" />
+                        <span>LinkedIn</span>
+                    </a>
+                )}
+
+                {member.linkedin && member.appointmentUrl && (
+                    <span className="text-gray-300 select-none" aria-hidden="true">
+                        |
+                    </span>
+                )}
+
+                {member.appointmentUrl && (
+                    <a
+                        href={member.appointmentUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Book an appointment with ${member.name} (opens in a new tab)`}
+                        className="inline-flex items-center gap-1.5 text-amber-700 hover:text-amber-800 hover:underline transition-colors focus-visible:ring-2 focus-visible:ring-[#d97706] rounded px-1 py-0.5"
+                    >
+                        <FaRegCalendarAlt aria-hidden="true" className="text-xs" />
+                        <span>Book an appointment</span>
+                    </a>
+                )}
+            </div>
+        )}
+
         {/* View Bio Button — ADA: type + aria-label + focus ring */}
-        <button
-            type="button"
-            aria-label={`View bio for ${member.name}`}
-            onClick={(e) => onSelect(member, e.currentTarget)}
-            className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
-        >
-            View Bio <span className="ml-1 text-lg" aria-hidden="true">›</span>
-        </button>
+        <div className="mt-auto">
+            <button
+                type="button"
+                aria-label={`View bio for ${member.name}`}
+                onClick={(e) => onSelect(member, e.currentTarget)}
+                className="text-[#000E24] text-xs font-bold uppercase flex items-center hover:opacity-80 transition focus-visible:ring-2 focus-visible:ring-[#d97706] rounded"
+            >
+                View Bio <span className="ml-1 text-lg" aria-hidden="true">›</span>
+            </button>
+        </div>
     </div>
 );
 

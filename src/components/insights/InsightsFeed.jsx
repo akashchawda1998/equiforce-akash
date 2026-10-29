@@ -36,7 +36,7 @@ const InsightsFeed = () => {
       type: "PDF Document",
       size: "215 KB",
       date: "2026",
-      author: "tsgperformance.com/podcast hosted by: Pat Fowler & Doug Spaulding",
+      author: " Pat Fowler & Doug Spaulding",
       description:
         "Companion slide carousel and presentation document for TSG Time Episode 41. Discover Jane Atmodjojo’s journey from practitioner to founder, key takeaways on bridging the performance technology gap, and building client-centric fintech solutions for modern asset managers.",
       downloadUrl: "/docs/Ep41-LinkedIn-Carousel.pdf",
@@ -161,8 +161,8 @@ const InsightsFeed = () => {
 
 
                   <div className="flex items-center gap-3 text-xs text-gray-500 flex-wrap">
-                    <span className="font-semibold text-gray-700">Author:</span>
-                    <span>{item.author} ({item.role})</span>
+                    <span className="font-semibold text-gray-700">Hosted by : </span>
+                    <span>{item.author}</span>
                   </div>
                 </div>
               </div>
